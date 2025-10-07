@@ -1,0 +1,672 @@
+%% abtex2-modelo-projeto-pesquisa.tex, v-1 PFC 1 2016
+%% Copyright 2012-2015 by abnTeX2 group at http://www.abntex.net.br/ 
+%%
+%% This work consists of the files abntex2-modelo-projeto-pesquisa.tex
+%% and abntex2-modelo-references.bib
+%%
+
+% ------------------------------------------------------------------------
+% ------------------------------------------------------------------------
+% abnTeX2: Modelo de Projeto de pesquisa em conformidade com 
+% ABNT NBR 15287:2011 Informação e documentação - Projeto de pesquisa -
+% Apresentação 
+% ------------------------------------------------------------------------ 
+% ------------------------------------------------------------------------
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,
+    %twoside,			% para impressão em verso e anverso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	french,				% idioma adicional para hifenização
+	spanish,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---
+% PACOTES
+% ---
+
+% ---
+% Pacotes fundamentais 
+% ---
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{listings}
+\usepackage{microtype} 	
+\usepackage{hyperref}  % necessário para links
+\usepackage{caption}   % opcional, melhora o controle de legendas
+% para melhorias de justificação
+% ---
+
+% ---
+% Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
+% ---
+\usepackage{lipsum}				% para geração de dummy text
+% ---
+
+% ---
+% Pacotes de citações
+% ---
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+% --- 
+% CONFIGURAÇÕES DE PACOTES
+% --- 
+
+% ---
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---
+
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% ---
+\input{dados}
+% ---
+% ---
+
+% ---
+% Configurações de aparência do PDF final
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{projeto de pesquisa}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% --- 
+
+% --- 
+% Espaçamentos entre linhas e parágrafos 
+% --- 
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ----
+% Início do documento
+% ----
+\begin{document}
+
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% ---
+\imprimirfolhaderosto
+% ---
+
+% ---
+% NOTA DA ABNT NBR 15287:2011, p. 4:
+%  ``Se exigido pela entidade, apresentar os dados curriculares do autor em
+%     folha ou página distinta após a folha de rosto.''
+% ---
+
+% ---
+% inserir lista de ilustrações
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de tabelas
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+
+% ---
+% inserir lista de abreviaturas e siglas
+% ---
+%\begin{siglas}
+%  \item[ABNT] Associação Brasileira de Normas Técnicas
+%  \item[abnTeX] ABsurdas Normas para TeX
+%\end{siglas}
+% ---
+
+% ---
+% inserir lista de símbolos
+% ---
+%\begin{simbolos}
+%  \item[$ \Gamma $] Letra grega Gama
+%  \item[$ \Lambda $] Lambda
+%  \item[$ \zeta $] Letra grega minúscula zeta
+%  \item[$ \in $] Pertence
+%\end{simbolos}
+% ---
+
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  columns=fullflexible,
+  backgroundcolor=\color{gray!10},
+  captionpos=b
+}
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% ----------------------------------------------------------
+% Introdução
+% ----------------------------------------------------------
+\chapter[Introdução]{Introdução}
+
+\section{Motivação}
+A busca por otimização de código é cada vez mais importante no contexto de sistemas embarcados, nos quais os recursos computacionais são extremamente limitados \cite{hong2025automated}. Os microcontroladores, ou MCUs, que são o cérebro destes sistemas e os responsáveis por executar tarefas específicas de acordo com a programação definida, contam com menos memória e menor capacidade de processamento quando comparados aos processadores usados em computadores \textit{desktops} ou \textit{notebooks}. Um exemplo são os modelos de microcontroladores da família STM32 \cite{stm32f103r8-datasheet}, amplamente utilizados na indústria, que apresentam memórias SRAM variando entre 2 e 620 KB e podem operar com frequência de até 600 MHz. Cada família de microcontroladores apresenta um conjunto de registradores, periféricos e instruções da CPU, as quais devem ser consideradas no processo de otimização.
+
+A otimização de código consiste em aplicar técnicas, ou transformações, que melhoram o desempenho ou reduzem o tamanho de um programa sem alterar sua funcionalidade original \cite{maslov_code_nodate}. A eficácia de cada transformação pode variar conforme o programa e a arquitetura de hardware considerada \cite{wang_machine_2018}. Por exemplo, um microcontrolador AVR ATmega328P, arquitetura RISC de 8 \textit{bits}, possui um conjunto reduzido de 131 instruções, em sua maioria executando em um ciclo de \textit{clock} e recursos de memória bem modestos: apenas 2 KB de RAM e 32 KB de memória \textit{flash} \cite{noauthor_avr1632dd1420_2024}. Ao contrário, um processador moderno como o Intel Core i7-1165G7, arquitetura CISC de 64 \textit{bits}, suporta centenas de instruções e conta com memórias \textit{flashes} e execução fora de ordem para alto desempenho \cite{noauthor_intel_nodate}. Essas diferenças de arquitetura impactam a geração de código intermediário (\textit{Intermediate Representation}): uma operação que resulta em uma única instrução complexa no Core i7 pode requerer várias instruções mais simples no AVR, influenciando o tamanho do código gerado e o nível de otimização possível em cada caso.
+%duvida na referencia da intel neste parágrafo, no ano da referência, eu coloco o ano que eu ví a página ou posso deixar sem ano ? A nota veio pro overleaf sem ano de lançamento, somente com a data da URL.
+
+% Prof. Thiago: A data de lançamento é uma boa data para o year da referência. Além dela vai aparecer o "acessado em:".
+
+Para simplificar o uso dos MCUs, os fabricantes fornecem bibliotecas de funções e rotinas, geralmente nomeadas como  \textit{Hardware Abstraction Layers} (HALs). Como cada HAL é específico do fabricante, a diversidade de periféricos e a falta de padronização fazem com que as interfaces de programação específicas não sejam compatíveis entre si. Como resultado, sempre que um novo modelo de microcontrolador é adotado em um sistema embarcado, os programadores precisam aprender sua interface de programação específica, dificultando ainda mais a otimização de código. Neste sentido, foram propostas ao longo do tempo, bibliotecas para linguagem de programação de propósito geral e \textit{frameworks}. Esses \textit{frameworks} atuam como uma camada de \textit{software} intermediária, oferecendo funções que vão além das camadas HAL disponibilizadas pelos fabricantes. Um exemplo bastante conhecido é o Arduino \cite{Arduino}, que abstrai o acesso aos periféricos mais utilizados em plataformas como AVR, STM32 e ExpressIf32. Outras ferramentas similares são o CMSIS\footnote{Site do CMSIS: \url{https://www.arm.com/technologies/cmsis}}, MBED\footnote{Site do MBED: \url{https://os.mbed.com/handbook/mbed-Microcontrollers}}, STM32CUBE\footnote{Site do STM32CUBE: \url{https://www.st.com/en/ecosystems/stm32cube.html}} e LibOpenCM3\footnote{Site do LibOpenCM3: \url{https://libopencm3.org}}, sendo essas últimas especificamente voltadas para arquiteturas baseadas em ARM.
+
+
+Tendo a otimização de código um papel fundamental na realização do potencial máximo de \textit{software} e \textit{hardware}, desenvolvedores buscam uma solução universal para transformar programas de entrada em versões semanticamente equivalentes, porém mais eficientes, sem esforço manual. A fim de alcançar este objetivo, os compiladores utilizam um \textit{front-end}, que traduz o código-fonte de uma linguagem de programação para uma representação intermediária (IR), um \textit{middle-end optimizer}, que executa otimizações independentes da linguagem e da plataforma sobre a IR do código original, e um \textit{back-end}, que converte a IR em código binário. O otimizador é comumente implementado como uma sequência de passes que aplicam transformações no código. O desempenho da otimização depende principalmente da seleção e ordem das passagens de otimização \cite{deng_compilerdream_2024}.
+
+Os compiladores disponibilizam estratégias de otimização com ordens pré-definidas, cada uma estabelecendo um conjunto ordenado de passes de otimização, como -O1, -O2 e -O3 para melhorar a velocidade de execução, e -Os e -Oz\footnote{-Oz existe somente na família de compiladores do LLVM.} para reduzir o tamanho do programa. Porém, com a diversidade de programas e plataformas, essas estratégias pré-definidas acabam não sendo ideais em todos os casos, e é possível melhorar o desempenho de um programa específico se encontrarmos uma sequência de passes melhor, comparada com os passes fornecidos pelos compiladores \cite{georgiou2018less,cummins_llm_2025, deng_compilerdream_2024}.
+
+
+%  Atualmente, na educação, a robótica é vista como potencializadora do trabalho coletivo, permitindo que os estudantes programem, discutam e consequentemente, aprendam brincando \cite{parreira_robotica_2022}. 
+
+
+Na última década, no  trabalho de \citeonline{wang_machine_2018},  foi empregado inteligência artificial para otimização de código por meio de aprendizado de máquina, utilizando atributos como tamanho das funções e/ou quantidade de blocos básicos, definidos com base no conhecimento humano, para representar o programa de forma que um modelo de aprendizado de máquina conseguisse operar sobre ele. Outras abordagens usaram redes neurais gráficas \cite{liang_learning_2023}. Contudo, segundo \citeonline{cummins_llm_2025}, tais pesquisas têm um problema em comum: elas não conseguem representar o programa original por completo, o que interfere no aprendizado e resultado do modelo de IA. Modelos de IA projetados para representação textual, como ChatGPT\footnote{Site de introdução do ChatGPT: \url{https://openai.com/index/chatgpt/}}, \textit{Code Llama}\footnote{Site da Meta Code Llama: \url{https://www.llama.com/code-llama}} e Codex\footnote{Site do Codex: \url{https://openai.com/index/openai-codex}}, avançam no entendimento estatístico de códigos e podem sugerir conclusões prováveis para códigos incompletos. No entanto, os mesmos não foram treinados de forma específica para otimização de código. O ChatGPT, por exemplo, consegue fazer pequenos ajustes em programas, como marcar variáveis para serem armazenadas como registradores e até tenta otimizações mais substanciais como vetorização. No entanto, ele com frequência alucina e comete erros, resultando muitas vezes em códigos incorretos \cite{cummins_llm_2025}.
+
+
+Recentemente, a elaboração de \textit{Large Language Models} (LLMs) para otimização de código tem mostrado resultados promissores, como evidenciado por \citeonline{cummins_llm_2025}, que apresentou o modelo LLM Compiler, treinado com aprendizado supervisionado, especificamente para selecionar passes de otimização no nível LLVM IR, alcançando uma redução média de 3{\,}\% a 5{\,}\% na contagem de instruções em comparação à otimização padrão do compilador LLVM com a flag -Oz. Além disso, os autores disponibilizaram os modelos publicamente na plataforma \textit{Hugging Face}\footnote{Site do \textit{Hugging face: \url{https://huggingface.co}}}, sob uma licença comercial personalizada, com o objetivo de incentivar ampla reutilização, permitindo assim que pesquisadores acadêmicos e profissionais da indústria possam expandir e aprofundar pesquisas nessa área emergente.
+
+O \textit{Hugging Face} destaca-se como uma plataforma central no atual ecossistema de Inteligência Artificial, atuando como um repositório massivo de modelos de linguagem e outros artefatos de \textit{machine learning}. O \textit{Hugging Face Hub} hospeda hoje mais de 900 mil modelos de IA, além de centenas de milhares de conjuntos de dados e aplicativos de demonstração, todos de acesso aberto, facilitando a colaboração e a reutilização pela comunidade. Essa plataforma cumpre um papel de distribuição e compartilhamento de modelos: pesquisadores e desenvolvedores podem publicar seus modelos treinados, permitindo que outros os utilizem ou aprimorem sem precisar treiná-los do zero. Isso democratiza o acesso a  modelos avançados de linguagem e incentiva uma abordagem comunitária na evolução da IA, em contraste a soluções proprietárias restritas a grandes empresas \cite{noauthor_hugging_nodate1}.
+
+
+% Muito detalhe para uma introdução, comentei. Essa tarefa, no entanto, é complexa, sendo importante notar que um passe(ou transformação) de código nem sempre é uma otimização. Em vez disso, ela pode modificar a estrutura da Representação Intermediária (IR) para permitir a aplicação de outras otimizações. Assim, identificar combinações eficientes de passes requer um nível de análise que os LLMs mais recentes tem demonstrado alcançar, de acordo com os resultados apresentados por \citeonline{cummins_large_2023}. Portanto, um código menor não significa necessariamente ser mais rápido em sua execução, mas pode abrir espaços para outras otimizações.\cite{georgiou_less_2018}.
+
+O \textit{LLM Compiler} \citeonline{cummins_llm_2025} é voltado à otimização de compiladores, porém focado em arquiteturas de CPUs de propósito geral (principalmente desktop/servers x86-64 e ARM de 64 bits) não abrangendo microcontroladores de 8 ou 16 bits. O modelo foi treinado com conjuntos de dados de LLVM IR e código de montagem dessas plataformas de alto desempenho. Assim, surge a necessidade de customizar o modelo, de forma a torná-lo assertivo para microcontroladores (MCUs) como o STM32, considerando suas restrições arquiteturais (baixos clocks na ordem de dezenas de MHz e pouquíssimos kilobytes de memória disponíveis). Um \textit{LLM Compiler} especializado para MCUs poderia ser treinado para ``entender'' as peculiaridades do código em arquiteturas de 8/16 bits e otimizar visando tamanho e eficiência energética, explorando instruções e padrões específicos desses processadores de recursos limitados. Em outras palavras, o \textit{LLM Compiler} proposto por \citeonline{cummins_llm_2025} mostrou o potencial dos modelos de linguagem na otimização de código para CPUs poderosas e é possível estender essa abordagem aos microcontroladores, refinando o treinamento do modelo.
+
+Neste sentido, os projetos ``\textit{Robotics Language}: Uma Linguagem de Programação de Propósito Específico para Microcontroladores'' (PI05974-2024) e seu antecessor ``Especificação e Construção de Protótipos Funcionais de Kits Robóticos de Baixo Custo para uso em Processos de Ensino-Aprendizagem'' (PI02361-2018) \cite{oliveira2024robcmp}, ambos desenvolvidos na Universidade Federal de Jataí, têm como foco o desenvolvimento de uma linguagem de programação voltada especificamente para aplicações em robótica e microcontroladores, denominada \textit{The Robotics Language} (ROBL), juntamente com seu compilador correspondente, o Robcmp, com o fim de criar um ecossistema de robótica educacional de baixo custo.
+
+\section{Objetivo do Trabalho}
+Portanto, este trabalho tem como objetivo refinar o modelo \textit{LLM Compiler} no contexto de MCUs, especificamente o STM32F103C8T6, usando como base programas escritos na \textit{Robotics Language}.A proposta busca adaptar técnicas de otimização já consolidadas para arquiteturas de propósito geral à realidade de sistemas embarcados com recursos limitados, ainda pouco explorada na literatura.  Os objetivos específicos foram:
+\begin{enumerate}
+    \item Converter repositórios de código escritos em C para a ROBL, ignorando os códigos em C que necessitam de funcionalidades inexistentes na ROBL;
+    \item Compilar o repositório convertido usando otimizações pré-determinadas e busca semi-exaustiva de passes, para encontrar o melhor código otimizado de cada programa;
+    \item Criar, para treinamento supervisionado do modelo, pares \textit{prompt-label} com o código em ROBL e o melhor código otimizado encontrado; e
+    \item Executar experimentos para validar o desempenho do modelo refinado ao indicar sequências de passes para otimização de programas não usados no treinamento, escritos em ROBL.
+\end{enumerate}
+
+\section{Contribuição do Trabalho}
+Como contribuição, desenvolve-se um pipeline completo de preparação de dados, conversão de código, \textit{autotuning} e avaliação quantitativa, visando gerar versões de código menores e compiláveis. A relevância da pesquisa se justifica pela crescente demanda por eficiência em ambientes restritos além da oportunidade de inovar ao aplicar modelos de linguagem de grande escala na otimização automatizada de código para microcontroladores.
+
+\section{Organização da Monografia}
+% Alinhando-se ao trabalho proposto por \citeonline{cummins_llm_2025}, que demonstra a possibilidade de se aprender heurísticas diretamente do código-fonte por meio de aprendizado profundo, estudando o potencial dessas técnicas no contexto de sistemas embarcados, eliminando a necessidade de heurísticas manuais e abrindo caminho para soluções mais generalizáveis.
+
+
+
+
+% ----------------------------------------------------------
+% Elementos Textuais
+% ----------------------------------------------------------
+\chapter{Referencial Teórico}
+
+\section{Introdução}
+Este capítulo apresenta os conceitos necessários para a compreensão deste texto, definindo conceitos sobre os compiladores e suas principais características, Inteligência Artificial e, por fim, estratégias de otimização em compiladores.
+
+\section{Compiladores}
+ Compiladores são fundamentais para a computação moderna. Eles atuam como tradutores, transformando linguagens de programação orientadas ao ser humano em linguagens de máquina orientadas ao computador \cite{fischer2010crafting}. Com o surgimento de novas instruções para MCUs e CPUs, os compiladores devem se adaptar, com o fim de melhorar seu desempenho em processamento e tempo de execução.
+ 
+Um compilador é uma ferramenta que traduz \textit{software} escrito em uma linguagem para outra linguagem. Para traduzir texto de uma linguagem para outra, a ferramenta precisa entender tanto a forma, ou sintaxe, quanto o conteúdo, ou significado, da linguagem de entrada. Ela precisa compreender as regras que governam a sintaxe e o significado na linguagem de saída. Por fim, ela precisa de um esquema para mapear o conteúdo da linguagem fonte para a linguagem alvo \cite{cooper2012engineering}.
+
+ Um compilador é dividido internamente em fases, cada uma contribuindo para o processo de compilação \cite{foleiss2009scc}. A \hyperref[fig:minhafigura1]{Figura~\ref{fig:minhafigura1}}  mostra a sequência macro de passos de um compilador. Segundo \citeonline{fischer2010crafting}, após receber um programa fonte como entrada, um compilador passa por três etapas principais:
+ 
+ \begin{enumerate}[label=\roman*.]
+    \item O \textit{front-end}, onde serão realizadas as etapas de análise léxica, sintática e semântica, além de produzir a árvore sintática e a transformar em código intermediário (ou representação intermediária-IR) (sendo este item um \textit{\textit{parser})};
+    \item O \textit{middle-end} que processa as IRs de maneira que beneficia as fontes e destinos(basicamente gerando otimizações sobre as IRs, excluindo funções desnecessárias etc.); e
+    \item O \textit{back-end} que gera a linguagem de destino ou objeto.
+\end{enumerate}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/fig1.png}
+    \caption{Arquitetura macro de um compilador. Adaptada de \citeonline{cooper2012engineering}.}
+    \label{fig:minhafigura1}
+\end{figure}
+
+\subsection{\textit{Front-End}}
+O \textit{Front-end} determina se o código fonte é bem formado em termos de sintaxe e semântica. Se o código é válido, é criada uma representação intermediária sua no compilador; se não é válido, é reportado de volta ao usuário com mensagens de erro como diagnóstico para identificar problemas no código \cite[p~11]{cooper2012engineering}. Por sua vez, o \textit{front-end} do compilador se divide em etapas, cada uma com sua respectiva funcionalidade na tradução do código-fonte. De acordo com \citeonline{cooper2012engineering}, a primeira etapa é a análise léxica, seguida da análise sintática, análise semântica e, por último, o gerador de código intermediário. Etapas estas são descritas a seguir.
+
+\subsection{Analisador Léxico}
+ 
+Como descrito por \citeonline{fischer2010crafting}, o principal objetivo da análise léxica é transformar um fluxo de caracteres em um fluxo de \textit{tokens}. Além disso, o analisador léxico ou \textit{scanner} é o único passo de um compilador que manipula cada caractere do programa de entrada \cite{cooper2012engineering}.
+
+%repetido abaixo: Esta análise, caractere por caractere, é efetuada através da abstração de expressões regulares, transformadas em autômatos finitos não determinísticos em código, que trazem o formalismo para os reconhecedores de caracteres \cite{cooper2012engineering}. 
+
+Os analisadores léxicos dos compiladores são comumente implementados com o uso de expressões regulares, que funcionam como uma forma compacta de especificar autômatos finitos não determinísticos (AFNs). Esses padrões utilizam uma combinação de operadores e símbolos para descrever classes de caracteres e regras de repetição \cite{cooper2012engineering}. De acordo com \citeonline{blauth2010linguagens}, os principais elementos das expressões regulares incluem: o ponto (.), que representa qualquer caractere; os colchetes ([]), que definem uma classe de caracteres; o acento circunflexo (\^{}), que nega uma classe; a barra vertical (|), que representa a união de padrões; o asterisco (*), que permite zero ou mais repetições; o sinal de soma (+), que exige pelo menos uma ocorrência; e o ponto de interrogação (?), que indica uma ou nenhuma ocorrência. Por exemplo, a expressão regular [0-9]+ reconhece qualquer sequência de dígitos decimais, ou seja, números naturais diferentes do conjunto vazio. Este tipo de expressão pode ser utilizado para definir \textit{tokens} numéricos inteiros, sendo uma parte essencial no funcionamento do analisador léxico de linguagens de programação.
+
+\subsection{Analisador Sintático}
+O analisador sintático, também conhecido como \textit{parser}, opera sobre o fluxo de \textit{\textit{tokens}} gerado pelo analisador léxico, verificando se a sequência segue as regras gramaticais da linguagem.  O analisador sintático solicita um \textit{token} ao
+ analisador léxico, que o gera a partir do código fonte. O \textit{token} recebido é avaliado dentro
+ das regras sintáticas e eventualmente passa a compor a tabela de símbolos \cite{aho1995compiladores}. Quando encontra construções que violam a sintaxe, o \textit{parser} reporta erros sintáticos e, em alguns casos, tenta realizar a recuperação de erros para permitir que a análise prossiga \cite{fischer2010crafting}. A partir dessa análise, caso a sintaxe siga as regras gramaticais da linguagem, é construída uma árvore sintática que será utilizada nas próximas fases do compilador \cite{cooper2012engineering}.
+
+Para a análise sintática, utiliza-se uma gramática livre de contexto (GLC), composta por regras formais que descrevem como os \textit{tokens} podem ser agrupados. Essas regras envolvem símbolos terminais (os próprios \textit{tokens}) e não terminais (variáveis que representam agrupamentos de \textit{tokens}), permitindo definir a estrutura hierárquica de uma linguagem \cite{blauth2010linguagens}. No entanto, uma das principais dificuldades no projeto de gramáticas é garantir que não haja ambiguidade (situação em que uma mesma cadeia de entrada pode gerar mais de uma árvore de derivação). Por exemplo, a \hyperref[fig:minhafigura2]{Figura~\ref*{fig:minhafigura2}} demonstra uma AST ambígua para a expressão A + B - C. Uma gramática ambígua permite diferentes formas de agrupamento dos operadores, resultando em árvores de sintaxe abstrata (ASTs) distintas e, consequentemente, comportamentos diferentes na execução do programa. Como as fases posteriores da tradução associarão significado com a forma detalhada da árvore sintática, múltiplas árvores implicam múltiplos significados possíveis para um único programa — o que é uma característica indesejável para uma linguagem de programação. Nessas situações, o compilador não teria como inferir automaticamente qual estrutura é a correta, o que evidencia a importância de projetar gramáticas bem definidas e livres de ambiguidade \cite{cooper2012engineering}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{imagens/fig2.png}
+    \caption{Exemplo de árvore ambígua de derivação para a expressão A + B - C.}
+    \label{fig:minhafigura2}
+\end{figure}
+
+\subsection{Analisador Semântico}
+A análise semântica é responsável por garantir que as construções do programa, mesmo estando sintaticamente corretas, também façam sentido lógico dentro do contexto da linguagem. É nessa etapa que o compilador verifica aspectos como a compatibilidade entre tipos de dados e o uso apropriado de identificadores. Um dos pontos centrais dessa fase é a verificação de tipos, onde o compilador analisa se os operadores estão sendo aplicados sobre operandos válidos conforme as regras definidas pela linguagem de programação. Essa verificação é essencial para evitar inconsistências que, embora passem pela análise sintática, podem resultar em comportamentos incorretos durante a execução \cite{aho1995compiladores}.
+
+Como dito por \citeonline{costacompiladores}, a função do analisador semântico é identificar erros que não podem ser detectados apenas pela análise sintática, utilizando a tabela de símbolos como suporte para garantir que a árvore gerada pelo \textit{parser} (AST) esteja em conformidade com as regras semânticas da linguagem. Essa verificação é essencial para garantir que o programa resultante seja seguro, funcional e livre de inconsistências. Esse processo envolve percorrer cada nó da AST e validar sua estrutura e significado, assegurando que as operações representadas sejam logicamente válidas \cite{fischer2010crafting}.
+
+Entre as validações mais comuns estão: compatibilidade de tipos em atribuições, verificação de parâmetros em chamadas de função, uso de constantes, e a exigência de que variáveis e funções sejam declaradas antes de seu uso.
+
+
+\subsection{\textit{Middle-End}}
+
+De acordo com \citeonline{fischer2010crafting}, em um compilador, o termo \textit{front-end} refere-se às fases responsáveis por analisar o código-fonte, enquanto o \textit{back-end} lida com a geração do código de saída, geralmente na forma de código de máquina ou \textit{\textit{assembly}}. Entre essas duas etapas, existe um conjunto intermediário de fases conhecido como \textit{middle-end} \cite{cooper2012engineering}. O \textit{middle-end} permite aplicar otimizações e transformações na representação intermediária (IR) do código, de forma independente da linguagem de entrada e da arquitetura de destino \cite{fischer2010crafting}. A tarefa do otimizador é transformar o programa em IR, produzido pelo \textit{front-end}, de uma forma que melhore a qualidade do código produzido pelo \textit{back-end} \cite{cooper2012engineering}.
+
+%Se ignorarmos por um momento as questões de desempenho, tanto uma única instrução de máquina quanto um programa completo podem ser tratados como uma sequência de instruções. Afinal, em um certo nível de abstração, ambos têm como função alterar o estado da computação conforme são executados \cite{fischer2010crafting}. Neste trabalho, estamos focados nas instruções de baixo nível, que o otimizador do Compilador utiliza para otimizar os programas em IR, chamados até agora de passes de otimização.
+
+As otimizações realizadas no middle-end, ou passes de otimização, podem variar amplamente. No caso do LLVM, os passes de otimização são divididos em:\footnote{Passes do LLVM: \url{https://llvm.org/docs/Passes.html}}
+
+\begin{enumerate}
+    \item Passes de análise (\textit{Analysis Passes}): calculam informações que podem ser usadas por outros passes, ou para fins de depuração ou visualização do programa. Por exemplo, o passe ``\textit{instcount}'', que apenas conta quantas instruções diferentes existem no programa.
+    
+    \item Passes de transformação (\textit{Transformer Passes}): podem usar (ou invalidar) os passes de análise. Todos os passes de transformação modificam o programa de alguma forma. Por exemplo, o passe ``\textit{dce}'', \textit{dead code elimination}, remove partes do código que nunca são usadas, como variáveis que são criadas mas nunca lidas.
+    
+    \item Passes de utilidade (\textit{Utility Passes}): oferecem funções de apoio que não analisam nem modificam o código, mas ajudam em outras tarefas. Por exemplo, um passe que dá nomes para instruções sem nome é útil para facilitar a leitura ou comparação de versões do código. Como exemplo de passe temos o ``\textit{verify}'' que age como um revisor ortográfico: ele verifica se o código está escrito corretamente segundo as regras internas do compilador. Ele não muda o código, mas avisa se há erros ou coisas malfeitas. 
+    %como se fosse colocar etiquetas em peças sem rótulo para ajudar a organizar melhor.
+\end{enumerate} 
+
+
+
+\subsection{\textit{Back-end}}
+
+A etapa do \textit{back-end} (ou gerador de código) de um compilador só entra em ação após todas as fases de compilação anteriormente citadas e tem como função converter a representação intermediária (IR), gerada pelo \textit{front-end}, em código objeto ou código de máquina compatível com a arquitetura de destino \cite{cooper2012engineering}. As exigências que são  tradicionalmente impostas sobre o \textit{back-end} são as seguintes: O código objeto precisa ser correto e de alta qualidade, significando que faz bom uso dos recursos da máquina-alvo \cite{aho1995compiladores}. 
+
+Embora certos aspectos da geração de código variem conforme a arquitetura da máquina-alvo e o sistema operacional utilizado, há elementos fundamentais que são comuns à maioria dos compiladores. Entre eles, destacam-se a gestão de memória, a seleção de instruções adequadas à arquitetura, a alocação eficiente de registradores e a determinação da ordem de avaliação das expressões. Esses elementos desempenham papel central no processo de geração de código. Como dito anteriormente, a entrada para essa etapa é composta pela representação intermediária (IR) gerada pelo \textit{front-end} do compilador, bem como pelas informações contidas na tabela de símbolos. Esta tabela é essencial para o mapeamento correto dos objetos de dados durante a execução, pois fornece os dados necessários para localizar os endereços associados aos identificadores presentes na IR. A saída é o programa objeto \cite{aho1995compiladores}.
+
+
+Assim o \textit{back-end} converte a representação intermediária em código de máquina adaptado à arquitetura de destino\cite{fischer2010crafting}. Essa etapa ganha importância especial quando o alvo são microcontroladores, cujas limitações de memória e processamento exigem geração de código altamente otimizada, como veremos na seção a seguir.
+
+
+
+
+\section{Microcontroladores}
+
+Segundo \citeonline{hussain2016programming}, um microcontrolador pode ser entendido como um pequeno computador encapsulado em um único chip. Ele reúne, em um mesmo circuito integrado, uma unidade de processamento (CPU), memória RAM, algum tipo de memória não volátil (como ROM ou Flash) e interfaces de entrada e saída. Ao contrário dos computadores de uso geral, que são projetados para executar diversas aplicações, os microcontroladores são desenvolvidos com foco em tarefas específicas, operando geralmente em sistemas embarcados com uma única finalidade. Produtos controlados automaticamente, como sistemas de controle automático de motor, controles remotos, ferramentas elétricas, brinquedos e máquinas de escritório, ou seja, fotocopiadoras e impressoras que são comumente usadas, estão sendo programados usando microcontroladores.
+Dois exemplos de microcontroladores de baixo custo são:
+
+\begin{itemize}
+    \item AVR: Elaborado pela Microship Technology, com uma arquitetura flexível e de baixo consumo de energia, incluindo o Event System, recursos analógicos inteligentes e periféricos digitais avançados. A \hyperref[fig:minhafigura4]{Figura~\ref*{fig:minhafigura4}} apresenta um exemplo de microcontrolador da família AVR, desenvolvido pela \textit{Microchip Technology}, é o modelo AVR16DD14. Ele conta com 14 pinos configuráveis para entrada e saída, opera com frequência máxima de 24 MHz e possui 2 kB de memória SRAM, além de 16 kB de memória Flash para armazenamento do programa\footnote{Site da Microchip sobre o AVR16DD20: \url{https://www.microchip.com/en-us/product/AVR16DD20}} \cite{avr16dd14-datasheet}.
+    
+    \item STM32: A família STM32, da \textit{STMicroelectronics}, é composta por microcontroladores de 32 bits baseados no núcleo ARM Cortex-M, conhecidos por sua alta performance, suporte a tempo real, baixo consumo e operação em baixa voltagem. Um exemplo é o STM32F103C8T6, que utiliza o núcleo ARM Cortex-M3, operando a até 72 MHz, com 128 kB de memória Flash, 20 kB de SRAM e até 37 portas de entrada/saída. Ele também conta com diversos periféricos conectados a dois barramentos APB, oferecendo boa flexibilidade para aplicações embarcadas. A \hyperref[fig:minhafigura5]{Figura~\ref*{fig:minhafigura5}} mostra uma placa com esse microcontrolador em destaque \cite{stm32f103r8-datasheet}.\footnote{DataSheet sobre  STM32F103x8 e STM32F103xB \url{https://www.st.com/resource/en/datasheet/stm32f103r8.pdf}}
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{imagens/fig4.png}
+    \caption[AVR16DD14, de 24 Mhz, com 14 portas de entrada e saída]{Um dos microcontroladores da linha AVR, desenvolvido pela Microchip Technology (empresa que incorporou a antiga Atmel), é o AVR16DD14. Esse modelo conta com 14 portas de entrada e saída, opera com frequência máxima de 24 MHz, e dispõe de 2 kB de memória SRAM e 16 kB de memória Flash para armazenamento do código \citeonline{avr16dd14-datasheet}.}
+    \label{fig:minhafigura4}
+\end{figure}\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{imagens/fig5.jpg}
+    \caption[Placa com um microcontrolador STM32F103C8T6, de 72 Mhz]{A imagem apresenta uma placa que utiliza um microcontrolador STM32, desenvolvido pela STMicroelectronics. O modelo em destaque é o STM32F103C8T6, que opera com frequência máxima de 72 MHz, possui 20 kB de memória SRAM, 128 kB de memória Flash e oferece até 37 portas de entrada e saída. Além do microcontrolador, a placa inclui outros componentes essenciais para seu funcionamento, como o oscilador, o circuito de alimentação e os conectores laterais que permitem o acesso às portas de I/O.\citeonline{stm32f103r8-datasheet}}
+    \label{fig:minhafigura5}
+\end{figure}
+
+\section{Linguagem Específica de Domínio e a \textit{Robotics Language}}
+
+Linguagens específicas de domínio (DSLs) são linguagens de programação desenvolvidas com foco em um conjunto restrito de problemas, oferecendo maior expressividade e simplicidade dentro daquele contexto em comparação às linguagens de propósito geral. Por serem projetadas com base no conhecimento técnico de um domínio específico (como bancos de dados, estatística, sistemas embarcados ou mesmo aplicações web), as DSLs tornam a escrita e a leitura do código mais intuitivas e alinhadas à lógica do problema que se busca resolver \cite{mernik2005and}.
+
+A implementação de sistemas computacionais voltados a domínios específicos tem se tornado cada vez mais complexa, exigindo a integração de múltiplas áreas do conhecimento. Um exemplo claro é o desenvolvimento de sistemas web modernos, que demanda atenção simultânea a aspectos como usabilidade, segurança, persistência de dados e regras de negócio. Para lidar com essas diferentes preocupações de forma mais estruturada e independente da tecnologia de codificação utilizada, engenheiros de software vêm recorrendo às Linguagens Específicas de Domínio (DSLs), como aponta \citeonline{fowler2010domain}.  Essas linguagens são amplamente adotadas para modelar e codificar funcionalidades de um domínio específico \cite{iung2020systematic}, no caso deste trabalho, no domínio dos microcontroladores.
+
+%\subsection{Robotics Language}
+
+A \textit{Robotics Language} é uma linguagem de programação desenvolvida com foco no domínio de microcontroladores aplicados à robótica e IoT. Seu principal diferencial é a abstração das particularidades do hardware diretamente no compilador e na biblioteca padrão, permitindo que o desenvolvedor escreva um único código que funcione em diferentes plataformas sem precisar de adaptações manuais ou diretivas específicas \cite{oliveira2024robcmp}.
+
+Além de facilitar a portabilidade, a linguagem realiza uma análise semântica mais rica, prevenindo erros que ocorreriam em tempo de execução, ainda na etapa de compilação. Sua construção foi feita utilizando ferramentas clássicas de compiladores como o Flex\footnote{Site do Flex: \url{https://github.com/westes/flex}} (versão 2.6.4) para a análise léxica, Bison \footnote{Site do Bison: \url{https://www.gnu.org/software/bison/manual/}/}(versão 3.8.2) para a análise sintática e o LLVM\footnote{Site do LLVM: \url{https://www.llvm.org/}/} para o \textit{back-end}, este último um \textit{framework} moderno e modular que permite tanto a otimização quanto a geração de código para diferentes arquiteturas de microcontroladores.
+
+O ecossistema de ferramentas da linguagem inclui suporte à depuração em simulador e realce de sintaxe no \textit{Visual Studio Code} (a IDE ideal para o desenvolvimento) por meio da extensão \textit{RobCmpSyntax}, o que torna o desenvolvimento mais vísivel e intuitivo, especialmente em ambientes educacionais. Ao utilizar a análise semântica do compilador, é possível evitar erros recorrentes que costumam surgir durante o desenvolvimento de firmware em linguagens de propósito geral, como C ou C++, justamente por essas linguagens não serem adaptadas às particularidades do domínio de aplicação.
+
+Embora as DSLs, como a \textit{Robotics Language}, simplifiquem o desenvolvimento ao abstrair detalhes de hardware e otimizar a portabilidade, seu potencial pode ser ampliado com técnicas de Inteligência Artificial, conforme evidenciado no trabalho de \citeonline{parallelProgram}. Modelos de IA, especialmente os de aprendizado de máquina, podem explorar o código gerado por DSLs para identificar padrões e aplicar otimizações automáticas, unindo a expressividade da linguagem à capacidade adaptativa de algoritmos inteligentes.
+
+\section{Inteligência Artificial}
+
+A inteligência artificial (IA) busca capacitar sistemas computacionais a realizar tarefas que, tradicionalmente, associamos à mente humana. Isso inclui tanto habilidades comumente consideradas ``inteligentes'', como o raciocínio lógico, quanto funções como visão ou controle motor, que também envolvem processos cognitivos importantes \cite{morandin2022artificial}.
+
+Em vez de representar um único tipo de habilidade, nossa inteligência abrange um conjunto complexo e estruturado de capacidades distintas voltadas ao processamento de informações. De forma análoga, a IA combina diferentes métodos e abordagens para lidar com uma ampla gama de desafios, adaptando-se conforme o tipo de problema a ser resolvido \cite{boden2017inteligencia}. Além disso, as IAs são baseadas em algoritmos e tecnologias de aprendizagem automático para que a máquina tenha a capacidade de realizar habilidades cognitivas e tarefas sozinhas, seja de maneira autônoma ou semi-autônoma \cite{morandin2022artificial}.
+
+\subsection{Aprendizado de Máquina}
+Como explicado por \citeonline{zhou2021machine}, o aprendizado de máquina é uma abordagem dentro da computação que permite que sistemas melhorem seu desempenho a partir da experiência, utilizando métodos computacionais. Nesse contexto, a ``experiência'' se traduz em dados, e o principal objetivo dessa área é desenvolver algoritmos capazes de extrair padrões desses dados para construir modelos preditivos (resultado aprendido a partir dos dados).
+
+
+O aprendizado de máquina pode ser categorizado em três tipos principais: supervisionado, não supervisionado e por reforço \cite{ludermir}. No aprendizado supervisionado, o algoritmo recebe um conjunto de exemplos de treinamento rotulados (com a resposta esperada) e aprende a associar as entradas às saídas corretas, tornando-se capaz de predizer resultados em novos dados cujo rótulo é desconhecido. Já no aprendizado não supervisionado, o algoritmo trabalha com dados não rotulados e procura por padrões ocultos ou agrupamentos (\textit{clustering}) nesses dados, sem conhecimento prévio das categorias, descobrindo estruturas subjacentes de forma autônoma. Por fim, no aprendizado por reforço, um agente aprende a tomar decisões através de recompensas e punições recebidas ao interagir com um ambiente; o sistema reforça ações corretas e desencoraja as incorretas, visando maximizar uma recompensa cumulativa ao longo do tempo \cite{russell2020artificial}.
+
+\subsection{Treinamento supervisionado}
+\label{sec:supervisionado}
+
+No aprendizado supervisionado, são utilizados exemplos em que se conhece tanto a entrada quanto a saída corretas – como uma lista de pares (entrada, saída), tipo $( (x_1, y_1), (x_2, y_2),$ \ldots, $(x_n, y_n) )$ \cite{mahesh2020machine}. Cada um desses pares foi gerado por alguma regra que relaciona entrada e saída; a regra exata pode ser desconhecida. A tarefa principal, então, é descobrir uma fórmula ou método capaz de imitar o comportamento dessa regra original o máximo possível. Em outras palavras, queremos que essa fórmula ou método consiga prever corretamente a saída $y$ para uma nova entrada $x$ \cite{ludermir}. Alguns autores chamam essa fórmula ou método de função h, ou função hipótese, pois representa uma suposição sobre como o mundo funciona, construída com base nos exemplos que se tem.
+
+Para avaliar corretamente um modelo de aprendizado, é necessário separar os dados de entrada em dois conjuntos: um para treinamento e outro para teste. O conjunto de treinamento serve como base para o modelo aprender, ou seja, é a partir desses exemplos que ele tenta identificar padrões. Já o conjunto de teste é usado posteriormente para verificar se o modelo consegue fazer boas previsões em dados que ele nunca viu antes, medindo assim seu desempenho \cite{ludermir}.
+
+%A escolha de um espaço de hipóteses pode ser guiada por conhecimento prévio sobre o processo que gerou os dados ou, na ausência disso, por uma análise exploratória que envolva testes estatísticos e visualizações como histogramas, diagramas de dispersão e diagramas de caixa, ajudando a obter uma compreensão inicial dos dados e sugerir qual espaço pode ser mais adequado. Outra abordagem é simplesmente testar diferentes espaços de hipóteses e avaliar, por meio de desempenho, qual se adapta melhor ao problema. Uma vez definido o espaço, a escolha de uma boa hipótese dentro dele pode se basear no critério de consistência, ou seja, uma hipótese \( h \) que, ao ser aplicada a cada instância \( x_i \) do conjunto de treinamento, produza uma saída \( h(x_i) \) igual ao rótulo correspondente \( y_i \). Em tarefas com saídas contínuas, a correspondência exata é rara, então buscamos uma função de melhor ajuste, em que \( h(x_i) \) esteja o mais próximo possível de \( y_i \). No entanto, mais importante do que o desempenho no treinamento é a capacidade da hipótese de lidar com novos dados, e isso pode ser avaliado usando um segundo conjunto de amostras, utilizando o  conjunto de teste. Uma hipótese é considerada capaz de generalizar bem quando consegue prever com precisão os resultados dessas novas entradas \cite{russell2020artificial}.
+
+
+Por exemplo, considere o cenário de uma instituição de ensino em que se deseja prever o desempenho dos estudantes. Um modelo de aprendizado de máquina poderia ser treinado com dados históricos de alunos, incluindo variáveis como notas em disciplinas anteriores, frequência às aulas e envolvimento em atividades acadêmicas. Com esses exemplos rotulados – por exemplo, dados de alunos formados indicando quais foram aprovados ou reprovados – o algoritmo aprenderia padrões que relacionam essas variáveis ao sucesso ou dificuldade acadêmica. Após o treinamento, o modelo seria capaz de prever quais alunos atuais estão sob risco de baixo desempenho ou reprovação, com base em seus dados mais recentes, permitindo que a escola ou os professores realizem intervenções pedagógicas antecipadas. Esse exemplo ilustra uma aplicação típica de aprendizado supervisionado na educação, em que o sistema aprende com experiências passadas (dados de alunos anteriores) para tomar decisões preditivas no presente.
+
+\subsection{\textit{Large Language Models} (LLMs)}
+%ver sobre essas referências de IAs abaixo
+Modelos de linguagem como o \textit{Code Llama}\footnote{Site do Code Llama: \url{https://www.llama.com/code-llama}} e o Chat GPT\footnote{Site do ChatGPT: \url{https://openai.com/index/chatgpt}} \cite{zhao2024explainability} são sistemas computacionais capazes de entender e produzir texto em linguagem natural. Eles têm a capacidade de prever a probabilidade de certas sequências de palavras ou até mesmo gerar novos textos com base em uma entrada fornecida, o que os torna ferramentas poderosas e versáteis em diversas aplicações \cite{chang2024survey}.
+
+Modelos de Linguagem de Grande Escala, conhecidos como LLMs, são versões avançadas dos modelos de linguagem, caracterizados por possuírem uma quantidade enorme de parâmetros e uma capacidade de aprendizado bastante sofisticada. O principal componente por trás do funcionamento desses modelos é o mecanismo de autoatenção presente na arquitetura \textit{Transformer}, que se tornou a base para diversas tarefas em Processamento de Linguagem Natural (PLN). Os \textit{Transformers} trouxeram uma mudança significativa para a área de PLN por conseguirem lidar de forma eficiente com dados sequenciais, permitindo paralelização no treinamento e capturando relações de longo alcance dentro dos textos \cite{chang2024survey}.
+
+O diferencial da arquitetura \textit{Transformer}, utilizada como base na maioria dos LLMs atuais, está no mecanismo de autoatenção. Em vez de depender de estruturas sequenciais como redes recorrentes, o \textit{Transformer} é capaz de analisar todas as partes de uma sequência de entrada ao mesmo tempo, identificando relações entre palavras mesmo quando elas estão distantes no texto. Isso torna o treinamento mais rápido, facilita a paralelização e melhora a capacidade do modelo de capturar padrões complexos na linguagem \cite{vaswani2017attention}.
+
+Apesar de seu grande potencial, o treinamento de LLMs exige um volume enorme de recursos computacionais e de dados. Um exemplo disso é o \textit{Code Llama}, cujo treinamento demandou cerca de 1,4 milhão de horas de GPU A100. Além disso, preparar e organizar conjuntos de dados com centenas de bilhões de \textit{tokens} é uma tarefa bastante complexa. Esses custos acabam sendo um obstáculo para muitos pesquisadores, tornando inviável a reprodução ou expansão desses modelos em contextos com recursos mais limitados \cite{cummins_llm_2025}.
+
+Os LLMs, ao demonstrarem capacidade de compreender e transformar código, como apresentado no trabalho de tornam-se candidatos promissores para apoiar a otimização em compiladores, como apresentado no trabalho de \citeonline{cummins_llm_2025}. Com essa base, vamos entender sobre o processo de otimização em compiladores na próxima seção.
+
+
+\section{Otimização em compiladores}
+\label{sec:otimizacoes}
+A função do otimizador é aplicar transformações sobre o código em representação intermediária (IR), gerado pelo \textit{front-end}, com o objetivo de melhorar a qualidade do código final que será emitido pelo \textit{back-end}. Essa ideia de ``melhora'' pode variar bastante, dependendo do contexto. Na maioria dos casos, significa tornar o código executável mais rápido. No entanto, em outras situações, a otimização pode estar voltada para a redução do consumo de energia ou para diminuir o uso de memória. Todas essas metas fazem parte do domínio da otimização dentro de um compilador \cite{cooper2012engineering}.
+
+\subsection{Otimização Clássica -- sem Inteligência Artificial}
+
+Até recentemente, encontrar uma tradução ótima era descartado como sendo algo difícil demais de se alcançar e um esforço irrealista \cite{wang_machine_2018}. \citeonline{faustino2021new} nos dizem que compiladores disponibilizam ao desenvolvedor algumas sequências de otimização pré-configuradas, cada uma voltada para um objetivo específico, como melhorar o desempenho do código ou reduzir seu tamanho. No caso do LLVM, por exemplo, o otimizador do \textit{middle-end}, conhecido como Opt, oferece três níveis padrão voltados para desempenho: \textit{-O1} \textit{-O2} e \textit{-O3}. Além disso, existem também dois níveis focados na redução do tamanho do código gerado: \textit{-Os} e \textit{-Oz} \cite{deng_compilerdream_2024}.
+
+Cada uma dessas sequências ativa uma série de etapas de compilação, que podem incluir tanto análises quanto transformações sobre o código intermediário. Para se ter uma ideia, o nível O1 no LLVM executa 229 passes de otimização; já o -O2 aciona 277, e o O3, 281. Mesmo as sequências voltadas à economia de espaço não são simples: o Opt-Os realiza 264 passes, enquanto o Opt-Oz executa 260 \cite{faustino2021new}.
+
+\subsection{Otimização Com Inteligência Artificial}
+% Leather, H. and Cummins, C. Machine Learning in Compilers: Past, Present and Future. In FDL, 2020
+
+Embora o uso de aprendizado de máquina (ML) para otimizações em compiladores já tenha sido bastante explorado em pesquisas acadêmicas, sua adoção em compiladores industriais (que exigem alto grau de robustez e confiabilidade) ainda é bastante limitada. Até o momento, essas técnicas não se consolidaram como parte integrante de compiladores amplamente utilizados na prática \cite{trofin2021mlgo}. Apesar dos avanços, muitos dos métodos propostos ainda falham em reproduzir até mesmo análises básicas de fluxo de dados (que são essenciais para orientar decisões de otimização mais eficazes) \cite{cummins2021programl}.
+
+ O aprendizado de máquina pode ser aplicado dentro do compilador para construir um modelo capaz de tomar decisões de otimização automaticamente, independentemente do programa fornecido como entrada. Esse processo é dividido em duas etapas principais: aprendizado e aplicação. Na fase de aprendizado, o modelo é treinado com base em dados coletados de programas anteriores, enquanto na etapa de aplicação o modelo é utilizado para prever boas decisões em novos programas ainda não vistos. Para que isso seja possível, é fundamental representar os programas de forma sistemática por meio de propriedades mensuráveis, conhecidas como \textit{features}. Essas \textit{features} são essenciais, pois o aprendizado de máquina depende justamente de características numéricas extraídas do código para construir um modelo que generalize bem e consiga orientar o compilador em diferentes contextos \cite{wang_machine_2018}.
+
+ 
+
+ Entre as abordagens exploradas em aprendizado de máquina para representação de programas, uma alternativa promissora tem sido a modelagem do código como um grafo. Nessa representação, instruções individuais são conectadas por relações de controle, dados e chamadas, permitindo que o modelo compreenda cada instrução em relação ao seu contexto local dentro do grafo. Essa forma de raciocínio relacional possibilita a criação de representações latentes mais expressivas, aproveitando a estrutura do programa como um todo. A ideia se aproxima do funcionamento das IRs já utilizadas por compiladores e lembra os métodos clássicos de análise de fluxo de dados \cite{cummins2021programl}.
+
+ Por fim, \citeonline{trofin2021mlgo} nos apresenta uma aplicação real de aprendizado de máquina no contexto de compiladores, o MLGO, uma estrutura projetada para integrar técnicas de ML de forma sistemática ao compilador LLVM. Como estudo de caso, foi explorada a substituição da heurística tradicional de \textit{inlining} voltada para redução de tamanho por modelos treinados com algoritmos de aprendizado, especificamente \textit{Policy Gradient} e \textit{Evolution Strategies}. Essa abordagem conseguiu reduzir em até 7\% o tamanho do código gerado, superando o desempenho da otimização -Oz padrão do LLVM. Além disso, o modelo mostrou boa capacidade de generalização, apresentando resultados positivos tanto em diferentes alvos reais quanto em versões futuras dos mesmos programas, mesmo após meses de evolução no desenvolvimento. Esse tipo de integração mostra como o uso de técnicas de ML pode complementar e, em alguns casos, aprimorar estratégias já consolidadas no \textit{pipeline} de compilação.
+ 
+\subsection{Otimização com \textit{Large Language Models} }
+
+Há um interesse crescente em modelos de linguagem de grande porte (LLMs) para tarefas de engenharia de software, incluindo geração, tradução e teste de código \cite{cummins_llm_2025}. Desenvolvedores desejam uma solução universal que transforme programas de entrada em versões semanticamente equivalentes, mas mais eficientes, sem esforço manual. Por isso, encontrar automaticamente uma boa sequência de passes é fundamental para melhorar a eficiência das otimizações feitas pelo compilador. Para que esse processo seja viável na prática, o algoritmo precisa ser capaz de gerar sequências eficazes em um tempo aceitável e funcionar bem com diferentes tipos de programas \cite{deng_compilerdream_2024}.
+
+Uma alternativa promissora dentro do uso de modelos de linguagem para otimização de compiladores é o CompilerDream, apresentado por \citeonline{deng_compilerdream_2024}, uma abordagem baseada em aprendizado por reforço com modelo de mundo. Diferentemente de métodos tradicionais que utilizam algoritmos de busca ou aprendizado com reforço sem modelo, o \textit{CompilerDream} constrói uma simulação precisa do comportamento do compilador e treina um agente que aprende a aplicar sequências eficazes de passes de otimização. Em experimentos, o modelo demonstrou capacidade de reduzir o tamanho do código em diversos conjuntos de dados, superando o nível de otimização -Oz do LLVM em praticamente todos os \textit{benchmarks} avaliados, com exceção de dois casos. Ele também apresentou desempenho superior ao algoritmo PPO e à busca aleatória, especialmente dentro de orçamentos de tempo semelhantes. Um dos destaques é sua generalização sem treinamento específico no domínio: por exemplo, no conjunto NPB (NASA Parallel Benchmarks, um conjunto de programas desenvolvido originalmente pela NASA para avaliar o desempenho de sistemas de computação paralela), o modelo alcançou uma redução adicional de 3\% no tamanho do código mesmo com dados escassos, e nos testes com programas em Fortran e Objective-C também obteve bons resultados — chegando a reduzir o código em até 2,87 vezes em casos específicos.
+
+Outra proposta recente e relevante é a do modelo com \textit{feedback} gerado pelo compilador, apresentado por \citeonline{grubisic2024compiler}, que utiliza LLMs para otimização de código em LLVM IR. Nesse modelo, o LLM não apenas sugere passes de otimização, mas também prevê a contagem de instruções do código antes e depois da otimização. Em seguida, essas sugestões são validadas com compilação real, e o resultado é devolvido ao modelo como \textit{feedback}, permitindo uma nova tentativa mais precisa. Essa abordagem permitiu um ganho adicional de 0,53\% em relação ao nível de otimização -Oz, superando os 2,87\% obtidos pelo modelo base. O modelo com \textit{feedback} também demonstrou desempenho superior em exemplos onde o modelo original cometia erros, especialmente com poucas inferências. Entre as variantes avaliadas, o modelo \textit{Fast} \textit{feedback} foi o mais eficaz, destacando-se pela eficiência na iteração e pela capacidade de detectar e corrigir instruções incorretas geradas anteriormente.
+
+Recentemente, \citeonline{cummins_llm_2025} propuseram os modelos \textit{LLM Compiler} e \textit{\textit{LLM Compiler} FTD}, desenvolvidos especificamente para tarefas relacionadas a compiladores. Esses modelos são derivados do \textit{Code Llama}, mas foram adaptados para compreender representações intermediárias (IRs), código \textit{assembly} e estratégias de otimização de compilação. O \textit{LLM Compiler} foi treinado com um impressionante volume de 546 bilhões de \textit{tokens} de dados especializados em LLVM IR e \textit{assembly}, passando por um ajuste fino orientado por instruções para interpretar o comportamento do compilador. O \textit{\textit{LLM Compiler} FTD}, por sua vez, vai além ao incorporar mais 164 bilhões de \textit{tokens} voltados para tarefas específicas como ajuste de flags e desassemblagem, totalizando 710 bilhões de \textit{tokens} no processo de treinamento. Esse treinamento em múltiplas etapas permite que os modelos obtenham resultados robustos: em tarefas de otimização de tamanho de código, o \textit{\textit{LLM Compiler} FTD} atinge 77\% do desempenho de uma busca por autotuning (melhor compilação obtida a partir da execução exaustiva de um conjunto amplo de sequência de passes de otimização), mas sem precisar de compilações adicionais. Já na tarefa de compilação reversa do código \textit{assembly} x86\_64 e ARM para LLVM IR, o modelo atinge uma taxa de 14\% de reconstruções exatas. Dado o nível de especialização alcançado, os modelos \textit{LLM Compiler} se mostram como um interessante ponto de partida para o desenvolvimento deste trabalho, que busca adaptar essa abordagem ao contexto de microcontroladores e ambientes com restrições severas de recursos.
+
+Neste trabalho, o \textit{LLM Compiler} será integrado ao processo de compilação da \textit{Robotics Language} para o STM32F103C8T6, recebendo como entrada o código em LLVM IR e retornando a sequência de passes de otimização a ser aplicada. O modelo, ajustado para este contexto, será executado antes da etapa final de geração de código, e suas saídas serão aplicadas no compilador para produzir a versão otimizada do programa.
+
+Considerando as possibilidades identificadas para o uso de LLMs na otimização de compiladores e as restrições impostas pelo ambiente de microcontroladores, optou-se por conduzir um estudo experimental. Na próxima seção, são descritos os procedimentos metodológicos que abrangem a preparação dos dados, o ajuste do \textit{LLM Compiler} ao contexto da \textit{Robotics Language} e a validação dos resultados em comparação com estratégias convencionais de otimização.
+
+%===== Seção de trabalhos relacionados ==============
+\chapter{Trabalhos Relacionados}
+
+\section{Introdução}
+Neste capítulo, para elaborar os trabalhos relacionados, foi escolhida uma revisão narrativa da literatura(NRL) com termos de busca voltados a compiladores, otimização de código e aprendizado de máquina.
+
+Para a escolha de trabalhos correlatos, foram elegidos aqueles que, direta ou indiretamente, aportam a aplicação de métodos para otimização de tamanho de código no pipeline de compilação(em especial no LLVM) , seja por ordenação de passes, \textit{autotunning} ou por modelos de Inteligência Artificial. 
+
+
+\section{Trabalhos Analisados}
+
+Nas subceções abaixo são descritos três trabalhos, ressaltando suas contribuições e limitações quanto ao escopo deste projeto.
+
+\subsection{NewOptimization Sequences for Code-Size Reduction for the
+ LLVMCompilation Infrastructure}
+
+texto
+
+\subsection{CompilerDream:
+ Learning a Compiler World Model for General Code Optimization}
+
+A ideia central do estudo de \citeonline{deng_compilerdream_2024} é treinar um modelo de mundo do compilador, isto é, um modelo que simula como os passes de otimização se comportam quando aplicados ao código. Em cima desse simulador, os autores treinam um agente de Aprendizado por Reforço (RL) que aprende quais passes aplicar e em que ordem para melhorar o código (por exemplo, reduzir tamanho do binário ou otimizar métricas de desempenho). Em linguagem simples: o sistema cria um “laboratório virtual” do compilador e ensina um agente a planejar sequências de otimização eficazes antes de gastar tempo com experimentos reais e lentos no compilador “de verdade”. 
+
+\subsection{LLMCompiler: Foundation Language Models
+ for Compiler Optimization}
+
+texto
+
+\subsection{Resumo Comparativo}
+
+
+%===== Seção de Metodologia ==============
+%metodologia feita em formato de texto corrido, diferentemente do tcc do ryan
+\chapter{Implementação}
+
+\section{Classificação da Pesquisa}
+
+A presente pesquisa se caracteriza, quanto à natureza, como aplicada, pois visa o desenvolvimento de uma solução prática com potencial impacto em ambientes de compilação, com foco especial na arquitetura STM32, especificamente no microcontrolador STM32F103C8T6. Com relação aos objetivos, é exploratória, pois investiga o uso de modelos de linguagem de grande porte (LLMs) em tarefas de otimização de código voltadas para sistemas embarcados. Quanto aos procedimentos, trata-se de uma pesquisa experimental, uma vez que implementa, adapta e valida algoritmos em ambiente de teste controlado. A abordagem adotada é quantitativa, visto que os resultados serão analisados por métricas objetivas, como a contagem de instruções do código gerado. Por fim, quanto às fontes, a pesquisa também é classificada como bibliográfica, uma vez que se fundamenta em artigos e manuais técnicos previamente publicados.
+
+
+\section{Aspectos Metodológicos Gerais}
+
+
+A metodologia será composta por etapas sequenciais, confome apresentado na figura \hyperref[fig:minhafigura7]{Figura~\ref*{fig:minhafigura7}}. Nossa metodologia começa pela preparação dos dados, em seguida  a utilização de um \textit{parser} específico, depois o treinamento de modelo e por fim a avaliação do modelo treinado. Primeiramente, selecionam-se os conjuntos de dados de programas em C que servirão de entrada, conforme a primeira parte do fluoxograma. Em seguida, implementa-se um conversor para traduzir esses programas para a ROBL. Após a conversão, os dados são organizados em pares de entrada (\textit{prompt}) e saída (resposta/\textit{label}) para treinamento do modelo. O modelo de linguagem é então treinado (ajuste fino) utilizando-se o \textit{LLM Compiler}, adaptando-o à tarefa de otimização de código específico da plataforma STM32. Por fim, realiza-se a validação do modelo treinado, comparando o código gerado com otimizações convencionais.
+
+Na fase de validação e experimentos, o desempenho do modelo treinado será avaliado com base em sua capacidade de reduzir o tamanho do código e manter a compilabilidade dos programas. Serão utilizados códigos do conjunto de validação, não vistos durante o treinamento, e para cada entrada será gerado um código otimizado pelo modelo. Esse resultado será comparado com a saída obtida ao aplicar a flag padrão -Oz do compilador, utilizando como métrica principal a contagem de instruções geradas na IR. Para que o código seja considerado validado, ele deverá não apenas reduzir o tamanho em relação ao -Oz, mas também ser compilável. Os testes serão conduzidos de forma automatizada, com medições para quantificar os ganhos e perdas, fornecendo uma base objetiva para verificar a eficácia do modelo. O objetivo final é verificar se o modelo treinado é capaz de replicar ou superar as otimizações tradicionais em um contexto de arquitetura restrita, como a de microcontroladores.
+
+\begin{center}
+    \makebox[\textwidth]{\includegraphics[width=1.5\textwidth]{imagens/fig7.png}}
+    \captionof{figure}{Fluxograma de etapas metodológicas.}
+    \label{fig:minhafigura7}
+\end{center}
+
+\section{Conjunto de Dados}
+
+
+Para compor a base de entrada do pipeline experimental, serão utilizados dois conjuntos de programas escritos em C, visando abranger tanto códigos sintéticos aleatórios quanto códigos oriundos de aplicações reais. O primeiro conjunto é gerado pelo Csmith \cite{yang2011finding}, uma ferramenta que produz programas em C aleatórios. O Csmith é comumente empregado para \textit{stress testing} de compiladores, garantindo uma ampla diversidade de construções nos programas de entrada. O segundo conjunto de programas é o AnghaBench \cite{da2021anghabench}, uma suíte que contém aproximadamente um milhão de funções em C compiláveis extraídas de repositórios públicos do GitHub. Diferentemente do código sintético do Csmith, o AnghaBench provê códigos representativos de padrões e estruturas encontrados em softwares do mundo real.
+
+Essa combinação de \textit{datasets} complementares visa maximizar a diversidade do conjunto de treino - códigos aleatórios exercitam aspectos incomuns da linguagem, enquanto códigos reais fornecem exemplos fielmente extraídos de aplicações práticas.
+
+Como o Robcmp não pode compilar código C, os conjuntos gerados serão convertidos de C para ROBL usando um conversor (c2rob) descrito na próxima seção.
+
+\section{Conversor de código C para RobCmp: c2rob}
+
+Para viabilizar a pesquisa, desenvolveu-se um conversor capaz de traduzir programas escritos em C para a sintaxe da ROBL, chamado \texttt{c2rob}.\footnote{Disponível em https://github.com/thborges/c2rob} A implementação foi realizada com auxílio das ferramentas Flex (versão 2.6.4) e Bison, escolhidas por sua capacidade de construir analisadores léxicos e sintáticos customizados.
+
+O \texttt{c2rob} lê o código fonte em C, proveniente dos \textit{datasets} descritos, e o transforma em um código equivalente na sintaxe da ROBL, preservando a lógica e o comportamento do programa original.
+
+Como nem todos os recursos da linguagem C estão presentes na ROBL, uma etapa adicional será empregada para selecionar códigos possíveis de conversão. A própria falha de tradução, apresentada pelo \texttt{c2rob} como erro de sintaxe, será um indicador de incompatibilidade. O desenvolvimento do \texttt{c2rob} é recente e uma fase adicional de ajustes finos e testes será realizada no início da execução do projeto.
+
+Buscamos atingir o mínimo de 100.000 códigos, sendo 80\% deste valor para o treinamento, 10\% para monitorar o desempenho e evitar \textit{overfitting} durante o treinamento e, por fim, os 10\% restantes comporão o conjunto de inferência, que será usado para avaliar a capacidade de generalização e a eficácia do modelo após o treinamento.
+
+\section{Formação dos Dados de Treinamento}
+
+Com os códigos convertidos, procede-se à organização dos dados em pares de \textit{prompt} e resposta para alimentar o treinamento supervisionado do modelo de linguagem. Em cada par, o \textit{prompt} consiste de um comando inicial textual em inglês, seguido do código em LLVM IR para a plataforma alvo (ROBL compilado para LLVM IR, sem otimização), enquanto o \textit{label} corresponde à melhor versão compilada do mesmo programa em \textit{assembly} e os respectivos passes de otimização empregados, seguindo o padrão adotado para o treinamento do modelo original \cite{cummins_llm_2025}.
+
+Para identificar a melhor versão compilada, será empregado um processo de \textit{autotuning}, inspirado na metodologia descrita por \citeonline{faustino2021new}. A metodologia busca encontrar sequências de otimização menores e mais eficazes para reduzir o tamanho do código objeto, usando uma ferramenta chamada \textit{YaCoS} \footnote{Repositório do YaCoS: \url{https://github.com/ComputerSystemsLaboratory/YaCoS}}, que gera milhares de sequências de otimização. Cada sequência é representada como um vetor de passes do LLVM, evoluído em populações de 100 indivíduos ao longo de 50 gerações. A melhor sequência para cada função é então reduzida com o algoritmo de \citeonline{purini2013finding}, removendo passes desnecessários e duplicados. O resultado é uma matriz de otimização (programas × sequências), usada para selecionar cinco sequências com base em diferentes métricas: frequência de melhor resultado, proximidade do ótimo, soma total, média geométrica e pior caso.
+
+O esquema de treinamento e inferência é apresentado na \hyperref[fig:minhafigura6]{Figura~\ref{fig:minhafigura6}}. O \textit{prompt}  contém um texto em inglês perguntando qual os passes necessários para se reduzir a contagem de instruções existentes no código IR e o código não otimizado. A resposta (\textit{answer}) contém os passes de otimização necessários para reduzir a contagem de instruções de 15 para 4, por exemplo. Durante a inferência, extraímos a lista de passes de otimização da resposta, que é, então, usada no compilador para produzir o código otimizado que será usado em outras validações descritas na \autoref{sec:validacao}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imagens/fig6.png}
+    \caption{Esquema de Treinamento e Inferência do LLM Compiler para STM32. Figura adaptada de \citeonline{cummins_large_2023}}
+    \label{fig:minhafigura6}
+\end{figure}
+
+\section{Treinamento do Modelo}
+
+Com os \textit{prompts} e \textit{labels} preparados, procedemos ao refinamento do modelo para que ele aprenda a realizar otimizações de código da arquitetura STM32. 
+
+Devido ao volume de exemplos e ao tamanho do modelo, o treinamento exigirá recursos computacionais de alto desempenho. Optou-se por utilizar o ambiente de treinamento oferecido pela plataforma \textit{Hugging Face}, que disponibiliza infraestrutura escalável com suporte a GPUs otimizadas, além de treinamento de fine-tuning automatizado (\textit{auto train}), que dispensa codificação. O \textit{Hugging Face} permite o treinamento de modelos diretamente na nuvem, por meio de créditos computacionais, e oferece ferramentas integradas como monitoramento de desempenho, versionamento de experimentos e integração com repositórios. Essa alternativa se mostrou mais viável e flexível para o escopo do projeto.
+
+%Durante o treinamento, o modelo será ajustado considerando como contexto principal os códigos destinados à arquitetura STM32F103C8T6, aproveitando sua representação intermediária na linguagem Robcmp para capturar padrões de otimização específicos deste microcontrolador.
+\section{Validação do Modelo Refinado} \label{sec:validacao}
+
+Para a validação do modelo treinado, serão reservados 10\% do total de dados processados, resultando em um conjunto de validação com, no mínimo, 10.000 amostras nunca vistas durante o treinamento. O objetivo é verificar a capacidade de generalização do modelo treinado e sua eficácia em realizar otimizações sobre códigos voltados à arquitetura STM32.
+
+Durante os testes, o modelo receberá como entrada o código não otimizado em LLVM IR (compilado a partir da linguagem Robcmp), e deverá gerar como saída uma sequência de passes de otimização. Esta sequência será então aplicada ao código original, resultando em uma nova versão que será comparada sob diferentes métricas.
+
+A principal métrica de desempenho será a redução percentual no tamanho do código final em comparação com o que seria gerado pelo compilador usando a \textit{flag} padrão -Oz, replicando a abordagem descrita por \citeonline{cummins_llm_2025}. Também será usada a métrica \textbf{MAPE} (Erro Percentual Absoluto Médio), que avalia o quão precisa foi a estimativa do modelo sobre o tamanho do código gerado após otimização. Isso ajuda a entender se o modelo está prevendo bem o impacto das mudanças que sugere.
+
+ 
+%Durante a inferência, o modelo receberá como entrada (\textit{prompt}) o código IR não otimizado e, como saída (resposta), deverá retornar uma sequência de passes de otimização. Essa sequência será aplicada ao código IR original, e o resultado final será comparado ao código gerado por otimizações tradicionais, especificamente pela \textit{flag} -Oz do compilador LLVM. A principal métrica empregada será a contagem de instruções no IR final.
+
+%A compilabilidade também será uma métrica central: será avaliado o percentual de códigos que permanecem compiláveis após a aplicação dos passes sugeridos pelo modelo. Um código será considerado válido se, além de ser menor que a versão gerada com \textit{-Oz}, for corretamente compilado pelo compilador Robcmp sem erros.
+
+Por fim, para verificar a precisão das otimizações aprendidas, será considerada a métrica de correspondência exata (\textit{Exact Match}) com o código gerado pelo \textit{autotuning}, isto é, quantos dos códigos otimizados pelo modelo coincidem exatamente com os gerados pelo processo de busca automática de passes descrito por \citeonline{faustino2021new}.
+
+Todo o processo de validação será automatizado por meio de \textit{scripts} que executam os testes em lote, avaliam as instruções geradas e contabilizam as diferenças de desempenho entre os métodos. Os resultados serão analisados de forma quantitativa, com médias e percentuais de redução, possibilitando uma avaliação objetiva da eficácia do modelo em otimizar código para a arquitetura STM32.
+
+
+\section{Especificações de Hardware e Software}
+
+Quanto aos recursos utilizados, o \texttt{c2rob} será aprimorado e testado com auxílio do Visual Studio Code versão 1.101.0, no Ubuntu 24.04 LTS, executado em um \textit{desktop} Lenovo ThinkCentre M93p, com processador Intel® Core™ i5-4570 (4 núcleos), 32GB de RAM e gráficos integrados Intel® HD \textit{Graphics} 4600. Essa infraestrutura local será utilizada principalmente nas etapas de geração, conversão e manipulação dos dados, enquanto o treinamento do modelo propriamente dito ocorrerá em ambiente de alto desempenho.
+
+
+
+
+%===== Seção de Cronograma ==============
+
+\chapter{Cronograma}
+
+A  \autoref{tabela_cronog} apresenta o cronograma de execução da pesquisa. 
+
+\begin{table}[!htb]
+\centering
+\caption{Cronograma de Atividades}
+\label{tabela_cronog}
+\begin{tabular}{p{8cm}ll@{}}
+\toprule
+\textit{Atividades} & \textit{Período Início} & \textit{Ano} \\ \midrule
+Geração dos datasets com Csmith e AnghaBench & Julho (2ª quinzena) & 2025 \\
+ Testes do parser com códigos gerados& Agosto (1ª quinzena) & 2025 \\
+ Geração dos pares prompt/label com autotuner& Agosto (2ª quinzena) & 2025 \\
+ Organização dos dados para fine-tuning& Setembro (1ª quinzena) & 2025 \\
+ Execução do fine-tuning do modelo no Hugging Face& Setembro (2ª quinzena) & 2025 \\
+ Inferência e validação dos códigos gerados (comparação com -Oz)& Outubro (1ª quinzena) & 2025 \\
+ Análise quantitativa e documentação (escrita) dos resultados& Outubro (2ª quinzena) & 2025 \\
+Escrita dos resultados e revisão do TCC & Novembro (1ª quinzena) & 2025 \\
+Revisão e defesa do TCC & Novembro (2ª quinzena) & 2025 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+% ----------------------------------------------------------
+% Capitulo com exemplos de comandos inseridos de arquivo externo 
+% ----------------------------------------------------------
+
+\include{abntex2-modelo-include-comandos}
+
+% ---
+% Finaliza a parte no bookmark do PDF
+% para que se inicie o bookmark na raiz
+% e adiciona espaço de parte no Sumário
+% ---
+\phantompart
+
+
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+\bibliography{Minha_biblioteca}
+
+% ----------------------------------------------------------
+% Glossário
+% ----------------------------------------------------------
+%
+% Consulte o manual da classe abntex2 para orientações sobre o glossário.
+%
+%\glossary
+
+
+
+\end{document}
+

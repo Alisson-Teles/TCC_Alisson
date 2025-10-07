@@ -1,0 +1,8 @@
+\babel@toc {brazil}{}\relax 
+\babel@toc {brazil}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Arquitetura macro de um compilador. Adaptada de \citeonline {cooper2012engineering}.}}{12}{figure.caption.5}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de árvore ambígua de derivação para a expressão A + B - C.}}{14}{figure.caption.6}%
+\contentsline {figure}{\numberline {3}{\ignorespaces AVR16DD14, de 24 Mhz, com 14 portas de entrada e saída}}{17}{figure.caption.7}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Placa com um microcontrolador STM32F103C8T6, de 72 Mhz}}{18}{figure.caption.8}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Fluxograma de etapas metodológicas.}}{28}{figure.4.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Esquema de Treinamento e Inferência do LLM Compiler para STM32. Figura adaptada de \citeonline {cummins_large_2023}}}{30}{figure.caption.9}%
