@@ -1,21 +1,21 @@
 # Fdb version 4
-["bibtex TCC_texto"] 1759867084.23143 "TCC_texto.aux" "TCC_texto.bbl" "TCC_texto" 1759867131.91725 0
-  "./Minha_biblioteca.bib" 1759784211 27631 1b9183d5791dbb159459c1c9c46317cf ""
+["bibtex TCC_texto"] 1759875816.25242 "TCC_texto.aux" "TCC_texto.bbl" "TCC_texto" 1759875828.13448 0
+  "./Minha_biblioteca.bib" 1759871062 25515 f9a7220e46ebb49cb1eca026720d87d1 ""
   "C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/bibtex/bib/abntex2/abntex2-options.bib" 1543103229 5396 4eb260dac60f150ae608d45252853090 ""
   "C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/bibtex/bst/abntex2/abntex2-alf.bst" 1543103230 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "TCC_texto.aux" 1759867130 44660 167f931b99d88426c3b689ea064b1144 "pdflatex"
-  "abntex2-modelo-include-comandos.aux" 1759867130 2102 333653f1b4f05279ee18fa31e56c52be "pdflatex"
+  "TCC_texto.aux" 1759875826 45427 a7f2ed64b1a60e8ffaa8dddcb2fbef2b "pdflatex"
+  "abntex2-modelo-include-comandos.aux" 1759875826 2102 9c2a94f292ceff29ca9ffa52172cd57d "pdflatex"
   (generated)
   "TCC_texto.bbl"
   "TCC_texto.blg"
   (rewritten before read)
-["makeindex TCC_texto.idx"] 1759866103.24267 "TCC_texto.idx" "TCC_texto.ind" "TCC_texto" 1759867131.91676 0
-  "TCC_texto.idx" 1759867118 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex TCC_texto.idx"] 1759866103.24267 "TCC_texto.idx" "TCC_texto.ind" "TCC_texto" 1759875828.13395 0
+  "TCC_texto.idx" 1759875818 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "TCC_texto.ilg"
   "TCC_texto.ind"
   (rewritten before read)
-["pdflatex"] 1759867116.30865 "c:/Users/Alisson Teles/Documents/CDC/GIT/TCC_Alisson/TCC_texto.tex" "TCC_texto.pdf" "TCC_texto" 1759867131.91836 0
+["pdflatex"] 1759875816.81102 "c:/Users/Alisson Teles/Documents/CDC/GIT/TCC_Alisson/TCC_texto.tex" "TCC_texto.pdf" "TCC_texto" 1759875828.13563 0
   "C:/Users/Alisson" 1743535936 17284 6544cf37feb17c62df77f6e5b62137e7 ""
   "C:/Users/Alisson Teles/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1757022196 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Alisson Teles/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757022053 24228857 46c625b3adee0473f72ace8e450fc25a ""
@@ -184,18 +184,18 @@
   "C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1700599895 7500 db31c3d04f8bc9010e47a5efbbace9ff ""
   "C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/tex/latex/xpatch/xpatch.sty" 1585221260 8510 7803f78066c4f9d008405191a4b43073 ""
-  "TCC_texto.aux" 1759867130 44660 167f931b99d88426c3b689ea064b1144 "pdflatex"
-  "TCC_texto.bbl" 1759867084 11867 3bafe8c19d7cbb4da660fd0c378ea367 "bibtex TCC_texto"
-  "TCC_texto.brf" 1759867130 5872 559c75b6b45f03ae93343d39d5b0964a "pdflatex"
+  "TCC_texto.aux" 1759875826 45427 a7f2ed64b1a60e8ffaa8dddcb2fbef2b "pdflatex"
+  "TCC_texto.bbl" 1759875816 11867 3bafe8c19d7cbb4da660fd0c378ea367 "bibtex TCC_texto"
+  "TCC_texto.brf" 1759875826 6308 6a31860ef30752d2e21d8243000012f8 "pdflatex"
   "TCC_texto.ind" 1759866103 0 d41d8cd98f00b204e9800998ecf8427e "makeindex TCC_texto.idx"
-  "TCC_texto.lof" 1759867130 942 b2d1642e3a9710361fc8ae234fd8868a "pdflatex"
-  "TCC_texto.lot" 1759867130 160 0e79e86242e80b38ce8f144d28e9355e "pdflatex"
-  "TCC_texto.tex" 1759867114 80128 17edf285599ca96c0cbadf0bc1b52b50 ""
-  "TCC_texto.toc" 1759867130 5010 fc06b5e630ac59c2cb795a2dad5aeb6e "pdflatex"
-  "abntex2-modelo-include-comandos.aux" 1759867130 2102 333653f1b4f05279ee18fa31e56c52be "pdflatex"
+  "TCC_texto.lof" 1759875826 942 0ed970189d72ccb3e24c552e57d03a82 "pdflatex"
+  "TCC_texto.lot" 1759875826 160 899177d1f5630b3d1bdf28dd4bdd0f8b "pdflatex"
+  "TCC_texto.tex" 1759875804 83736 f3df7d908d3ab01a34e80368685f1cbb ""
+  "TCC_texto.toc" 1759875826 5010 7d58caf22707ad114fa8b82840702f23 "pdflatex"
+  "abntex2-modelo-include-comandos.aux" 1759875826 2102 9c2a94f292ceff29ca9ffa52172cd57d "pdflatex"
   "abntex2-modelo-include-comandos.tex" 0 -1 0 ""
   "c:/Users/Alisson" 1743535936 17284 6544cf37feb17c62df77f6e5b62137e7 ""
-  "c:/Users/Alisson Teles/Documents/CDC/GIT/TCC_Alisson/TCC_texto.tex" 1759867114 80128 17edf285599ca96c0cbadf0bc1b52b50 ""
+  "c:/Users/Alisson Teles/Documents/CDC/GIT/TCC_Alisson/TCC_texto.tex" 1759875804 83736 f3df7d908d3ab01a34e80368685f1cbb ""
   "dados.tex" 1757021109 728 d5170899e0110ccaae3e17964177ac30 ""
   "imagens/fig1.png" 1757021109 41351 9bd16b1fb46dd116c03cc0a20283775c ""
   "imagens/fig2.png" 1757021109 81993 f817f28928f2878937944f0228d16568 ""
