@@ -36,7 +36,7 @@
 \contentsline {section}{\numberline {3.2}Trabalhos Analisados}{26}{section.3.2}%
 \contentsline {subsection}{\numberline {3.2.1}NewOptimization Sequences for Code-Size Reduction for the LLVMCompilation Infrastructure}{26}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}CompilerDream: Learning a Compiler World Model for General Code Optimization}{27}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}LLMCompiler: Foundation Language Models for Compiler Optimization}{27}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.3}LLMCompiler: Foundation Language Models for Compiler Optimization}{28}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Resumo Comparativo}{28}{subsection.3.2.4}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Implementação}}{29}{chapter.4}%

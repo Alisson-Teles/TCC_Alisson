@@ -524,7 +524,10 @@ Em síntese, o estudo de \citeonline{deng_compilerdream_2024}, nos mostra que é
 \subsection{LLMCompiler: Foundation Language Models
  for Compiler Optimization}
 
-texto
+A ideia central de \cite{cummins_llm_2025} é treinar modelos de linguagem “fundacionais” para compiladores em 546 bilhões de \textit{tokens} de LLVM-IR e \textit{assembly}, e depois especializá-los para emular otimizações e escolher passes que reduzem tamanho de código (além de um segundo alvo de levantamento de \textit{assembly} → IR). O tamanho de código é medido de duas formas: contagem de instruções no IR e tamanho binário (soma das seções .TEXT + .DATA após gerar o objeto; .BSS fica de fora por não afetar o tamanho em disco). Para gerar dados e treinar o modelo a “pensar como o opt”, os autores aplicam listas aleatórias de passes (amostradas de um conjunto de 167 passes) a programas desotimizados, e fazem \textit{fine-tuning} para que o LLM preveja o IR/\textit[assembly] e o tamanho resultante.
+
+Além disso, o modelo alcança 77\% do potencial de um \textit{autotuner} extensivo, mas sem precisar de milhares de compilações por programa. Em suma, o LLM Compiler mostra que modelos fundacionais especializados em IR/\textit{assembly} podem ordenar passes e escolher flags para reduzir tamanho de código de forma \textit{zero-shot}, com ganhos médios de 4\% sobre o -Oz.
+
 
 \subsection{Resumo Comparativo}
 
