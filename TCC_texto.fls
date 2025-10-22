@@ -192,6 +192,8 @@ INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\ls
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype-pdftex.def
@@ -343,6 +345,8 @@ INPUT .\imagens\fig5.jpg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmsso17.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 INPUT .\imagens\fig7.png
 INPUT .\imagens\fig7.png
 INPUT .\imagens\fig7.png
@@ -361,7 +365,6 @@ INPUT .\imagens\fig6.png
 INPUT .\imagens\fig6.png
 INPUT .\imagens\fig6.png
 INPUT .\imagens\fig6.png
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
 OUTPUT abntex2-modelo-include-comandos.aux
 INPUT .\TCC_texto.bbl
 INPUT .\TCC_texto.bbl
@@ -381,6 +384,8 @@ INPUT .\abntex2-modelo-include-comandos.aux
 INPUT abntex2-modelo-include-comandos.aux
 INPUT .\TCC_texto.brf
 INPUT .\TCC_texto.brf
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb

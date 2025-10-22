@@ -47,6 +47,7 @@
 \usepackage{graphicx}
 \usepackage{subfig}
 \usepackage{listings}
+\usepackage{multirow}
 \usepackage{microtype} 	
 \usepackage{hyperref}  % necessário para links
 \usepackage{caption}   % opcional, melhora o controle de legendas
@@ -495,7 +496,7 @@ Neste capítulo, para elaborar os trabalhos relacionados, foi escolhida uma revi
 Para a escolha de trabalhos correlatos, foram elegidos aqueles que, direta ou indiretamente, aportam a aplicação de métodos para otimização de tamanho de código no pipeline de compilação(em especial no LLVM) , seja por ordenação de passes, \textit{autotunning} ou por modelos de Inteligência Artificial. 
 
 
-\section{Trabalhos Analisados}
+\subsection{Trabalhos Analisados}
 
 Nas subceções abaixo são descritos três trabalhos, ressaltando suas contribuições e limitações quanto ao escopo deste estudo.
 
@@ -528,9 +529,46 @@ A ideia central de \cite{cummins_llm_2025} é treinar modelos de linguagem “fu
 
 Além disso, o modelo alcança 77\% do potencial de um \textit{autotuner} extensivo, mas sem precisar de milhares de compilações por programa. Em suma, o LLM Compiler mostra que modelos fundacionais especializados em IR/\textit{assembly} podem ordenar passes e escolher flags para reduzir tamanho de código de forma \textit{zero-shot}, com ganhos médios de 4\% sobre o -Oz.
 
-
+%resumo comparativo
 \subsection{Resumo Comparativo}
+A tabela \hyperref[tab:comparativo-trabalhos]{tabela~\ref*{tab:comparativo-trabalhos}} nos mostra o resumo comparativo entre os trabalhos analisados nas seções anteriores, com a utilização de critérios elaborados durante a revisão da literatura.
 
+\begin{table}[ht]
+\centering
+\caption{Comparativo entre trabalhos relacionados}
+\label{tab:comparativo-trabalhos}
+\footnotesize
+\setlength{\tabcolsep}{3pt}%
+\renewcommand{\arraystretch}{1.15}%
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{Trabalhos}} & \multicolumn{6}{c|}{\textbf{Critérios}} \\ \cline{2-7}
+ & \textbf{MCUs} & \textbf{Modelos} & \textbf{LLM} & \textbf{Fine-tuning} & \textbf{CPU} & \textbf{Otimiz. p/ tamanho} \\
+\hline
+\cite{faustino2021new}         & -- & -- & -- & -- & + & + \\
+\hline
+\cite{deng_compilerdream_2024} & -- & +  & -- & +  & + & + \\
+\hline
+\cite{cummins_llm_2025}        & -- & +  & +  & +  & + & + \\
+\hline
+Este trabalho                  & +  & +  & +  & +  & + & + \\
+\hline
+\end{tabular}%
+}
+\vspace{2pt}
+
+\footnotesize “+” indica presença do critério; “--” indica ausência.
+\end{table}
+%duvida, talvez os textos tenham ficado muito grandes pois eu quís explicar o motivo de cada um conter um critério ou não( o porque dele conter o critério).
+Todos os trabalhos apresentam o critério \textbf{otimização para tamanho} de forma explicita, o que diferencia é o caminho, um utiliza de heurísticas e engenharia de passes \cite{faustino2021new}, enquanto os outros utilizam modelos treinados que priorizam métricas de tamanho \cite{cummins_llm_2025,deng_compilerdream_2024}. Da mesma forma, todos os trabalhos possuem o critério \textbf{CPU}, pois em todos os trabalhos, o \textit{pipeline} é pensado e executado para ambientes de CPUs de propósito geral.
+
+Quanto ao critério \textbf{Modelos}, só é presente naqueles trabalhos em que foi utulizado modelos de inteligência artificial na otimização para redução de tamanho. Neste caso \citeonline{faustino2021new} não contém este critério pois realizam busca sistemática para descobrir sequências curtas que reduzem tamanho e tempo de compilação em LLVM. Porém, \citeonline{cummins_llm_2025} e \citeonline{deng_compilerdream_2024} utilizam respectivamente, um modelo de linguagem e modelo de mundo com um agente (um programa que aprende por tentativa e erro) para redução de tamanho de código.
+
+
+O critério \textbf{Fine-tuning}, é adotado como qualquer adaptação paramétrica de um modelo base guiada por um sinal de tarefa ou domínio. Nessa leitura, somente \citeonline{cummins_llm_2025} e \citeonline{deng_compilerdream_2024} pontuam positivamente. \citeonline{cummins_llm_2025}, após expor o modelo a bilhões de \textit{tokens} inicia um \textit{fine-tuning} supervisionado por instruções, usando entradas e saídas desejadas (A variante FTD adiciona uma etapa extra focada em tarefas, aprofundando essa especialização). \citeonline{deng_compilerdream_2024} realizam o \textit{fine-tuning} por reforço de um agente dentro de um modelo de mundo que imita o compilador. O agente ajusta sua política (sua regra de decisão) para aplicar passes que reduzem o código.
+
+Por fim, apenas no trabalho de \citeonline{cummins_llm_2025} é atingido o critério \textbf{LLM}, que é a utilização de LLMs para reduzir o tamanho em LLVM-IR. Isso nos mostra que a literatura permanece centrada em CPUs. A minha contribuição é trazer esse conjunto de técnicas para o domínio de MCUs, mantendo o foco em otimização para tamanho, demonstrando sua efetividade sob as restrições de hardware embarcado e atingindo o critério de \textbf{MCUs}(utilização destas técnicas em MCUs).
 
 %===== Seção de Metodologia ==============
 %metodologia feita em formato de texto corrido, diferentemente do tcc do ryan

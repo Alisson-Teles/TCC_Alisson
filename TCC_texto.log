@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.4)  8 OCT 2025 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.4)  22 OCT 2025 18:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -713,25 +713,31 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
- (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
+ (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip262
+\multirow@cntb=\count364
+\multirow@dima=\skip263
+\bigstrutjot=\dimen275
+) (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.sty
 Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
 \MT@toks=\toks31
 \MT@tempbox=\box60
-\MT@count=\count364
+\MT@count=\count365
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
 LaTeX Info: Redefining \leftprotrusion on input line 1088.
 \MT@prot@toks=\toks32
 LaTeX Info: Redefining \rightprotrusion on input line 1107.
 LaTeX Info: Redefining \textls on input line 1449.
-\MT@outer@kern=\dimen275
+\MT@outer@kern=\dimen276
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
-\MT@listname@count=\count365
+\MT@listname@count=\count366
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-pdftex.def
 File: microtype-pdftex.def 2025/07/09 v3.2b Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 944.
 LaTeX Info: Redefining \lslig on input line 944.
-\MT@outer@space=\skip262
+\MT@outer@space=\skip264
 )
 Package microtype Info: Loading configuration file microtype.cfg.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype.cfg
@@ -742,18 +748,18 @@ LaTeX Info: Redefining \microtypesetup on input line 3065.
 Package: l3keys2e 2023-10-10 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count366
-\l__lipsum_a_int=\count367
-\l__lipsum_b_int=\count368
+\g__lipsum_par_int=\count367
+\l__lipsum_a_int=\count368
+\l__lipsum_b_int=\count369
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\backref.sty
 Package: backref 2023-11-26 v1.44 Bibliographical back referencing
 ) (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/abntex2\abntex2cite.sty
 Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/abntex2\abntex2abrev.sty)
-\minimumbiblabelwidth=\skip263
-\ABCIauxlen=\skip264
-\c@ABCIaux=\count369
-\c@ABCImax=\count370
+\minimumbiblabelwidth=\skip265
+\ABCIauxlen=\skip266
+\c@ABCIaux=\count370
+\c@ABCImax=\count371
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 ) (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
@@ -761,13 +767,13 @@ Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 ) (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\biblabelsep=\skip265
+\biblabelsep=\skip267
 LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
 \ABCItoken=\toks33
 ) (dados.tex)
-Package color Info: Redefining color blue on input line 100.
-Package hyperref Info: Option `colorlinks' set `true' on input line 117.
+Package color Info: Redefining color blue on input line 101.
+Package hyperref Info: Option `colorlinks' set `true' on input line 118.
 \TCC_texto@idxfile=\write4
 \openout4 = `TCC_texto.idx'.
 
@@ -776,40 +782,40 @@ Writing index file TCC_texto.idx
 (TCC_texto.aux (abntex2-modelo-include-comandos.aux))
 \openout1 = `TCC_texto.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 140.
-LaTeX Font Info:    ... okay on input line 140.
-Package hyperref Info: Link coloring ON on input line 140.
-LaTeX Info: Redefining \degres on input line 140.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+Package hyperref Info: Link coloring ON on input line 141.
+LaTeX Info: Redefining \degres on input line 141.
 \myptabbox=\box61
-\myptabboxwidth=\skip266
+\myptabboxwidth=\skip268
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count371
-\scratchdimen=\dimen276
+\scratchcounter=\count372
+\scratchdimen=\dimen277
 \scratchbox=\box62
-\nofMPsegments=\count372
-\nofMParguments=\count373
+\nofMPsegments=\count373
+\nofMParguments=\count374
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count374
-\MPscratchDim=\dimen277
-\MPnumerator=\count375
-\makeMPintoPDFobject=\count376
+\MPscratchCnt=\count375
+\MPscratchDim=\dimen278
+\MPnumerator=\count376
+\makeMPintoPDFobject=\count377
 \everyMPtoPDFconversion=\toks35
 ) (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -821,14 +827,14 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count377
-LaTeX Info: Redefining \microtypecontext on input line 140.
-Package microtype Info: Applying patch `item' on input line 140.
-Package microtype Info: Applying patch `toc' on input line 140.
-Package microtype Info: Applying patch `eqnum' on input line 140.
-Package microtype Info: Applying patch `footnote' on input line 140.
-Package microtype Info: Applying patch `verbatim' on input line 140.
-LaTeX Info: Redefining \microtypesetup on input line 140.
+\c@lstlisting=\count378
+LaTeX Info: Redefining \microtypecontext on input line 141.
+Package microtype Info: Applying patch `item' on input line 141.
+Package microtype Info: Applying patch `toc' on input line 141.
+Package microtype Info: Applying patch `eqnum' on input line 141.
+Package microtype Info: Applying patch `footnote' on input line 141.
+Package microtype Info: Applying patch `verbatim' on input line 141.
+LaTeX Info: Redefining \microtypesetup on input line 141.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -842,7 +848,7 @@ Package microtype Info: No adjustment of character kerning.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 157.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 158.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -853,33 +859,33 @@ Package microtype Info: Loading generic protrusion settings for font family
  [1
 
 {C:/Users/Alisson Teles/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 165.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 166.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 165.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 166.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 165.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 166.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 165.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 166.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 165.
+(Font)              <12> on input line 166.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 165.
+(Font)              <8> on input line 166.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 165.
+(Font)              <6> on input line 166.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.165 
+l.166 
        [1
 
 
@@ -896,78 +902,78 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
  [4
 
 ]) [5]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 237.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 238.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 242.
+(Font)              <10> on input line 243.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 242.
+(Font)              <7> on input line 243.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 242.
+(Font)              <5> on input line 243.
  [6
 
 
 {C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [7] [8] [9] [10]
-<imagens/fig1.png, id=269, 1445.4pt x 813.0375pt>
+<imagens/fig1.png, id=271, 1445.4pt x 813.0375pt>
 File: imagens/fig1.png Graphic file (type png)
 <use imagens/fig1.png>
-Package pdftex.def Info: imagens/fig1.png  used on input line 307.
+Package pdftex.def Info: imagens/fig1.png  used on input line 308.
 (pdftex.def)             Requested size: 455.0pt x 255.93448pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 312.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 313.
 [11
 
 ] [12 <./imagens/fig1.png (PNG copy)>]
-<imagens/fig2.png, id=313, 1445.4pt x 813.0375pt>
+<imagens/fig2.png, id=315, 1445.4pt x 813.0375pt>
 File: imagens/fig2.png Graphic file (type png)
 <use imagens/fig2.png>
-Package pdftex.def Info: imagens/fig2.png  used on input line 332.
+Package pdftex.def Info: imagens/fig2.png  used on input line 333.
 (pdftex.def)             Requested size: 455.0pt x 255.93448pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [13] [14 <./imagens/fig2.png (PNG copy)>] [15] [16]
-<imagens/fig4.png, id=376, 513.92pt x 362.35374pt>
+<imagens/fig4.png, id=378, 513.92pt x 362.35374pt>
 File: imagens/fig4.png Graphic file (type png)
 <use imagens/fig4.png>
-Package pdftex.def Info: imagens/fig4.png  used on input line 389.
+Package pdftex.def Info: imagens/fig4.png  used on input line 390.
 (pdftex.def)             Requested size: 181.99722pt x 128.32408pt.
-<imagens/fig5.jpg, id=382, 1405.25pt x 936.49875pt>
+<imagens/fig5.jpg, id=384, 1405.25pt x 936.49875pt>
 File: imagens/fig5.jpg Graphic file (type jpg)
 <use imagens/fig5.jpg>
-Package pdftex.def Info: imagens/fig5.jpg  used on input line 394.
+Package pdftex.def Info: imagens/fig5.jpg  used on input line 395.
 (pdftex.def)             Requested size: 227.5pt x 151.6005pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 399.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 400.
 [17 <./imagens/fig4.png>] [18 <./imagens/fig5.jpg>] [19] [20{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] [21] [22] [23] [24] [25] [26
 
-] [27] [28] [29
+] [27] [28] [29] [30
 
 ]
-<imagens/fig7.png, id=587, 1445.4pt x 813.0375pt>
+<imagens/fig7.png, id=626, 1445.4pt x 813.0375pt>
 File: imagens/fig7.png Graphic file (type png)
 <use imagens/fig7.png>
-Package pdftex.def Info: imagens/fig7.png  used on input line 552.
+Package pdftex.def Info: imagens/fig7.png  used on input line 590.
 (pdftex.def)             Requested size: 682.5pt x 383.90173pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 553.
+(caption)                particular \caption on input line 591.
 See the caption package documentation for explanation.
 
-[30 <./imagens/fig7.png (PNG copy)>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 568.
+[31 <./imagens/fig7.png (PNG copy)>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 606.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -975,13 +981,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [31]
-<imagens/fig6.png, id=616, 1156.32pt x 770.88pt>
+ [32]
+<imagens/fig6.png, id=654, 1156.32pt x 770.88pt>
 File: imagens/fig6.png Graphic file (type png)
 <use imagens/fig6.png>
-Package pdftex.def Info: imagens/fig6.png  used on input line 586.
+Package pdftex.def Info: imagens/fig6.png  used on input line 624.
 (pdftex.def)             Requested size: 318.49861pt x 212.3279pt.
- [32 <./imagens/fig6.png>] [33] [34] [35
+ [33 <./imagens/fig6.png>] [34] [35] [36
 
 ]
 \openout2 = `abntex2-modelo-include-comandos.aux'.
@@ -994,12 +1000,12 @@ No file abntex2-modelo-include-comandos.tex.
 
 
 bibitemlist
-[36
+[37
 
 
 
 
-] [37]) [38]
+] [38]) [39]
 \tf@lof=\write6
 \openout6 = `TCC_texto.lof'.
 
@@ -1015,20 +1021,20 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `TCC_texto.brf' has not changed.
-(rerunfilecheck)             Checksum: 5912D43F6FFA56D682DBE05E43A7D9F3;6368.
+(rerunfilecheck)             Checksum: 94033A017295F07D43D34ED63A1825F7;7256.
  ) 
 Here is how much of TeX's memory you used:
- 22800 strings out of 474486
- 385757 string characters out of 5739944
+ 22882 strings out of 474486
+ 387217 string characters out of 5739944
  1942542 words of memory out of 5000000
- 44316 multiletter control sequences out of 15000+600000
- 654992 words of font info for 211 fonts, out of 8000000 for 9000
+ 44381 multiletter control sequences out of 15000+600000
+ 658466 words of font info for 217 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,107p,1856b,705s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on TCC_texto.pdf (39 pages, 2858028 bytes).
+<C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on TCC_texto.pdf (40 pages, 2907064 bytes).
 PDF statistics:
- 1015 PDF objects out of 1200 (max. 8388607)
- 173 named destinations out of 1000 (max. 500000)
- 56207 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 1061 PDF objects out of 1200 (max. 8388607)
+ 175 named destinations out of 1000 (max. 500000)
+ 58255 words of extra memory for PDF output out of 61914 (max. 10000000)
 
