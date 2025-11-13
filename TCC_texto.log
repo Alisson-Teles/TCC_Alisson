@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.4)  12 NOV 2025 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.4)  13 NOV 2025 11:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -959,7 +959,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
 [17 <./imagens/fig4.png>] [18 <./imagens/fig5.jpg>] [19] [20{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] [21] [22] [23] [24] [25] [26
 
 ] [27] [28] [29]
-<imagens/fig7.png, id=621, 1445.4pt x 813.0375pt>
+<imagens/fig7.png, id=623, 1445.4pt x 813.0375pt>
 File: imagens/fig7.png Graphic file (type png)
 <use imagens/fig7.png>
 Package pdftex.def Info: imagens/fig7.png  used on input line 589.
@@ -982,10 +982,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [32]
-<imagens/fig6.png, id=654, 1156.32pt x 770.88pt>
+<imagens/fig6.png, id=660, 1156.32pt x 770.88pt>
 File: imagens/fig6.png Graphic file (type png)
 <use imagens/fig6.png>
-Package pdftex.def Info: imagens/fig6.png  used on input line 625.
+Package pdftex.def Info: imagens/fig6.png  used on input line 626.
 (pdftex.def)             Requested size: 318.49861pt x 212.3279pt.
  [33 <./imagens/fig6.png>] [34] [35] [36
 
@@ -1021,20 +1021,20 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `TCC_texto.brf' has not changed.
-(rerunfilecheck)             Checksum: A71ECB4ECB6DCBFEA351DDA6BE297FC1;7308.
+(rerunfilecheck)             Checksum: 3803AF3E0A6D2BEE5194CB4A5E61F554;7306.
  ) 
 Here is how much of TeX's memory you used:
- 22884 strings out of 474486
- 387242 string characters out of 5739944
+ 22883 strings out of 474486
+ 387228 string characters out of 5739944
  1942542 words of memory out of 5000000
  44380 multiletter control sequences out of 15000+600000
- 658686 words of font info for 219 fonts, out of 8000000 for 9000
+ 658557 words of font info for 218 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,107p,1856b,705s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on TCC_texto.pdf (40 pages, 2906441 bytes).
+Output written on TCC_texto.pdf (40 pages, 2907672 bytes).
 PDF statistics:
- 1058 PDF objects out of 1200 (max. 8388607)
- 174 named destinations out of 1000 (max. 500000)
+ 1066 PDF objects out of 1200 (max. 8388607)
+ 175 named destinations out of 1000 (max. 500000)
  58247 words of extra memory for PDF output out of 61914 (max. 10000000)
 
