@@ -1,0 +1,46 @@
+use csmith;
+__undefined = int64(0);
+
+int64 func_1();
+
+int64 func_1() {
+	l_2 = {uint32(0)};
+	l_3 = int32((-1));
+	i = int32(0);
+
+	i = 0;
+	while i < 1 {
+		l_2[i] = 0x3342EB90;
+		i++;
+	}
+
+
+	l_3 = 0;
+	while (l_3 >= 0) {
+		l_4 = int32(0xAED23B61);
+
+		l_4 = 0;
+		while (l_4 >= 0) {
+			l_9 = int32((-1));
+			i = int32(0);
+			l_9 = (safe_sub_func_int64_t_s_s((safe_sub_func_int32_t_s_s(l_2[l_3], l_2[l_3])), 0x8F8F576C5165352F));
+			return l_3;
+			l_4 -= 1;
+		}
+
+		l_3 -= 1;
+	}
+
+	return l_2[0];
+}
+
+
+int32 main() {
+	print_hash_value = int32(0);
+	platform_main_begin();
+	crc32_gentab();
+	func_1();
+	platform_main_end(crc32_context ^ 0xFFFFFFFFU, print_hash_value);
+	return 0;
+}
+

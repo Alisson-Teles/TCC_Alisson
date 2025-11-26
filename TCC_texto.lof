@@ -5,4 +5,5 @@
 \contentsline {figure}{\numberline {3}{\ignorespaces AVR16DD14, de 24 Mhz, com 14 portas de entrada e saída}}{17}{figure.caption.7}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Placa com um microcontrolador STM32F103C8T6, de 72 Mhz}}{18}{figure.caption.8}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Fluxograma de etapas metodológicas.}}{31}{figure.4.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Esquema de Treinamento e Inferência do LLM Compiler para STM32. Figura adaptada de \citeonline {cummins_large_2023}}}{33}{figure.caption.10}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Esquema de Treinamento e Inferência do LLM Compiler para STM32. Figura adaptada de \citeonline {cummins_large_2023}}}{34}{figure.4.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Comparação de tamanho entre os códigos otimizados pelas sequências do \cite {faustino2021new} e os códigos otimizados pela \textit {flag} -Oz.}}{39}{figure.caption.10}%

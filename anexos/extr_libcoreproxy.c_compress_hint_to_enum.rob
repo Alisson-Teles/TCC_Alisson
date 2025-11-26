@@ -1,0 +1,34 @@
+H2O_COMPRESS_HINT_AUTO = char(0);
+H2O_COMPRESS_HINT_DISABLE = char(0);
+H2O_COMPRESS_HINT_ENABLE = char(0);
+H2O_COMPRESS_HINT_ENABLE_BR = char(0);
+H2O_COMPRESS_HINT_ENABLE_GZIP = char(0);
+
+int32 H2O_STRLIT(char _un0);
+
+int32 h2o_lcstris(char _un1, uint32 _un2, int32 _un3);
+
+char compress_hint_to_enum(char val, uint32 len) {
+
+	if h2o_lcstris(val, len, H2O_STRLIT("on")) != 0 {
+		return H2O_COMPRESS_HINT_ENABLE;
+	}
+
+
+	if h2o_lcstris(val, len, H2O_STRLIT("off")) != 0 {
+		return H2O_COMPRESS_HINT_DISABLE;
+	}
+
+
+	if h2o_lcstris(val, len, H2O_STRLIT("gzip")) != 0 {
+		return H2O_COMPRESS_HINT_ENABLE_GZIP;
+	}
+
+
+	if h2o_lcstris(val, len, H2O_STRLIT("br")) != 0 {
+		return H2O_COMPRESS_HINT_ENABLE_BR;
+	}
+
+	return H2O_COMPRESS_HINT_AUTO;
+}
+

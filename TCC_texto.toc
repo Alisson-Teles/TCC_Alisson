@@ -38,18 +38,49 @@
 \contentsline {subsection}{\numberline {3.1.4}LLMCompiler: Foundation Language Models for Compiler Optimization}{28}{subsection.3.1.4}%
 \contentsline {subsection}{\numberline {3.1.5}Resumo Comparativo}{28}{subsection.3.1.5}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Implementação}}{30}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Metodologia}}{30}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Classificação da Pesquisa}{30}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Aspectos Metodológicos Gerais}{30}{section.4.2}%
 \contentsline {section}{\numberline {4.3}Conjunto de Dados}{31}{section.4.3}%
 \contentsline {section}{\numberline {4.4}Conversor de código C para RobCmp: c2rob}{32}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Formação dos Dados de Treinamento}{32}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Treinamento do Modelo}{33}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Validação do Modelo Refinado}{34}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Especificações de Hardware e Software}{35}{section.4.8}%
+\contentsline {section}{\numberline {4.6}Treinamento do Modelo}{34}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Especificações de Hardware e Software}{35}{section.4.7}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Cronograma}}{36}{chapter.5}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Resultados e Trabalhos Futuros}}{36}{chapter.5}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {6}\MakeTextUppercase []{Limitações}}{37}{chapter.6}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {7}\MakeTextUppercase []{Discussão}}{38}{chapter.7}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\contentsline {chapter}{\chapternumberline {8}\MakeTextUppercase []{Conclusão e trabalhos futuros}}{40}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Trabalhos Futuros}{40}{section.8.1}%
 \vspace {\cftbeforechapterskip }
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase []{Refer\^encias}}{37}{section*.15}%
+\contentsline {chapter}{\MakeTextUppercase []{Refer\^encias}}{42}{section*.14}%
+\cftinsert {AAA}
+\renewcommand *{\cftappendixname }{ANEXO \space }
+\setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
+\cftinsert {A}
+\contentsline {part}{\uppercase {Anexos}}{45}{section*.15}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Código 00668.rob, usado para criar o IR para inferência}}{46}{appendix.anexochapback.1}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Código 08016.rob, usado para criar o IR para inferência}}{52}{appendix.anexochapback.2}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase []{Código 45071.rob, usado para criar o IR para inferência}}{54}{appendix.anexochapback.3}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase []{Código \texttt {extr\_........gdbstub.c\_gdb\_cmd\_memwrite}, usado para criar o IR para inferência}}{56}{appendix.anexochapback.4}%
+\setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\cftinsert {A}
+\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase []{Código \texttt {extr\_libcoreproxy.c\_compress\_hint\_to\_enum.rob}, usado para criar o IR para inferência}}{57}{appendix.anexochapback.5}%
