@@ -174,6 +174,68 @@
 \imprimirfolhaderosto
 % ---
 
+% ---------------------------------
+% DEDICATÓRIA
+% ---------------------------------
+\begin{dedicatoria}
+   \vspace*{\fill}
+   \begin{center}
+      \textit{Dedico este trabalho à minha Mãe, Carla Teles Lima, ao meu Pai, Carlos Borges de Souza, e à minha Avó, Rauilda Teles Lima, pelo o orgulho e confiança que sempre tiveram em mim durante a minha jornada de vida. Devo tudo a vocês, porque em cada passo meu esteve o esforço de cada um de vocês.}
+   \end{center}
+   \vspace*{\fill}
+\end{dedicatoria}
+
+% ---------------------------------
+% AGRADECIMENTOS
+% ---------------------------------
+\begin{agradecimentos}
+   \vspace*{\fill}
+   \centering
+   \textit{
+  Agradeço à minha família, pelo amor, paciência e apoio constante em cada etapa, não só na minha jornada como acadêmico, mas em minha vida como um todo. Aos meus amigos e colegas de curso, pela companhia, pelas conversas, pelas dúvidas e respostas compartilhadas, e por toda a ajuda nos momentos em que precisei. Registro também minha gratidão a todos os professores que fizeram parte da minha formação e, em especial, ao meu orientador, Thiago Borges de Oliveira, pelas ideias, correções, conselhos e por cada contribuição depositada no desenvolvimento deste trabalho.
+  }   \vspace*{\fill}
+
+
+
+
+\end{agradecimentos}
+
+% ---------------------------------
+% ---
+% Epígrafe
+% ---
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{``Todos esses que aí estão atravancando meu caminho, eles passarão... Eu passarinho!.''\\
+      (Mario Quintana)}
+	\end{flushright}
+\end{epigrafe}
+
+% ---------------------------------
+% RESUMO EM PORTUGUÊS
+% ---------------------------------
+\begin{resumo}
+Este trabalho investiga o uso de modelos de linguagem de grande porte (LLMs) para otimização de código de microcontroladores, com foco no microcontrolador STM32F103C8T6 e na linguagem de programação \textit{Robotics Language}(ROBL). O objetivo principal é adaptar o modelo \textit{LLM Compiler}, originalmente treinado para unidades centrais de propósito geral, ao contexto de sistemas centrais de processamento de propósito geral, ao contexto de sistemas embarcados com fortes restrições de recursos, visando à redução do tamanho do código objeto. Para isso, foi desenvolvido um fluxo de processamento completo que: (i) coleta programas na linguagem C provenientes dos conjuntos \textit{Csmith} e \textit{AnghaBench}; (ii) converte automaticamente esses programas para a linguagem ROBL por meio do conversor c2rob; (iii) compila os códigos convertidos com diferentes sequências de etapas de otimização do compilador LLVM, obtidas na literatura; (iv) seleciona, para cada programa, a sequência que gera o menor código objeto para a arquitetura baseada no microcontrolador STM32; e (v) organiza esses dados em pares de entrada e saída (\textit{prompt–label}) para ajuste fino supervisionado do \textit{LLM Compiler}. O modelo refinado foi treinado com cerca de 2,000 amostras e avaliado de forma exploratória em códigos que não foram utilizados no treinamento. Os testes indicam que o modelo é capaz de reproduzir, em alguns casos, padrões de otimização compatíveis com as sequências obtidas por busca automática, ainda que com capacidade de generalização limitada pelo tamanho do conjunto de dados. A principal contribuição deste trabalho é a disponibilização de um fluxo de processamento reprodutível(\textit{pipeline}) que integra uma linguagem de programação voltada a microcontroladores(ROBL), o compilador Robcmp e um modelo de linguagem de grande porte especializado em compiladores, abrindo caminho para estudos futuros com conjuntos de dados maiores e avaliações quantitativas mais robustas.
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: Compiladores; Microcontroladores; Otimização de Código; Modelos de Linguagem; Aprendizado de Máquina; Modelos de Linguagem de Grande Porte.
+\end{resumo}
+
+% ---------------------------------
+% ABSTRACT (RESUMO EM INGLÊS)
+% ---------------------------------
+\begin{resumo}[Abstract]
+\begin{otherlanguage*}{english}
+This work investigates the use of large language models (LLMs) for code optimization on microcontrollers, focusing on the STM32F103C8T6 microcontroller and the domain-specific programming language Robotics Language (ROBL). The main goal is to adapt the LLM Compiler model—originally trained for general-purpose central processing units—to the context of embedded systems with strict resource constraints, targeting object code size reduction. To this end, we designed a complete processing pipeline that: (i) collects C programs from the Csmith and AnghaBench datasets; (ii) automatically converts these programs into ROBL using the c2rob converter; (iii) compiles the converted codes with different sequences of optimization passes of the LLVM compiler, including short sequences proposed in the literature; (iv) selects, for each program, the sequence that produces the smallest object file for the architecture based on the STM32 microcontroller; and (v) organizes these results into input–output pairs (prompt–label) for supervised fine-tuning of the LLM Compiler. The refined model was trained on approximately two thousand examples and evaluated in an exploratory manner on codes that were not used during training. The experiments show that, in some cases, the model can reproduce optimization patterns consistent with those obtained through automatic search, although its generalization ability is limited by the reduced size of the training set. The main contribution of this work is a reproducible pipeline that integrates a microcontroller-oriented programming language, the Robcmp compiler, and a compiler-focused large language model, paving the way for future studies with larger datasets and more comprehensive quantitative evaluations.
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Keywords}: Compilers; Microcontrollers; Code Optimization; Language Models; Machine Learning; Large Language Models.
+\end{otherlanguage*}
+\end{resumo}
+
 % ---
 % NOTA DA ABNT NBR 15287:2011, p. 4:
 %  ``Se exigido pela entidade, apresentar os dados curriculares do autor em
@@ -689,7 +751,7 @@ Por outro lado, a ausência de uma avaliação quantitativa abrangente, baseada 
 
 Outro ponto a ser destacado é que o conjunto de programas utilizados (Códigos C convertidos para ROBL) tende a abranger exemplos curtos(como é o caso do \textit{AnghaBench}) ou com pouca variabilidade(caso do \textit{Csmith}). Isso significa que o modelo foi exposto principalmente a padrões de códigos com pouca generalização, o que limita sua capacidade de lidar com projetos mais complexos. Apesar disso, o \textit{pipeline} proposto estabelece uma base sólida para a qual o conjuntos de dados mais amplos e diversos podem ser agregados em trabalhos futuros, permitindo avaliar de forma mais robusta o potencial da abordagem em cenários de maior complexidade.
 
-Além disso, a figura \ref{fig:minhafigura8} evidencia uma limitação importante do conjunto de dados utilizado. Observa-se que, em 56,2\% dos programas, as sequências de passes propostas por \citeonline{faustino2021new} produzem códigos menores do que a \textit{flag} padrão -Oz, enquanto em 43,6\% dos casos o resultado é equivalente e apenas 0,2\% há piora. Esse comportamento indica que o \textit{dataset} empregado neste trabalho está fortemente enviesado para programas nos quais as sequências de \citeonline{faustino2021new} já são muito competitivas, muitas vezes dominando a configuração padrão do compilador. Em outras palavras, o modelo é treinado majoritariamente em exemplos que já existe uma sequência de otimização bastante ajustata ao conjunto de \textit{benchmarks} de origem, o que reduz o espaço de melhoria e pode mascarar limitações da abordagem quando aplicada a códigos mais variados.
+Além disso, a figura \ref{fig:minhafigura8} evidencia uma limitação importante do conjunto de dados utilizado. Observa-se que, em 56,2\% dos programas, as sequências de passes propostas por \citeonline{faustino2021new} produzem códigos menores do que a \textit{flag} padrão -Oz, enquanto em 43,6\% dos casos o resultado é equivalente e apenas 0,2\% há piora. Esse comportamento indica que o \textit{dataset} empregado neste trabalho está fortemente enviesado para programas nos quais as sequências de \citeonline{faustino2021new} já são muito competitivas, muitas vezes dominando a configuração padrão do compilador. 
 
 Esse cenário configura uma ameaça à validade externa dos experimentos, na medida em que as conclusões obtidas tendem a se restringir a situações muito específicas, caracterizadas por programas curtos e com pouca variabilidade. Em contextos mais realistas, envolvendo códigos de maior porte, com múltiplos módulos, bibliotecas externas e uso intensivo de periféricos, é pouco provável que o mesmo padrão de ganho se repita de forma consistente. Assim, embora os resultados indiquem que o modelo é capaz de reproduzir sequências competitivas em um cenário controlado, não se pode afirmar que o comportamento observado será mantido quando aplicado a sistemas embarcados de complexidade superior, o que deve ser explicitado como limitação e ameaça à generalização dos resultados.
 

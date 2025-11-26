@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.4)  26 NOV 2025 17:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.4)  26 NOV 2025 19:25
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -899,142 +899,153 @@ l.176
 
 
 
-] (TCC_texto.lof) [2
+] [2
 
-] (TCC_texto.lot) [3
+] [3
+
+
+] [4
+
+] [5
+
+] [6
+
+] (TCC_texto.lof) [7
+
+] (TCC_texto.lot) [8
 
 ] (TCC_texto.toc
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 16.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 17.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 23.
- [4
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 24.
+ [9
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 66.
+(Font)              <14.4> on input line 67.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 66.
+(Font)              <10> on input line 67.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 66.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 82.
+(Font)              <7> on input line 67.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 83.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 82.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 83.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (10.37971pt too wide) in paragraph at lines 82--82
+Overfull \hbox (10.37971pt too wide) in paragraph at lines 83--83
  [][] [][][]\T1/lmss/bx/n/12 (-20) CÓDIGO \T1/lmtt/b/n/12 EXTR_........GDBSTUB.C_GDB_CMD_MEMWRITE\T1/lmss/bx/n/12 (-20) , 
  []
 
 
-Overfull \hbox (48.17964pt too wide) in paragraph at lines 86--86
+Overfull \hbox (48.17964pt too wide) in paragraph at lines 87--87
  [][] [][][]\T1/lmss/bx/n/12 (-20) CÓDIGO \T1/lmtt/b/n/12 EXTR_LIBCOREPROXY.C_COMPRESS_HINT_TO_ENUM.ROB\T1/lmss/bx/n/12 (-20) , 
  []
 
-) [5]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 248.
+) [10]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 310.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 253.
- [6
+(Font)              <5> on input line 315.
+ [11
 
 
-{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [7] [8] [9] [10]
-<imagens/fig1.png, id=297, 1445.4pt x 813.0375pt>
+{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [12] [13] [14] [15]
+<imagens/fig1.png, id=330, 1445.4pt x 813.0375pt>
 File: imagens/fig1.png Graphic file (type png)
 <use imagens/fig1.png>
-Package pdftex.def Info: imagens/fig1.png  used on input line 317.
+Package pdftex.def Info: imagens/fig1.png  used on input line 379.
 (pdftex.def)             Requested size: 455.0pt x 255.93448pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 322.
-[11
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 384.
+[16
 
-] [12 <./imagens/fig1.png (PNG copy)>]
-<imagens/fig2.png, id=341, 1445.4pt x 813.0375pt>
+] [17 <./imagens/fig1.png (PNG copy)>]
+<imagens/fig2.png, id=373, 1445.4pt x 813.0375pt>
 File: imagens/fig2.png Graphic file (type png)
 <use imagens/fig2.png>
-Package pdftex.def Info: imagens/fig2.png  used on input line 342.
+Package pdftex.def Info: imagens/fig2.png  used on input line 404.
 (pdftex.def)             Requested size: 455.0pt x 255.93448pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[13] [14 <./imagens/fig2.png (PNG copy)>] [15] [16]
-<imagens/fig4.png, id=404, 513.92pt x 362.35374pt>
+[18] [19 <./imagens/fig2.png (PNG copy)>] [20] [21]
+<imagens/fig4.png, id=437, 513.92pt x 362.35374pt>
 File: imagens/fig4.png Graphic file (type png)
 <use imagens/fig4.png>
-Package pdftex.def Info: imagens/fig4.png  used on input line 399.
+Package pdftex.def Info: imagens/fig4.png  used on input line 461.
 (pdftex.def)             Requested size: 181.99722pt x 128.32408pt.
-<imagens/fig5.jpg, id=410, 1405.25pt x 936.49875pt>
+<imagens/fig5.jpg, id=443, 1405.25pt x 936.49875pt>
 File: imagens/fig5.jpg Graphic file (type jpg)
 <use imagens/fig5.jpg>
-Package pdftex.def Info: imagens/fig5.jpg  used on input line 404.
+Package pdftex.def Info: imagens/fig5.jpg  used on input line 466.
 (pdftex.def)             Requested size: 227.5pt x 151.6005pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 409.
-[17 <./imagens/fig4.png>] [18 <./imagens/fig5.jpg>] [19] [20{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] [21] [22] [23] [24] [25] [26
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 471.
+[22 <./imagens/fig4.png>] [23 <./imagens/fig5.jpg>] [24] [25{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] [26] [27] [28] [29] [30] [31
 
-] [27] [28] [29]
-<imagens/fig7.png, id=650, 1445.4pt x 813.0375pt>
+] [32] [33] [34]
+<imagens/fig7.png, id=682, 1445.4pt x 813.0375pt>
 File: imagens/fig7.png Graphic file (type png)
 <use imagens/fig7.png>
-Package pdftex.def Info: imagens/fig7.png  used on input line 599.
+Package pdftex.def Info: imagens/fig7.png  used on input line 661.
 (pdftex.def)             Requested size: 682.5pt x 383.90173pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 600.
+(caption)                particular \caption on input line 662.
 See the caption package documentation for explanation.
 
-[30
+[35
 
-] [31 <./imagens/fig7.png (PNG copy)>] [32]
-<imagens/fig6.png, id=689, 1445.4pt x 813.0375pt>
+] [36 <./imagens/fig7.png (PNG copy)>] [37]
+<imagens/fig6.png, id=721, 1445.4pt x 813.0375pt>
 File: imagens/fig6.png Graphic file (type png)
 <use imagens/fig6.png>
-Package pdftex.def Info: imagens/fig6.png  used on input line 635.
+Package pdftex.def Info: imagens/fig6.png  used on input line 697.
 (pdftex.def)             Requested size: 682.5pt x 383.90173pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 636.
+(caption)                particular \caption on input line 698.
 See the caption package documentation for explanation.
 
-[33] [34 <./imagens/fig6.png (PNG copy)>] [35]
+[38] [39 <./imagens/fig6.png (PNG copy)>] [40]
 
-LaTeX Warning: Reference `anexo:codigo6' on page 36 undefined on input line 670.
+LaTeX Warning: Reference `anexo:codigo6' on page 41 undefined on input line 732.
 
-[36
+[41
 
-] [37
+] [42
 
-] [38
+] [43
 
 ]
-<imagens/fig8.png, id=759, 760.34062pt x 453.19313pt>
+<imagens/fig8.png, id=791, 760.34062pt x 453.19313pt>
 File: imagens/fig8.png Graphic file (type png)
 <use imagens/fig8.png>
-Package pdftex.def Info: imagens/fig8.png  used on input line 699.
+Package pdftex.def Info: imagens/fig8.png  used on input line 761.
 (pdftex.def)             Requested size: 318.49861pt x 189.84192pt.
- [39 <./imagens/fig8.png>] [40
+ [44 <./imagens/fig8.png>] [45
 
-] [41]
+] [46]
 \openout2 = `abntex2-modelo-include-comandos.aux'.
 
 
@@ -1045,17 +1056,17 @@ No file abntex2-modelo-include-comandos.tex.
 
 
 bibitemlist
-[42
+[47
 
 
 
 
-] [43]) [44]
+] [48]) [49]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 769.
+(hyperref)                removing `\uppercase' on input line 831.
 
-[45
+[50
 
 
 ] (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
@@ -1063,41 +1074,41 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 774.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 836.
  (anexos/00668.rob
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 17.
- [46
+ [51
 
-] [47] [48] [49] [50]) [51] (anexos/08016.rob [52
+] [52] [53] [54] [55]) [56] (anexos/08016.rob [57
 
-]) [53] (anexos/45071.rob [54
+]) [58] (anexos/45071.rob [59
 
-]) [55]
-Overfull \hbox (47.42801pt too wide) in paragraph at lines 825--825
+]) [60]
+Overfull \hbox (47.42801pt too wide) in paragraph at lines 887--887
  \T1/lmtt/m/n/24.88 extr_........gdbstub.c_gdb_cmd_memwrite\T1/lmss/m/n/24.88 (-20) , 
  []
 
-(anexos/extr_........gdbstub.c_gdb_cmd_memwrite.rob) [56
+(anexos/extr_........gdbstub.c_gdb_cmd_memwrite.rob) [61
 
 ]
-Overfull \hbox (124.24506pt too wide) in paragraph at lines 843--843
+Overfull \hbox (124.24506pt too wide) in paragraph at lines 905--905
  \T1/lmtt/m/n/24.88 extr_libcoreproxy.c_compress_hint_to_enum.rob\T1/lmss/m/n/24.88 (-20) , 
  []
 
-(anexos/extr_libcoreproxy.c_compress_hint_to_enum.rob) [57
+(anexos/extr_libcoreproxy.c_compress_hint_to_enum.rob) [62
 
 ]
 
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 874.
+(in both cases you will find help in the memoir manual). on input line 936.
 
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [58]
+ [63]
 \tf@lof=\write6
 \openout6 = `TCC_texto.lof'.
 
@@ -1117,20 +1128,20 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `TCC_texto.brf' has not changed.
-(rerunfilecheck)             Checksum: B75AB1D1D1BA67993488586E96D2AA0D;8037.
+(rerunfilecheck)             Checksum: E95D356AC44AD7B7281DF790E28D5C8F;8074.
  ) 
 Here is how much of TeX's memory you used:
- 24574 strings out of 474486
- 415694 string characters out of 5739944
+ 24624 strings out of 474486
+ 416623 string characters out of 5739944
  2177542 words of memory out of 5000000
- 45627 multiletter control sequences out of 15000+600000
- 667475 words of font info for 234 fonts, out of 8000000 for 9000
+ 45655 multiletter control sequences out of 15000+600000
+ 667798 words of font info for 237 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,107p,1856b,2346s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,107p,2155b,2346s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb>
-Output written on TCC_texto.pdf (59 pages, 1792239 bytes).
+Output written on TCC_texto.pdf (64 pages, 1805361 bytes).
 PDF statistics:
- 1718 PDF objects out of 1728 (max. 8388607)
- 577 named destinations out of 1000 (max. 500000)
- 64980 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1767 PDF objects out of 2073 (max. 8388607)
+ 593 named destinations out of 1000 (max. 500000)
+ 65020 words of extra memory for PDF output out of 74296 (max. 10000000)
 
