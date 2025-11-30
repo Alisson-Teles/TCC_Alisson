@@ -52,44 +52,44 @@
 \contentsline {section}{\numberline {4.10}Resultados: Ferramentas para Geração do Dataset de Treinamento}{44}{section.4.10}%
 \contentsline {section}{\numberline {4.11}Discussão e Limitações}{46}{section.4.11}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
-\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Conclusão e trabalhos futuros}}{49}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Trabalhos Futuros}{49}{section.5.1}%
+\contentsline {chapter}{\chapternumberline {5}\MakeTextUppercase []{Conclusão e trabalhos futuros}}{48}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Trabalhos Futuros}{48}{section.5.1}%
 \vspace {\cftbeforechapterskip }
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\MakeTextUppercase []{Refer\^encias}}{51}{section*.20}%
+\contentsline {chapter}{\MakeTextUppercase []{Refer\^encias}}{50}{section*.20}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftpartindent }{\cftlastnumwidth } \setlength {\cftpartnumwidth }{2em}
 \cftinsert {A}
-\contentsline {part}{\uppercase {Anexos}}{54}{section*.21}%
+\contentsline {part}{\uppercase {Anexos}}{53}{section*.21}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Código 00668.rob, e Resultado da inferência}}{55}{appendix.anexochapback.1}%
-\contentsline {section}{\numberline {A.1}Código em ROBL}{55}{section.anexochapback.1.1}%
-\contentsline {section}{\numberline {A.2}Resultado da Inferência}{60}{section.anexochapback.1.2}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Código 00668.rob, e Resultado da inferência}}{54}{appendix.anexochapback.1}%
+\contentsline {section}{\numberline {A.1}Código em ROBL}{54}{section.anexochapback.1.1}%
+\contentsline {section}{\numberline {A.2}Resultado da Inferência}{59}{section.anexochapback.1.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Código 08016.rob, usado para criar o IR para inferência}}{61}{appendix.anexochapback.2}%
-\contentsline {section}{\numberline {B.1}Código em ROBL}{61}{section.anexochapback.2.1}%
-\contentsline {section}{\numberline {B.2}Resultado da Inferência}{62}{section.anexochapback.2.2}%
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Código 08016.rob, usado para criar o IR para inferência}}{60}{appendix.anexochapback.2}%
+\contentsline {section}{\numberline {B.1}Código em ROBL}{60}{section.anexochapback.2.1}%
+\contentsline {section}{\numberline {B.2}Resultado da Inferência}{61}{section.anexochapback.2.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase []{Código 45071.rob, usado para criar o IR para inferência}}{63}{appendix.anexochapback.3}%
-\contentsline {section}{\numberline {C.1}Código em ROBL}{63}{section.anexochapback.3.1}%
-\contentsline {section}{\numberline {C.2}Resultado da Inferência}{64}{section.anexochapback.3.2}%
+\contentsline {appendix}{\chapternumberline {C}\MakeTextUppercase []{Código 45071.rob, usado para criar o IR para inferência}}{62}{appendix.anexochapback.3}%
+\contentsline {section}{\numberline {C.1}Código em ROBL}{62}{section.anexochapback.3.1}%
+\contentsline {section}{\numberline {C.2}Resultado da Inferência}{63}{section.anexochapback.3.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase []{Código \texttt {extr\_........gdbstub.c\_gdb\_cmd\_memwrite}, usado para criar o IR para inferência}}{65}{appendix.anexochapback.4}%
-\contentsline {section}{\numberline {D.1}Código em ROBL}{65}{section.anexochapback.4.1}%
-\contentsline {section}{\numberline {D.2}Resultado da Inferência}{66}{section.anexochapback.4.2}%
+\contentsline {appendix}{\chapternumberline {D}\MakeTextUppercase []{Código \texttt {extr\_........gdbstub.c\_gdb\_cmd\_memwrite}, usado para criar o IR para inferência}}{64}{appendix.anexochapback.4}%
+\contentsline {section}{\numberline {D.1}Código em ROBL}{64}{section.anexochapback.4.1}%
+\contentsline {section}{\numberline {D.2}Resultado da Inferência}{65}{section.anexochapback.4.2}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase []{Código \texttt {extr\_libcoreproxy.c\_compress\_hint\_to\_enum.rob}, usado para criar o IR para inferência}}{67}{appendix.anexochapback.5}%
-\contentsline {section}{\numberline {E.1}Código em ROBL}{67}{section.anexochapback.5.1}%
-\contentsline {section}{\numberline {E.2}Resultado da Inferência}{68}{section.anexochapback.5.2}%
+\contentsline {appendix}{\chapternumberline {E}\MakeTextUppercase []{Código \texttt {extr\_libcoreproxy.c\_compress\_hint\_to\_enum.rob}, usado para criar o IR para inferência}}{66}{appendix.anexochapback.5}%
+\contentsline {section}{\numberline {E.1}Código em ROBL}{66}{section.anexochapback.5.1}%
+\contentsline {section}{\numberline {E.2}Resultado da Inferência}{67}{section.anexochapback.5.2}%

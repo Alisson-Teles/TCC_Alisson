@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.4)  30 NOV 2025 16:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.4)  30 NOV 2025 17:33
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1047,9 +1047,9 @@ Underfull \hbox (badness 2799) in paragraph at lines 762--762
  [][] [][][]\T1/lmr/m/n/10 (+20) Versão trei-nada do \T1/lmr/m/it/10 (+20) LLM Com-pi-ler\T1/lmr/m/n/10 (+20) , dis-po-ní-vel em: [][]$<[]https : / / huggingface . co / Cal-[]mfbc5446 /
  []
 
-[43] [44] [45] [46] [47] [48] [49
+[43] [44] [45] [46] [47] [48
 
-] [50]
+] [49]
 \openout2 = `abntex2-modelo-include-comandos.aux'.
 
 
@@ -1060,17 +1060,17 @@ No file abntex2-modelo-include-comandos.tex.
 
 
 bibitemlist
-[51
+[50
 
 
 
 
-] [52]) [53]
+] [51]) [52]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 908.
+(hyperref)                removing `\uppercase' on input line 905.
 
-[54
+[53
 
 
 ] (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
@@ -1078,51 +1078,51 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 915.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 912.
  (anexos/00668.rob
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 17.
- [55
+ [54
 
-] [56] [57] [58] [59]) [60] (anexos/08016.rob [61
+] [55] [56] [57] [58]) [59] (anexos/08016.rob [60
 
-]) [62] (anexos/45071.rob [63
+]) [61] (anexos/45071.rob [62
 
-]) [64]
-Overfull \hbox (47.42801pt too wide) in paragraph at lines 979--979
+]) [63]
+Overfull \hbox (47.42801pt too wide) in paragraph at lines 976--976
  \T1/lmtt/m/n/24.88 extr_........gdbstub.c_gdb_cmd_memwrite\T1/lmss/m/n/24.88 (-20) , 
  []
 
-(anexos/extr_........gdbstub.c_gdb_cmd_memwrite.rob) [65
+(anexos/extr_........gdbstub.c_gdb_cmd_memwrite.rob) [64
 
 ]
 
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 1002.
+(in both cases you will find help in the memoir manual). on input line 999.
 
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [66]
-Overfull \hbox (124.24506pt too wide) in paragraph at lines 1002--1002
+ [65]
+Overfull \hbox (124.24506pt too wide) in paragraph at lines 999--999
  \T1/lmtt/m/n/24.88 extr_libcoreproxy.c_compress_hint_to_enum.rob\T1/lmss/m/n/24.88 (-20) , 
  []
 
-(anexos/extr_libcoreproxy.c_compress_hint_to_enum.rob [67
+(anexos/extr_libcoreproxy.c_compress_hint_to_enum.rob [66
 
 ])
 
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 1038.
+(in both cases you will find help in the memoir manual). on input line 1035.
 
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [68]
+ [67]
 \tf@lof=\write6
 \openout6 = `TCC_texto.lof'.
 
@@ -1138,20 +1138,20 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `TCC_texto.brf' has not changed.
-(rerunfilecheck)             Checksum: CDCF1007F74F226200128E809DDA0A42;8221.
+(rerunfilecheck)             Checksum: 33FC227F53FCF83C279FB90E21DE4304;8221.
  ) 
 Here is how much of TeX's memory you used:
- 24664 strings out of 474486
- 417100 string characters out of 5739944
+ 24663 strings out of 474486
+ 417093 string characters out of 5739944
  2184542 words of memory out of 5000000
  45665 multiletter control sequences out of 15000+600000
  667786 words of font info for 238 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,107p,2148b,2356s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb>
-Output written on TCC_texto.pdf (69 pages, 1842506 bytes).
+Output written on TCC_texto.pdf (68 pages, 1840985 bytes).
 PDF statistics:
- 1888 PDF objects out of 2073 (max. 8388607)
- 621 named destinations out of 1000 (max. 500000)
+ 1884 PDF objects out of 2073 (max. 8388607)
+ 620 named destinations out of 1000 (max. 500000)
  65108 words of extra memory for PDF output out of 74296 (max. 10000000)
 
