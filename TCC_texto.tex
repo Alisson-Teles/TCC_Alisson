@@ -793,7 +793,7 @@ Para completar esse par de dados, o campo ``\texttt{content}'', possui duas vari
 
 Esse processo produz um conjunto de dados organizado e padronizado, já pronto para ser utilizado na etapa de \textit{fine-tuning} do \textit{LLM Compiler}. Dessa forma, assegura-se tanto a consistência em relação à metodologia original quanto a aderência ao domínio específico da arquitetura STM32.
 
-Dessa forma, os resultados práticos deste trabalho incluem os \textit{scripts}: 
+Portanto os resultados apresentados nesse trabalho também \textit{scripts}: 
 
 \begin{itemize}
     \item O script \texttt{rodar\_seq\_uniq.sh} aplica, para cada programa LLVM-IR, as 1289 sequências de otimização únicas derivadas de \cite{faustino2021new}. Para cada sequência, o código é compilado para STM32, sendo gerados e armazenados os arquivos resultantes (\texttt{.s}, \texttt{.o}, \texttt{.ll}). Ao final, para cada programa, identifica-se a sequência que produz o menor arquivo objeto, caracterizando o ``melhor caso''.
