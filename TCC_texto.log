@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.4)  27 NOV 2025 11:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.4)  30 NOV 2025 14:04
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -923,28 +923,28 @@ LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 67.
+(Font)              <14.4> on input line 65.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 67.
+(Font)              <10> on input line 65.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 67.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 89.
+(Font)              <7> on input line 65.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 87.
  (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 89.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 87.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (10.37971pt too wide) in paragraph at lines 89--89
+Overfull \hbox (10.37971pt too wide) in paragraph at lines 87--87
  [][] [][][]\T1/lmss/bx/n/12 (-20) CÓDIGO \T1/lmtt/b/n/12 EXTR_........GDBSTUB.C_GDB_CMD_MEMWRITE\T1/lmss/bx/n/12 (-20) , 
  []
 
 
-Overfull \hbox (48.17964pt too wide) in paragraph at lines 95--95
+Overfull \hbox (48.17964pt too wide) in paragraph at lines 93--93
  [][] [][][]\T1/lmss/bx/n/12 (-20) CÓDIGO \T1/lmtt/b/n/12 EXTR_LIBCOREPROXY.C_COMPRESS_HINT_TO_ENUM.ROB\T1/lmss/bx/n/12 (-20) , 
  []
 
@@ -959,94 +959,97 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 {C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] [13] [14] [15] [16]
-<imagens/fig1.png, id=354, 1445.4pt x 813.0375pt>
+<imagens/fig1.png, id=357, 1445.4pt x 813.0375pt>
 File: imagens/fig1.png Graphic file (type png)
 <use imagens/fig1.png>
-Package pdftex.def Info: imagens/fig1.png  used on input line 379.
+Package pdftex.def Info: imagens/fig1.png  used on input line 381.
 (pdftex.def)             Requested size: 455.0pt x 255.93448pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 384.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 386.
 [17
 
 ] [18 <./imagens/fig1.png (PNG copy)>]
-<imagens/fig2.png, id=398, 1445.4pt x 813.0375pt>
+<imagens/fig2.png, id=401, 1445.4pt x 813.0375pt>
 File: imagens/fig2.png Graphic file (type png)
 <use imagens/fig2.png>
-Package pdftex.def Info: imagens/fig2.png  used on input line 404.
+Package pdftex.def Info: imagens/fig2.png  used on input line 406.
 (pdftex.def)             Requested size: 455.0pt x 255.93448pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [19] [20 <./imagens/fig2.png (PNG copy)>] [21] [22]
-<imagens/fig4.png, id=461, 513.92pt x 362.35374pt>
+<imagens/fig4.png, id=464, 513.92pt x 362.35374pt>
 File: imagens/fig4.png Graphic file (type png)
 <use imagens/fig4.png>
-Package pdftex.def Info: imagens/fig4.png  used on input line 461.
+Package pdftex.def Info: imagens/fig4.png  used on input line 463.
 (pdftex.def)             Requested size: 181.99722pt x 128.32408pt.
-<imagens/fig5.jpg, id=467, 1405.25pt x 936.49875pt>
+<imagens/fig5.jpg, id=470, 1405.25pt x 936.49875pt>
 File: imagens/fig5.jpg Graphic file (type jpg)
 <use imagens/fig5.jpg>
-Package pdftex.def Info: imagens/fig5.jpg  used on input line 466.
+Package pdftex.def Info: imagens/fig5.jpg  used on input line 468.
 (pdftex.def)             Requested size: 227.5pt x 151.6005pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <17.28> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 471.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 473.
 [23 <./imagens/fig4.png>] [24 <./imagens/fig5.jpg>] [25] [26{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}] [27] [28] [29] [30] [31] [32
 
 ] [33] [34] [35]
-<imagens/fig7.png, id=706, 1445.4pt x 813.0375pt>
+<imagens/fig7.png, id=709, 1445.4pt x 813.0375pt>
 File: imagens/fig7.png Graphic file (type png)
 <use imagens/fig7.png>
-Package pdftex.def Info: imagens/fig7.png  used on input line 661.
+Package pdftex.def Info: imagens/fig7.png  used on input line 666.
 (pdftex.def)             Requested size: 682.5pt x 383.90173pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 662.
+(caption)                particular \caption on input line 667.
 See the caption package documentation for explanation.
 
 [36
 
 ] [37 <./imagens/fig7.png (PNG copy)>] [38]
-<imagens/fig6.png, id=745, 1445.4pt x 813.0375pt>
+<imagens/fig6.png, id=750, 1445.4pt x 813.0375pt>
 File: imagens/fig6.png Graphic file (type png)
 <use imagens/fig6.png>
-Package pdftex.def Info: imagens/fig6.png  used on input line 697.
+Package pdftex.def Info: imagens/fig6.png  used on input line 708.
 (pdftex.def)             Requested size: 682.5pt x 383.90173pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 698.
+(caption)                particular \caption on input line 709.
 See the caption package documentation for explanation.
 
-[39] [40 <./imagens/fig6.png (PNG copy)>] [41]
-Underfull \hbox (badness 2799) in paragraph at lines 730--730
+[39]
+<imagens/fig8.png, id=765, 760.34062pt x 453.19313pt>
+File: imagens/fig8.png Graphic file (type png)
+<use imagens/fig8.png>
+Package pdftex.def Info: imagens/fig8.png  used on input line 721.
+(pdftex.def)             Requested size: 318.49861pt x 189.84192pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[40 <./imagens/fig6.png (PNG copy)>] [41 <./imagens/fig8.png>]
+Underfull \hbox (badness 2799) in paragraph at lines 755--755
  [][] [][][]\T1/lmr/m/n/10 (+20) Versão trei-nada do \T1/lmr/m/it/10 (+20) LLM Com-pi-ler\T1/lmr/m/n/10 (+20) , dis-po-ní-vel em: [][]$<[]https : / / huggingface . co / Cal-[]mfbc5446 /
  []
 
-[42
+[42]
+Underfull \hbox (badness 2799) in paragraph at lines 763--763
+ [][] [][][]\T1/lmr/m/n/10 (+20) Versão trei-nada do \T1/lmr/m/it/10 (+20) LLM Com-pi-ler\T1/lmr/m/n/10 (+20) , dis-po-ní-vel em: [][]$<[]https : / / huggingface . co / Cal-[]mfbc5446 /
+ []
 
-] [43
+[43] [44] [45] [46] [47] [48] [49
 
-] [44
-
-]
-<imagens/fig8.png, id=821, 760.34062pt x 453.19313pt>
-File: imagens/fig8.png Graphic file (type png)
-<use imagens/fig8.png>
-Package pdftex.def Info: imagens/fig8.png  used on input line 761.
-(pdftex.def)             Requested size: 318.49861pt x 189.84192pt.
- [45 <./imagens/fig8.png>] [46
-
-] [47]
+] [50]
 \openout2 = `abntex2-modelo-include-comandos.aux'.
 
 
@@ -1057,17 +1060,17 @@ No file abntex2-modelo-include-comandos.tex.
 
 
 bibitemlist
-[48
+[51
 
 
 
 
-] [49]) [50]
+] [52]) [53]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\uppercase' on input line 831.
+(hyperref)                removing `\uppercase' on input line 911.
 
-[51
+[54
 
 
 ] (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
@@ -1075,51 +1078,51 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 838.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 918.
  (anexos/00668.rob
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 17.
- [52
+ [55
 
-] [53] [54] [55] [56]) [57] (anexos/08016.rob [58
+] [56] [57] [58] [59]) [60] (anexos/08016.rob [61
 
-]) [59] (anexos/45071.rob [60
+]) [62] (anexos/45071.rob [63
 
-]) [61]
-Overfull \hbox (47.42801pt too wide) in paragraph at lines 902--902
+]) [64]
+Overfull \hbox (47.42801pt too wide) in paragraph at lines 982--982
  \T1/lmtt/m/n/24.88 extr_........gdbstub.c_gdb_cmd_memwrite\T1/lmss/m/n/24.88 (-20) , 
  []
 
-(anexos/extr_........gdbstub.c_gdb_cmd_memwrite.rob) [62
+(anexos/extr_........gdbstub.c_gdb_cmd_memwrite.rob) [65
 
 ]
 
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 925.
+(in both cases you will find help in the memoir manual). on input line 1005.
 
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [63]
-Overfull \hbox (124.24506pt too wide) in paragraph at lines 925--925
+ [66]
+Overfull \hbox (124.24506pt too wide) in paragraph at lines 1005--1005
  \T1/lmtt/m/n/24.88 extr_libcoreproxy.c_compress_hint_to_enum.rob\T1/lmss/m/n/24.88 (-20) , 
  []
 
-(anexos/extr_libcoreproxy.c_compress_hint_to_enum.rob [64
+(anexos/extr_libcoreproxy.c_compress_hint_to_enum.rob [67
 
 ])
 
 Class memoir Warning: The material used in the headers is too large
 (28.99998pt) for the given head height (14.5pt), it is recommended to
 either increase the head height or redesign the header
-(in both cases you will find help in the memoir manual). on input line 961.
+(in both cases you will find help in the memoir manual). on input line 1041.
 
 
 Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 
- [65]
+ [68]
 \tf@lof=\write6
 \openout6 = `TCC_texto.lof'.
 
@@ -1134,21 +1137,30 @@ Overfull \vbox (14.49998pt too high) has occurred while \output is active []
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-Package rerunfilecheck Info: File `TCC_texto.brf' has not changed.
-(rerunfilecheck)             Checksum: 25B0B091BE5BE1D88D538EF75D818F99;8074.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `TCC_texto.brf' has changed.
+(rerunfilecheck)                Rerun to get bibliographical references right.
+
+Package rerunfilecheck Info: Checksums for `TCC_texto.brf':
+(rerunfilecheck)             Before: B9F25B29275A1EB41B04CCD82E7DCDAE;8196
+(rerunfilecheck)             After:  94E097CB9A3D162070D22A23BBEF58DD;8221.
  ) 
 Here is how much of TeX's memory you used:
- 24650 strings out of 474486
- 416988 string characters out of 5739944
- 2183542 words of memory out of 5000000
- 45664 multiletter control sequences out of 15000+600000
- 668001 words of font info for 239 fonts, out of 8000000 for 9000
+ 24670 strings out of 474486
+ 417186 string characters out of 5739944
+ 2184542 words of memory out of 5000000
+ 45673 multiletter control sequences out of 15000+600000
+ 667721 words of font info for 237 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,107p,2155b,2356s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,107p,2148b,2356s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso17.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/Alisson Teles/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtti10.pfb>
-Output written on TCC_texto.pdf (66 pages, 1818732 bytes).
+Output written on TCC_texto.pdf (69 pages, 1843777 bytes).
 PDF statistics:
- 1833 PDF objects out of 2073 (max. 8388607)
- 606 named destinations out of 1000 (max. 500000)
- 65100 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1890 PDF objects out of 2073 (max. 8388607)
+ 621 named destinations out of 1000 (max. 500000)
+ 65108 words of extra memory for PDF output out of 74296 (max. 10000000)
 
