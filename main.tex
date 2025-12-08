@@ -1,0 +1,204 @@
+%% TCC Alisson - Modelo modularizado em capítulos e apêndices
+
+\documentclass[
+	12pt,				
+	oneside,
+	a4paper,		
+    sumario=tradicional,
+	english,			
+	french,				
+	spanish,			
+	brazil				
+]{abntex2}
+
+% --- CONFIGURAÇÕES ESPECÍFICAS DA UFJ (se você usar esse pacote)
+% Se você já estiver usando o abntex2-bcc-ufj, descomente a linha abaixo
+% e remova coisas duplicadas do preâmbulo, se houver.
+% \usepackage{abntex2/abntex2-bcc-ufj}
+
+\renewcommand*\arraystretch{1.2} 
+\usepackage{pdfpages}
+
+% --- Pacotes básicos (mantive o que você já usava) ---
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lastpage}
+\usepackage{indentfirst}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{lipsum}
+
+% Citações ABNT
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
+
+% Configuração do backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+\renewcommand{\backref}{}
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi
+}
+
+% Listings (códigos)
+\lstset{
+  inputpath=anexos/, % se quiser manter isso para códigos
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  numbers=left,
+  numberstyle=\tiny,
+}
+
+% Dados da capa / folha de rosto (você já usa isso)
+\input{dados}
+
+% Configuração do PDF
+\definecolor{blue}{RGB}{41,5,195}
+\makeatletter
+\hypersetup{
+     	pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{monografia}, 
+		colorlinks=true,
+    	linkcolor=blue,
+    	citecolor=blue,
+    	filecolor=magenta,
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+% Parágrafos
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{0.2cm}
+
+\makeindex
+
+\begin{document}
+\selectlanguage{brazil}
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+% Capa
+\imprimircapa
+
+% Folha de rosto
+\imprimirfolhaderosto
+
+% (Opcional) Ficha catalográfica como PDF externo
+% \begin{fichacatalografica}
+%     \includepdf{ficha}
+% \end{fichacatalografica}
+
+% (Opcional) Folha de aprovação como PDF externo
+% \includepdf{aprova}
+
+% Dedicatória, agradecimentos, epígrafe, resumos etc.
+% Aqui você pode manter como estava OU modularizar também.
+% Exemplo modularizado:
+\include{pretextuais/dedicatoria}
+\include{pretextuais/agradecimentos}
+\include{pretextuais/epigrafe}
+\include{pretextuais/resumos} % resumo + abstract
+
+% Listas
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+% Siglas (se quiser usar)
+% \begin{siglas}
+%   \item[MCU] Microcontroller Unit
+%   \item[LLVM] Low Level Virtual Machine
+% \end{siglas}
+
+% Sumário
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+\chapter[Introdução]{Introdução}\label{cap:introducao}
+\addcontentsline{toc}{chapter}{INTRODUÇÃO} % se quiser em maiúsculas no sumário
+\input{capitulos/1introdu.tex}
+
+\chapter{Referencial Teórico}\label{cap:referencial}
+\input{capitulos/2referencial.tex}
+
+\chapter{Trabalhos Relacionados}\label{cap:relacionados}
+\input{capitulos/3trabalhosRela.tex}
+
+\chapter{Metodologia e Experimentos}\label{cap:metodologia}
+\input{capitulos/4Metodologia.tex}
+
+\chapter{Conclusão e Trabalhos Futuros}\label{cap:conclusao}
+\input{capitulos/5Conclusao.tex}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% Referências
+\bibliography{Minha_biblioteca}
+
+% ----------------------------------------------------------
+% APÊNDICES  (AQUI TROCAMOS ANEXOS -> APÊNDICES)
+% ----------------------------------------------------------
+\begin{apendicesenv}
+\partapendices
+
+\chapter{Código 00668.rob e resultado da inferência}\label{apendice:codigo1}
+\input{anexos/00668.rob}
+
+\chapter{Código 08016.rob e resultado da inferência}\label{apendice:codigo2}
+\input{anexos/08016.rob}
+
+\chapter{Código 45071.rob e resultado da inferência}\label{apendice:codigo3}
+\input{anexos/45071.rob}
+
+\chapter{Código \texttt{extr\_...gdbstub.c\_gdb\_cmd\_memwrite}}\label{apendice:codigo4}
+\input{anexos/extr_........gdbstub.c_gdb_cmd_memwrite.rob}
+
+\chapter{Código \texttt{extr\_libcoreproxy.c\_compress\_hint\_to\_enum}}\label{apendice:codigo5}
+\input{anexos/extr_libcoreproxy.c_compress_hint_to_enum.rob}
+
+\end{apendicesenv}
+
+% (Se ainda quiser ter ANEXOS externos de documento, pode ter também depois dos apêndices)
+
+% \begin{anexosenv}
+% \partanexos
+% \chapter{Documentação do Robcmp}
+% \includepdf[pages=-]{doc_robcmp.pdf}
+% \end{anexosenv}
+
+% Índice remissivo (se usar)
+% \printindex
+
+\end{document}
