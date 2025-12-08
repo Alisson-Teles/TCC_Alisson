@@ -1,0 +1,174 @@
+\section{Classificação da Pesquisa}
+
+A presente pesquisa se caracteriza, quanto à natureza, como aplicada, pois visa o desenvolvimento de uma solução prática com potencial impacto em ambientes de compilação, com foco especial na arquitetura STM32, especificamente no microcontrolador STM32F103C8T6. Com relação aos objetivos, é exploratória, pois investiga o uso de modelos de linguagem de grande porte (LLMs) em tarefas de otimização de código voltadas para sistemas embarcados. Quanto aos procedimentos, trata-se de uma pesquisa experimental, uma vez que implementa, adapta e valida algoritmos em ambiente de teste controlado. A abordagem adotada é quantitativa, visto que os resultados serão analisados por métricas objetivas, como a contagem de instruções do código gerado. Por fim, quanto às fontes, a pesquisa também é classificada como bibliográfica, uma vez que se fundamenta em artigos e manuais técnicos previamente publicados.
+
+
+\section{Aspectos Metodológicos Gerais}
+
+
+A metodologia será composta por etapas sequenciais, confome apresentado na \hyperref[fig:minhafigura7]{Figura~\ref*{fig:minhafigura7}}. Nossa metodologia começa pela preparação dos dados, em seguida  a utilização de um \textit{parser} específico, depois o treinamento de modelo e por fim a avaliação do modelo treinado. Primeiramente, selecionamos os conjuntos de dados de programas em C,em seguida utilizamos um conversor(\textit{parser}) para converter esses mesmos programas em C para a ROBL. 
+
+Após a conversão, compilamos os códigos em ROBL, mas agora aplicando sequências de otimizações LLVM provenientes da pesquisa de \citeonline{faustino2021new}, e somente então os dados foram organizados em pares de entrada (\textit{prompt}) e saída (resposta/\textit{label}) para treinamento do modelo. Partimos então, para o ajuste fino do modelo \textit{LLM Compiler}, adaptando-o à tarefa de otimização de código específico da plataforma STM32. Finalmente, realizamos à avaliação do modelo treinado, com códigos não utilizados no treinamento, comparando a saída do modelo com otimizações convencionais. Todas estas etapas serão descritas nas subseções subsequentes.
+
+\begin{center}
+    \makebox[\textwidth]{\includegraphics[width=1.5\textwidth]{imagens/fig7.png}}
+    \captionof{figure}{Fluxograma de etapas metodológicas.}
+    \label{fig:minhafigura7}
+\end{center}
+
+\section{Conjunto de Dados}
+
+
+Para compor a base de entrada do pipeline experimental, utilizamo dois conjuntos de programas da linguagem C, visando abranger tanto códigos sintéticos aleatórios quanto códigos oriundos de aplicações reais.
+
+O primeiro conjunto foi gerado pelo Csmith \cite{yang2011finding}, uma ferramenta que produz programas aleatórios em C. O Csmith é comumente empregado para \textit{stress testing} de compiladores, garantindo uma ampla diversidade de construções nos programas de entrada. Neste trabalho, a variabilidade dos códigos foi limitada pelas restrições de recursos na ROBL, como ausência de ponteiros, por exemplo. O Csmith possui um conjunto de parâmetros que pode ser usado para não emitir alguns recursos nos programas gerados, como o \texttt{--no-pointers} que previne a geração de ponteiros nos programas. 
+
+O segundo conjunto de programas é o AnghaBench \cite{da2021anghabench}, uma suíte que contém aproximadamente um milhão de funções em C, extraídas de repositórios públicos do GitHub. Diferentemente do código sintético do Csmith, o AnghaBench provê códigos representativos de padrões e estruturas encontrados em softwares do mundo real.
+
+Essa combinação de \textit{datasets} visou maximizar a diversidade do conjunto de treino. Códigos aleatórios exercitam aspectos incomuns da linguagem, enquanto códigos reais fornecem exemplos fielmente extraídos de aplicações práticas. Para utilizar estes \textit{datasets} no nosso contexto, usaremos um conversor (c2rob) descrito na próxima seção.
+
+\section{Conversor de código C para RobCmp: c2rob}
+
+Para viabilizar a pesquisa, desenvolveu-se um conversor capaz de traduzir programas escritos em C para a sintaxe da ROBL, chamado \texttt{c2rob}.\footnote{Disponível em: \url{https://github.com/thborges/c2rob}} A implementação foi realizada com auxílio das ferramentas Flex e Bison, escolhidas por sua capacidade de construir analisadores léxicos e sintáticos customizados.
+
+O \texttt{c2rob} lê o código fonte em C, proveniente dos \textit{datasets} descritos na subseção anterior, e o transforma em um código equivalente na sintaxe da ROBL, preservando a lógica e o comportamento do programa original.
+
+Como nem todos os recursos da linguagem C estão presentes na ROBL, uma etapa adicional foi empregada para selecionar programas possíveis de conversão. A própria falha de tradução, apresentada pelo \texttt{c2rob} como erro de sintaxe, foi um indicador de incompatibilidade. Para garantir uma quantidade suficiente de programas corretos, criamos um \textit{dataset} de aproximadamente 80.000 códigos C, e fizemos com que o \texttt{c2rob} ignorasse os arquivos que apresentassem erro de sintaxe. Os programas corretos foram compilados com a \textit{flag} -O1, que aplica otimizações básicas e reduz o tamanho do código gerado, tornando-o mais adequado às limitações de contexto do modelo, ou seja, permite a criação de \textit{prompts} menores mais que ainda possuem oportunidades de otimização.
+
+\section{Formação dos Dados de Treinamento}
+
+Para a criação dos dados de treinamento, é necessário que os pares de \textit{prompt-label}, possuam em seu label uma versão compilada que se aproxime em eficiência da \textit{flag} -Oz. Para isso foi empregado um processo de compilação, aproveitando uma lista de passes dos resultados do trabalho de \citeonline{faustino2021new}, conhecida como \textit{Optimization Cache}\footnote{Disponível em: \url{https://zenodo.org/records/4416117}} que funcionam como um ótimo caso geral para os códigos, assim como a \textit{flag} -Oz. 
+
+
+A lista de sequências de passes do trabalho de \citeonline{faustino2021new} não eram devidamente aplicáveis ao contexto atual do LLVM-20, usado neste trabalho, pois foi realizada usando a versão 10 do LLVM (lançada em meados de 2020). Inicialmente, apenas 30\% das sequências eram utilizáveis. Portanto, mostrou-se necessário realizar a conversão dos passes do LLVM-10 para o LLVM-20. Após esta conversão, conseguiu-se utilizar 100\% da lista de passes para realizar a compilação.
+
+Com os códigos devidamente compilados, procedeu-se à organização dos dados em pares de \textit{prompt-label} para alimentar o treinamento supervisionado do modelo de linguagem. Em cada par, o \textit{prompt} consiste de um comando inicial textual em inglês, seguido do código em LLVM IR para a plataforma alvo (ROBL compilado para LLVM IR, otimizado com a \textit{flag} -O1), enquanto o \textit{label} corresponde à melhor versão compilada do mesmo código em \textit{assembly} e os respectivos passes de otimização empregados, seguindo o padrão adotado para o treinamento do modelo original \cite{cummins_llm_2025}.
+
+A lista de sequências de passes do trabalho de \citeonline{faustino2021new} não eram devidamente aplicáveis ao contexto atual do LLVM-20, usado neste trabalho, pois foi realizada usando a versão 10 do LLVM (lançada em meados de 2020). Inicialmente, apenas 30\% das sequências eram utilizáveis. Portanto, mostrou-se necessário realizar a conversão dos passes do LLVM-10 para o LLVM-20. Após esta conversão, conseguiu-se utilizar 100\% da lista de passes para realizar a compilação, composta por \textbf{1289 sequências únicas} de passes LLVM.
+
+Com os códigos devidamente compilados, procedeu-se à organização dos dados em pares de \textit{prompt-label} para alimentar o treinamento supervisionado do modelo de linguagem. Em cada par, o \textit{prompt} consiste de um comando inicial textual em inglês, seguido do código em 	LLVM-IR para a plataforma alvo (ROBL compilado para 	LLVM-IR, otimizado com a \textit{flag} -O1), enquanto o \textit{label} corresponde à melhor versão compilada do mesmo código em \textit{assembly} e os respectivos passes de otimização empregados, seguindo o padrão adotado para o treinamento do modelo original \cite{cummins_llm_2025}.
+
+
+%irei ter de acrescentar as estruturas dos arquivos objetos após a compilação no referencial, pois como os leitores entenderão o que são os campos de um arquivo binário
+O esquema de treinamento e inferência é apresentado na \hyperref[fig:minhafigura6]{Figura~\ref{fig:minhafigura6}}. O \textit{prompt}  contém um texto em inglês perguntando qual os passes necessários para se reduzir o tamanho do arquivo objeto para a arquitetura stm32, seguido do código IR otimizado apenas com a flag -O1. A resposta (\textit{label}) contém os passes de otimização necessários para reduzir o tamanho do arquivo objeto e o valor em decimal, da soma dos campos estruturais do mesmo arquivo, seguido do código assembly já otimizado com as sequências de \citeonline{faustino2021new}. Durante a inferência, extraímos a lista de passes de otimização da resposta, que é, então, usada no compilador para produzir o código otimizado que foi usado em outras validações descritas na \autoref{sec:validacao}.
+
+\begin{center}
+    \makebox[\textwidth]{\includegraphics[width=1.5\textwidth]{imagens/fig6.png}}
+    \captionof{figure}{Esquema de Treinamento e Inferência do LLM Compiler para STM32. Figura adaptada de \citeonline{cummins_large_2023}}
+    \label{fig:minhafigura6}
+\end{center}
+
+\section{Caracterização do Dataset quanto a Sequência de Passes}
+
+A Figura \ref{fig:minhafigura8} apresenta a análise do conjunto de dados utilizado em relação à melhor otimização obtida utilizando a lista de sequências de passes do trabalho de \citeonline{faustino2021new}. Observa-se que, em 56,2\% dos programas, as sequências de passes propostas por \citeonline{faustino2021new} produzem códigos menores do que a \textit{flag} padrão -Oz, enquanto em 43,6\% dos casos o resultado é equivalente. Em apenas 0,2\% a sequência é pior que o -Oz. Portanto, o conjunto de passes apresenta otimizações significativas que o modelo refinado pode capturar e aprender, mesmo não explorando todo o espaço de busca. A vantagem em relação ao -Oz é que a lista de passes é significativamente menor (dezenas \emph{vs} centenas de passes).
+
+%Esse comportamento indica que o \textit{dataset} empregado neste trabalho está fortemente enviesado para programas nos quais as sequências de \citeonline{faustino2021new} já são muito competitivas, muitas vezes dominando a configuração padrão do compilador. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{imagens/fig8.png}
+    \caption{Comparação de tamanho entre os códigos otimizados pelas sequências do \cite{faustino2021new} e os códigos otimizados pela \textit{flag} -Oz.}
+    \label{fig:minhafigura8}
+\end{figure}
+
+
+\section{Treinamento do Modelo}
+
+Com os \textit{prompts} e \textit{labels} preparados, procedemos ao refinamento do modelo para que ele aprenda a realizar otimizações de código da arquitetura STM32. 
+
+Devido ao volume de exemplos e ao tamanho do modelo, o treinamento exigirá recursos computacionais de alto desempenho. Optou-se por utilizar o ambiente de treinamento oferecido pela plataforma \textit{Hugging Face}, que disponibiliza infraestrutura escalável com suporte a GPUs otimizadas, além de treinamento de \textit{fine-tuning} automatizado (\textit{auto-train}\footnote{Documentação do \textit{auto-train}, disponível em: \url{https://huggingface.co/docs/autotrain/index}}), que dispensa codificação, através de sua interface de usuário. O \textit{Hugging Face} permite o treinamento de modelos diretamente na nuvem, por meio de créditos computacionais, e oferece ferramentas integradas como monitoramento de desempenho, versionamento de experimentos e integração com repositórios, além disso, para treinar o modelo através de sua interface de usuário, precisamos apenas selecionar os parâmetros de treinamento, fornecer o \textit{dataset} e escolher o modelo a ser treinado. Essa alternativa se mostrou mais viável e flexível para o escopo do projeto.
+
+O treinamento então foi realizado com 1.907 pares de \textit{prompt-label}, e seu treinamento durou aproximadamente 60 horas. Para realizar o treinamento do modelo, deixamos a maioria dos parâmetros de treinamento nos padrões do próprio \textit{hugging face Auto-Train}. De parâmetros similares ao de \citeonline{cummins_llm_2025}, conseguimos utilizar somente o \textit{Cosine schedule} e também o \textit{optimizer} AdamW, sem os valores $\beta_1$ e $\beta_2$ apresentados na mesma pesquisa, além disso, houve necessidade de alterar o valor do parâmetro \textit{model max length} para 8,192 tokens. Estas limitações se devem ao fato de optarmos por utilizar a interface de usuário para treinamento do modelo, onde temos pouca liberdade de manipulação destes parâmetros, salvo o \textit{model max length}, que precisamos alterar devido a GPU que escolhemos não suportar treinar o modelo com os 16.384 tokens como entrada. Mais detalhes sobre o ambiente de treinamento serão fornecidos na próxima seção.
+
+
+
+%Durante o treinamento, o modelo será ajustado considerando como contexto principal os códigos destinados à arquitetura STM32F103C8T6, aproveitando sua representação intermediária na linguagem Robcmp para capturar padrões de otimização específicos deste microcontrolador.
+
+
+\section{Especificações de Hardware e Software}
+
+Quanto aos recursos utilizados, o \texttt{c2rob} foi desenvolvido e testado com auxílio do Visual Studio Code versão 1.101.0, no Ubuntu 24.04 LTS, executado em um \textit{desktop} Lenovo ThinkCentre M93p, com processador Intel® Core™ i5-4570 (4 núcleos), 32GB de RAM e gráficos integrados Intel® HD \textit{Graphics} 4600. Essa infraestrutura local foi utilizada principalmente nas etapas de geração, conversão, inferência experimental e manipulação dos dados, enquanto o treinamento do modelo propriamente dito ocorreu em ambiente de alto desempenho.
+
+O ambiente de alto desempenho empregado foi o \textit{hugging face auto-train}, utilizando de uma GPU A10G Large, com 12vCPU, 46GB de memória, acelerador Nvidia A10G e 24GB de VRAM. 
+
+
+
+%===== Seção de Resultados ==============
+
+\section{Resultados: Refinamento do Modelo}
+
+
+A partir do \textit{pipeline} desenvolvido neste trabalho, foi possível construir um conjunto de 1.907 pares de \textit{prompt-label}, para treinamento supervisionado, nos quais o \textit{prompt} corresponde ao código em ROBL compilado para LLVM IR, otimizado apenas com a \textit{flag} -O1, e o \textit{label} representa a melhor sequência de passes de otimização, que resultou no menor código objeto para a arquitetura STM32. Esse conjunto foi gerado a partir de programas escritos originalmente em linguagem C, convertidos automaticamente para ROBL, compilados com diferentes sequências de passes e avaliados quanto ao tamanho gerado para o microcontrolador STM32F103C8T6.
+
+O modelo \textit{LLM Compiler} foi então refinado com esses pares, resultando em uma versão treinada\footnote{Versão treinada do \textit{LLM Compiler}, disponível em: \url{https://huggingface.co/Cal-mfbc5446/LlmCompiler-Stm32FineTunningFinal}} para o domínio de programas em ROBL-alvo STM32. Embora o número de amostrar utilizadas no ajuste fino tenha sido reduzido, testes exploratórios de inferência indicaram que o modelo refinado é capaz de sugerir sequências de passes compatíveis com aquelas observadas no treinamento. Podemos observar isso no anexo \ref{anexo:codigo5}, que nos mostra o código ROB utilizado com a finalidade de criar o código IR para realizar inferência e o resultado apresentado pelo modelo.  
+
+
+No total foram realizados 5 testes de inferência exploratórios, sendo três do \textit{benchmark} do \textit{Csmith} (Apêndices \ref{anexo:codigo1}, \ref{anexo:codigo2} e \ref{anexo:codigo3}) e dois do \textit{benchmark} do \textit{AnghaBench} (Apêndices \ref{anexo:codigo4} e \ref{anexo:codigo5}). Para cada um deles, o código LLVM IR foi fornecido ao modelo por meio do \textit{script} de inferência\footnote{Código de inferência disponível em:\url{https://github.com/Alisson-Teles/Pipeline-training/blob/main/STM32/Inferencia/llm_compiler_demo.py}}, registrando-se as respostas em terminal. Nos testes com programas do \textit{Csmith} e em dois dos três programas do \textit{AnghaBench}, o modelo não recuperou as sequências de passes fornecidas durante o processo de \textit{auto-tunning}, o que sugere generalização ainda limitada, compatível com o tamanho reduzido do conjunto de treinamento. Em apenas um dos códigos (Anexo \ref{anexo:codigo5}) do \textit{AnghaBench} observou-se a geração de uma sequência de passes estruturalmente semelhante àquela empregada durante o treinamento, indicando que o modelo é capaz de, em alguns casos, reproduzir padrões de otimização previamente observados.
+
+A partir do \textit{pipeline} desenvolvido neste trabalho, foi possível construir um conjunto de 1.907 pares de \textit{prompt-label}, para treinamento supervisionado, nos quais o \textit{prompt} corresponde ao código em ROBL compilado para 	LLVM-IR, otimizado apenas com a \textit{flag} -O1, e o \textit{label} representa a melhor sequência de passes de otimização, que resultou no menor código objeto para a arquitetura STM32. Esse conjunto foi gerado a partir de programas escritos originalmente em linguagem C, convertidos automaticamente para ROBL, compilados com diferentes sequências de passes e avaliados quanto ao tamanho gerado para o microcontrolador STM32F103C8T6.
+
+O modelo \textit{LLM Compiler} foi então refinado com esses pares, resultando em uma versão treinada\footnote{Versão treinada do \textit{LLM Compiler}, disponível em: \url{https://huggingface.co/Cal-mfbc5446/LlmCompiler-Stm32FineTunningFinal}} para o domínio de programas em ROBL-alvo STM32. Embora o número de amostrar utilizadas no ajuste fino tenha sido reduzido, testes exploratórios de inferência indicaram que o modelo refinado é capaz de sugerir sequências de passes compatíveis com aquelas observadas no treinamento. Podemos observar isso no anexo \ref{anexo:codigo5}, que nos mostra o código ROB utilizado com a finalidade de criar o código IR para realizar inferência e o resultado apresentado pelo modelo.  
+
+
+
+\section{Resultados: Ferramentas para Geração do Dataset de Treinamento}
+
+
+O principal resultado deste trabalho é a implementação de um pipeline reprodutível\footnote{Acesso do pipeline reprodutível:\url{https://github.com/Alisson-Teles/Pipeline-training.git}} que vai desde a coleta e conversão de códigos fonte em C para ROBL, passando pela seleção da melhor sequência de passes, até a construção dos pares de \textit{prompt-label} e o ajuste fino do modelo. Este pipeline está disponível publicamente para acesso de todos.
+
+
+
+O principal resultado deste trabalho é a implementação de um \textit{pipeline} reprodutível\footnote{Acesso do pipeline reprodutível:\url{https://github.com/Alisson-Teles/Pipeline-training.git}} que vai desde a coleta e conversão de códigos fonte em C para ROBL, passando pela seleção da melhor sequência de passes, até a construção dos pares de \textit{prompt-label} e o ajuste fino do modelo. O pipeline começa com o processo de compilação exaustiva do \textit{script} ``\texttt{rodar\_seq\_unica.sh}'', que, ao receber como entrada o arquivo ``\texttt{sequencias\_unicas.txt}'' (arquivo que contém as 1289 sequências de otimização do \texttt{LLVM-IR}), e o diretório contendo os arquivos LLVM-IR compilados em ROBL para STM32 realiza os seguintes pontos:
+
+\begin{enumerate}
+    \item Aplicação dos passes presentes dentro de \texttt{sequencias\_unicas.txt} ao arquivo LLVM-IR do código de entrada;
+    \item Geração do LLVM-IR otimizado com a melhor sequência de passes (aquela que produziu o melhor arquivo objeto);
+    \item Geração do melhor arquivo objeto correspondente (aquele que possui o menor tamanho);
+    \item Geração para STM32 \textit{assembly};
+    \item Extração e armazenamento do DEC (tamanho em bytes do melhor código objeto);
+    \item Armazenamento dos artefatos referentes à melhor sequência parcial (arquivos \texttt{.s}, \texttt{.o} e \texttt{.ll} e \texttt{.txt}), onde o \texttt{melhor.txt} contém a sequência que produziu o menor código;
+    \item Salva os melhores DEC de todos os códigos em um \texttt{melhores.csv} (apenas quando não executado de forma paralela);
+    \item Gera um diretório com os melhores artefatos para cada código em que as sequências foram aplicadas. Todos os artefatos são salvos em um subdiretório com o nome do código que foi otimizado.
+\end{enumerate}
+
+Devido ao grande volume do dataset esperado, criamos um \textit{script} que consegue realizar a execução paralela do código \texttt{rodar\_seq\_unica.sh}, este artefato permite a execução em múltiplas \textit{threads} (quantas você houver disponível em seu computador, no nosso caso foram nove). Porém, quando utilizada a execução paralela, o DEC de todos os códigos não é salvo, para resolver este problema, criamos o \texttt{coleta\_melhores.py}, que recebe como entrada o diretório criado pelo \texttt{rodar\_seq\_unica.sh}, e coleta o DEC de cada \texttt{melhor.o} presente dentro de cada subdiretório e salvando em um \texttt{melhores.csv}.
+
+Após gerar todos os dados necessários, utilizamos o código \texttt{promptLavel.py} para criação dos pares de \textit{prompt-label}. O \textit{script} realiza varredura em todos os diretórios que armazenam os arquivos LLVM-IR, as sequências consideradas ótimas (\texttt{melhor.txt}) e os respectivos arquivos de \textit{assembly} otimizados, integrando essas informações e gerando como saída um arquivo \texttt{JSONL}. Nesse arquivo, cada linha é estruturada em uma coluna ``\texttt{messages}'', seguida de ``\texttt{content}'', no formato esperado pelo serviço de \textit{autotrain} do \textit{Hugging Face}, de modo que cada linha corresponde a um par de dados.
+
+Para completar esse par de dados, o campo ``\texttt{content}'', possui duas variações, uma pertencendo ao ``\texttt{user}'' e outra ao ``\texttt{assistant}'', sendo respectivamente representadas pelo \textit{prompt} e \textit{label}, exatamente como apresentado no campo de ``\textit{Training Phase}'' da figura \ref{fig:minhafigura6}.
+
+Esse processo produz um conjunto de dados organizado e padronizado, já pronto para ser utilizado na etapa de \textit{fine-tuning} do \textit{LLM Compiler}. Dessa forma, assegura-se tanto a consistência em relação à metodologia original quanto a aderência ao domínio específico da arquitetura STM32.
+
+Portanto os resultados apresentados nesse trabalho contêm os \textit{scripts}: 
+
+\begin{itemize}
+    \item O script \texttt{rodar\_seq\_uniq.sh} aplica, para cada programa LLVM-IR, as 1289 sequências de otimização únicas derivadas de \cite{faustino2021new}. Para cada sequência, o código é compilado para STM32, sendo gerados e armazenados os arquivos resultantes (\texttt{.s}, \texttt{.o}, \texttt{.ll}). Ao final, para cada programa, identifica-se a sequência que produz o menor arquivo objeto, caracterizando o ``melhor caso''.
+    \item O script \texttt{parallel-run.py} atua distribuindo a execução do \texttt{rodar\_seq\_uniq.sh} entre múltiplos núcleos da CPU, possibilitando o processamento simultâneo de diversos programas e reduzindo de forma significativa o tempo total necessário para a conclusão das compilações.
+    \item O script \texttt{coleta\_melhores.py} percorre todas os subdiretórios de resultados geradas pelas compilações e, para cada programa, seleciona o arquivo objeto \texttt{melhor.o} e registra seu tamanho em \textit{bytes}. Esses dados são então agregados em um único arquivo \texttt{melhores.csv}, estruturado como uma tabela que relaciona o nome de cada programa ao respectivo tamanho após otimização.
+    \item O script \texttt{promptLavel.py} é encarregado da construção dos pares de treinamento, reunindo o IR não otimizado, o assembly otimizado, a sequência de passes considerada ótima e o tamanho final do objeto. Essas informações são organizadas no formato \texttt{JSONL} adotado pelo \textit{LLM Compiler}.
+\end{itemize}
+
+
+%=====Seção de limitações=================
+\section{Discussão e Limitações}\label{sec:Discussao}
+
+Este estudo foi conduzido sobre restrições de tempo e de orçamento computacional, o que impactou diretamente o escopo do projeto. A etapa de geração de dados, que envolve a compilação exaustiva dos mesmos programas sobre diferentes sequências de passes se mostrou custosa em termos de tempo de CPU e armazenamento. Em função destas limitações, optou-se por restringir o \textit{auto-tunning} a um subconjunto controlado de combinações de passes e a um número reduzido de programas, priorizando a viabilidade da coleta e a completude do \textit{pipeline} mesmo que isso implicasse em não explorar de forma exaustiva todo o espaço de combinações de passes de otimização.
+
+Como consequência direta deste cenário, o modelo \textit{LLM Compiler} foi refinado com 1.907 pares \textit{prompt-label}, número inferior à estimativa inicial deste projeto e também a números observados em trabalhos correlatos, que utilizam ordens de grandeza superiores de dados e infraestrutura de processamento especializada para treinar modelos para otimização de código. Essa limitação de escala restringe a capacidade de generalização do modelo, especialmente para programas que se afastam do padrão observado no conjunto de treinamento.
+
+
+Os resultados obtidos, ainda que limitados em escala, sugerem que a abordagem de refinamento de LLMs voltados a compiladores é aplicável ao contexto de microcontroladores STM32 e à linguagem específica de domínio Robotics Language. O fato de o modelo ser capaz de recuperar, para um programa não utilizado no treinamento, sequências de passes compatíveis com aquelas descobertas pelo \citeonline{faustino2021new}, ou seja, sequências similarese com alteração mínima no final de sua estrutura, indica que ele consegue internalizar, ao menos de forma esporádica, padrões de otimização associados à redução de tamanho do código objeto.  Esse comportamento está em linha com observações de trabalhos recentes que exploram LLMs especializados em IRs de compiladores e \textit{assembly} para tarefas de otimização \cite{cummins_llm_2025,deng_compilerdream_2024}. 
+
+Por outro lado, a ausência de uma avaliação quantitativa abrangente, baseada em métricas como redução média de \textit{bytes} no objeto ou comparação sistemática com a sequência padrão -Oz, impede de afirmar que o modelo refinado supera consistentemente as estratégias tradicionais em cenários reais de desenvolvimento embarcado. Trabalhos voltados à descoberta de novas sequências compactas de passes para redução de código mostram que, mesmo em arquiteturas de propósito geral, o ganho em relação às \textit{flags} padrão tende a ser modesto e depende fortemente da seleção de \textit{benchmarks} e da profundidade da busca\cite{cummins_llm_2025,faustino2021new}. No presente estudo, essa exploração foi necessariamente restrita pelo tempo disponível e pelo custo computacional.
+
+
+Outro ponto a ser destacado é que o conjunto de programas utilizados (Códigos C convertidos para ROBL) tende a abranger exemplos curtos (como é o caso do \textit{AnghaBench}) ou com pouca variabilidade (caso do \textit{Csmith}). Isso significa que o modelo foi exposto principalmente a padrões de códigos com pouca generalização, o que limita sua capacidade de lidar com projetos mais complexos. Apesar disso, o \textit{pipeline} proposto estabelece uma base sólida para a qual o conjuntos de dados mais amplos e diversos podem ser agregados em trabalhos futuros, permitindo avaliar de forma mais robusta o potencial da abordagem em cenários de maior complexidade.
+
+O conjunto de programas utilizados (Códigos C convertidos para ROBL) tende a abranger exemplos curtos (como é o caso do \textit{AnghaBench}) ou com pouca variabilidade (caso do \textit{Csmith}). Isso significa que o modelo foi exposto principalmente a padrões de códigos com pouca generalização, o que limita sua capacidade de lidar com projetos mais complexos. Apesar disso, o \textit{pipeline} proposto estabelece uma base sólida para a qual o conjuntos de dados mais amplos e diversos podem ser agregados em trabalhos futuros, permitindo avaliar de forma mais robusta o potencial da abordagem em cenários de maior complexidade.
+
+
+Outra limitação relevante, em relação ao tamanho do contexto de LLMs em geral, diz respeito ao tamanho médio dos pares de \textit{prompt-label} que ficou em torno de 50.000 tokens. Esse volume de contexto é substancialmente maior do que o utilizado por \citeonline{cummins_llm_2025}, que treina o modelo com uma janela de 16,384 \textit{tokens}. Na prática, isso significa que o conjunto construído neste trabalho não pôde ser explorado integralmente com a arquitetura de LLM utilizada nesta pesquisa, sendo realizado o truncamento dos dados após exceder o limite de contexto. Por outro lado, optou-se por manter os \textit{prompts} completos justamente porque já existem modelos com janelas de 128.000 \textit{tokens}\footnote{Modelo Gemma 3 possuí 128.000 de janela de contexto. Documentação disponível em: \url{https://ai.google.dev/gemma/docs/core?hl=pt-br}}, o que preserva a utilidade das ferramentas de construção do \textit{dataset} para uso em trabalhos futuros.
+
+
+Em última análise, o cenário apresentado na figura \ref{fig:minhafigura8} configura uma ameaça à validade externa dos experimentos, na medida em que as conclusões obtidas tendem a se restringir a situações muito específicas, caracterizadas por programas curtos e com pouca variabilidade. Em contextos mais realistas, envolvendo códigos de maior porte, com múltiplos módulos, bibliotecas externas e uso intensivo de periféricos, é pouco provável que o mesmo padrão de ganho se repita de forma consistente. Assim, embora os resultados indiquem que o modelo é capaz de reproduzir sequências competitivas em um cenário controlado, não se pode afirmar que o comportamento observado será mantido quando aplicado a sistemas embarcados de complexidade superior, o que deve ser explicitado como limitação e ameaça à generalização dos resultados.
+

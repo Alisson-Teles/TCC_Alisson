@@ -1,0 +1,24 @@
+% ---------------------------------
+% RESUMO EM PORTUGUÊS
+% ---------------------------------
+\setlength{\absparsep}{18pt} % ajusta o espaçamento dos parágrafos do resumo
+\begin{resumo}
+Este trabalho investiga o uso de modelos de linguagem de grande porte (LLMs) para otimização de código de microcontroladores, com foco no microcontrolador STM32F103C8T6 e na linguagem de programação \textit{Robotics Language} (ROBL). O objetivo principal é adaptar o modelo \textit{LLM Compiler}, originalmente treinado para unidades centrais de processamento (CPUs), de propósito geral, ao contexto de sistemas embarcados com fortes restrições de recursos, visando à redução do tamanho do código objeto. Para isso, foi desenvolvido um fluxo de processamento que: (i) coleta programas na linguagem C provenientes dos conjuntos \textit{Csmith} e \textit{AnghaBench}; (ii) converte automaticamente esses programas para a linguagem ROBL por meio do conversor c2rob; (iii) compila os códigos convertidos com diferentes sequências de etapas de otimização do compilador LLVM, obtidas na literatura; (iv) seleciona, para cada programa, a sequência que gera o menor código objeto para a arquitetura baseada no microcontrolador STM32; e (v) organiza esses dados em pares de entrada e saída (\textit{prompt–label}) para ajuste fino supervisionado do modelo \textit{LLM Compiler}. Tal modelo foi refinado com cerca de 1.907 amostras e avaliado de forma exploratória em códigos que não foram utilizados no treinamento. Os testes indicam que o modelo é capaz de reproduzir, em alguns casos, padrões de otimização compatíveis com as sequências obtidas por busca automática, ainda que com capacidade de generalização limitada pelo tamanho do conjunto de dados usado no refinamento. A principal contribuição deste trabalho é a elaboração de um conjunto de rotinas e scripts que elaboram datasets de treinamento para modelos LLMs, que integram uma linguagem de programação voltada a microcontroladores (ROBL), o compilador Robcmp e um modelo de linguagem de grande porte especializado em compiladores, abrindo caminho para estudos futuros com conjuntos de dados maiores e avaliações quantitativas mais robustas.
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Palavras-chave}: Compiladores; Microcontroladores; Otimização de Código; Modelos de Linguagem; Aprendizado de Máquina; Modelos de Linguagem de Grande Porte.
+\end{resumo}
+
+% ---------------------------------
+% ABSTRACT (RESUMO EM INGLÊS)
+% ---------------------------------
+\begin{resumo}[Abstract]
+\begin{otherlanguage*}{english}
+This work investigates the use of large language models (LLMs) for code optimization on microcontrollers, focusing on the STM32F103C8T6 microcontroller and the domain-specific programming language Robotics Language (ROBL). The main goal is to adapt the LLM Compiler model, originally trained for general-purpose central processing units, to the context of embedded systems with strict resource constraints, targeting object code size reduction. To this end, we designed a complete processing pipeline that: (i) collects C programs from the Csmith and AnghaBench datasets; (ii) automatically converts these programs into ROBL using the c2rob converter; (iii) compiles the converted codes with different sequences of optimization passes of the LLVM compiler, including short sequences proposed in the literature; (iv) selects, for each program, the sequence that produces the smallest object file for the architecture based on the STM32 microcontroller; and (v) organizes these results into input–output pairs (prompt–label) for supervised fine-tuning of the LLM Compiler. The refined model was trained on 1,907 examples and evaluated in an exploratory manner on codes that were not used during training. The experiments show that, in some cases, the model can reproduce optimization patterns consistent with those obtained through automatic search, although its generalization ability is limited by the reduced size of the training set. The main contribution of this work is a reproducible pipeline that integrates a microcontroller-oriented programming language, the Robcmp compiler, and a compiler-focused large language model, paving the way for future studies with larger datasets and more comprehensive quantitative evaluations.
+
+\vspace{\onelineskip}
+\noindent
+\textbf{Keywords}: Compilers; Microcontrollers; Code Optimization; Language Models; Machine Learning; Large Language Models.
+\end{otherlanguage*}
+\end{resumo}

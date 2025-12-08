@@ -1,5 +1,3 @@
-%% TCC Alisson - Modelo modularizado em capítulos e apêndices
-
 \documentclass[
 	12pt,				
 	oneside,
@@ -33,6 +31,8 @@
 \usepackage{microtype}
 \usepackage{hyperref}
 \usepackage{caption}
+\captionsetup[lstlisting]{labelformat=empty,labelsep=none}
+
 \usepackage{lipsum}
 
 % Citações ABNT
@@ -54,11 +54,15 @@
 
 % Listings (códigos)
 \lstset{
-  inputpath=anexos/, % se quiser manter isso para códigos
+  inputpath=anexos/,
   basicstyle=\ttfamily\small,
   breaklines=true,
   numbers=left,
   numberstyle=\tiny,
+  frame=single,
+  columns=fullflexible,
+  backgroundcolor=\color{gray!10},
+  captionpos=b,
 }
 
 % Dados da capa / folha de rosto (você já usa isso)
@@ -143,8 +147,7 @@
 % ----------------------------------------------------------
 \textual
 
-\chapter[Introdução]{Introdução}\label{cap:introducao}
-\addcontentsline{toc}{chapter}{INTRODUÇÃO} % se quiser em maiúsculas no sumário
+\chapter{Introdução}\label{cap:introducao}
 \input{capitulos/1introdu.tex}
 
 \chapter{Referencial Teórico}\label{cap:referencial}
@@ -172,24 +175,133 @@
 % ----------------------------------------------------------
 \begin{apendicesenv}
 \partapendices
+\chapter{Código 00668.rob, e Resultado da inferência}\label{anexo:codigo1}
+Este anexo apresenta um dos códigos em ROBL utilizado para criar o LLVM-IR e realizar a inferência, bem como o resultado apresentado pela inferência experimental.
+\section{Código em ROBL}
+\lstinputlisting[
+  language=C,
+  caption={Código 00668.rob},
+  label={lst:codigo00668rob}
+]{00668.rob}
 
-\chapter{Código 00668.rob e resultado da inferência}\label{apendice:codigo1}
-\input{anexos/00668.rob}
+\section{Resultado da Inferência}
+Saída gerada no terminal:
+\begin{lstlisting}
+    The LLVM-IR will have instruction count 33 and binary size 130 bytes:
+    <code>; Module ID =' '
+    source_filename =
+\end{lstlisting}
 
-\chapter{Código 08016.rob e resultado da inferência}\label{apendice:codigo2}
-\input{anexos/08016.rob}
+\chapter{Código 08016.rob, usado para criar o IR para inferência}\label{anexo:codigo2}
+Este anexo apresenta um dos códigos em ROBL utilizado para criar o LLVM-IR e realizar a inferência, bem como o resultado apresentado pela inferência experimental.
 
-\chapter{Código 45071.rob e resultado da inferência}\label{apendice:codigo3}
-\input{anexos/45071.rob}
+\section{Código em ROBL}
 
-\chapter{Código \texttt{extr\_...gdbstub.c\_gdb\_cmd\_memwrite}}\label{apendice:codigo4}
-\input{anexos/extr_........gdbstub.c_gdb_cmd_memwrite.rob}
+\lstinputlisting[
+  language=C,
+  caption={Código 08016.rob},
+  label={lst:codigo08016rob}
+]{08016.rob}
 
-\chapter{Código \texttt{extr\_libcoreproxy.c\_compress\_hint\_to\_enum}}\label{apendice:codigo5}
-\input{anexos/extr_libcoreproxy.c_compress_hint_to_enum.rob}
+\section{Resultado da Inferência}
+
+Saída gerada no terminal:
+\begin{lstlisting}
+    The assembly will have instruction count 7 and binary size 142
+    <code>     .text
+    .file  "."
+    .globl  S0:init          #-- Begin function S0:init
+    .p2align    5,0x90
+    .type S0:init  
+\end{lstlisting}
+
+
+\chapter{Código 45071.rob, usado para criar o IR para inferência}\label{anexo:codigo3}
+Este anexo apresenta um dos códigos em ROBL utilizado para criar o LLVM-IR e realizar a inferência, bem como o resultado apresentado pela inferência experimental.
+
+\section{Código em ROBL}
+
+\lstinputlisting[
+  language=C,
+  caption={Código 45071.rob},
+  label={lst:codigo45071rob}
+]{45071.rob}
+
+\section{Resultado da Inferência}
+
+Saída gerada no terminal:
+
+\begin{lstlisting}
+
+
+<code>      .text
+
+``S0:crc32\_gentab'':
+
+                     push\{r7, lr\}
+               
+                     mov r7,sp
+
+                     bl 0xad8 <S0:crc32\_gentab+0x6>              @ imm = \#-0x4
+\end{lstlisting}
+
+
+\chapter{Código \texttt{extr\_........gdbstub.c\_gdb\_cmd\_memwrite}, usado para criar o IR para inferência}
+\label{anexo:codigo4}
+Este anexo apresenta um dos códigos em ROBL utilizado para criar o LLVM-IR e realizar a inferência, bem como o resultado apresentado pela inferência experimental.
+
+\section{Código em ROBL}
+
+\lstinputlisting[
+  language=C,
+  caption={Código \texttt{extr\_........gdbstub.c\_gdb\_cmd\_memwrite}},
+  label={lst:codigo_extr_gdb_cmd_memwrite}
+]{extr_........gdbstub.c_gdb_cmd_memwrite.rob}
+
+\section{Resultado da Inferência}
+
+Saída gerada no terminal:
+
+\begin{lstlisting}
+
+<|im\_end|>
+
+<|im\_start|>assistant
+\end{lstlisting}
+
+\chapter{Código \texttt{extr\_libcoreproxy.c\_compress\_hint\_to\_enum.rob}, usado para criar o IR para inferência}
+\label{anexo:codigo5}
+Este anexo apresenta um dos códigos em ROBL utilizado para criar o LLVM-IR e realizar a inferência, bem como o resultado apresentado pela inferência experimental.
+
+\section{Código em ROBL}
+
+\lstinputlisting[
+  language=C,
+  caption={Código \texttt{extr\_libcoreproxy.c\_compress\_hint\_to\_enum.rob}},
+  label={lst:codigo_extr_libcoreproxy_compress_hint}
+]{extr_libcoreproxy.c_compress_hint_to_enum.rob}
+
+\section{Resultado da Inferência}
+
+Saída gerada no terminal:
+
+\begin{lstlisting}
+    
+<|im\_end|>
+
+<|im\_start|>assistant
+
+Run the following passes function(agressive-instcombine),early-cse<memssa>,function(sroa,simplify,gvn) to reduce the object file size to 259
+
+[code]
+
+/
+
+
+\end{lstlisting}
+
 
 \end{apendicesenv}
-
 % (Se ainda quiser ter ANEXOS externos de documento, pode ter também depois dos apêndices)
 
 % \begin{anexosenv}

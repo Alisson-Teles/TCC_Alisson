@@ -1,7 +1,7 @@
 PWD c:\Users\Alisson Teles\Documents\CDC\GIT\TCC_Alisson
 INPUT C:\Users\Alisson Teles\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Alisson Teles\Documents\CDC\GIT\TCC_Alisson\texto.tex
-OUTPUT texto.log
+INPUT c:\Users\Alisson Teles\Documents\CDC\GIT\TCC_Alisson\main.tex
+OUTPUT main.log
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\abntex2\abntex2.cls
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\abntex2\abntex2.cls
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\base\ifthen.sty
@@ -143,6 +143,34 @@ INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\en
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\pdfpages\pdfpages.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\eso-pic\eso-pic.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\pdfpages\pppdftex.def
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\pdfpages\pppdftex.def
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\pdfpages\pppdftex.def
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\lmodern.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\lmodern.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
@@ -153,28 +181,14 @@ INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmr.fd
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage2e.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpage2e.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpageclassic.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lastpage\lastpageclassic.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\tools\indentfirst.sty
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\color.cfg
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\mathcolor.ltx
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\trig.sty
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\subfig\subfig.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption.sty
@@ -192,6 +206,8 @@ INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\ls
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\listings.cfg
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\microtype\microtype-pdftex.def
@@ -225,15 +241,25 @@ INPUT .\dados.tex
 INPUT .\dados.tex
 INPUT .\dados.tex
 INPUT dados.tex
-OUTPUT texto.idx
-INPUT .\texto.aux
-INPUT .\texto.aux
-INPUT texto.aux
-INPUT .\abntex2-modelo-include-comandos.aux
-INPUT .\abntex2-modelo-include-comandos.aux
-INPUT abntex2-modelo-include-comandos.aux
-OUTPUT texto.aux
-OUTPUT texto.pdf
+OUTPUT main.idx
+INPUT .\main.aux
+INPUT .\main.aux
+INPUT main.aux
+INPUT .\pretextuais\dedicatoria.aux
+INPUT .\pretextuais\dedicatoria.aux
+INPUT pretextuais\dedicatoria.aux
+INPUT .\pretextuais\agradecimentos.aux
+INPUT .\pretextuais\agradecimentos.aux
+INPUT pretextuais\agradecimentos.aux
+INPUT .\pretextuais\epigrafe.aux
+INPUT .\pretextuais\epigrafe.aux
+INPUT pretextuais\epigrafe.aux
+INPUT .\pretextuais\resumos.aux
+INPUT .\pretextuais\resumos.aux
+INPUT pretextuais\resumos.aux
+OUTPUT main.aux
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
+OUTPUT main.pdf
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -242,6 +268,12 @@ INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pk
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\pdflscape\pdflscape.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\pdflscape\pdflscape-nometadata.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\pdflscape\pdflscape-nometadata.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\lscape.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
@@ -279,38 +311,75 @@ INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\omxlmex.fd
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmex10.tfm
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmss17.tfm
-INPUT .\texto.lof
-INPUT .\texto.lof
-INPUT texto.lof
-INPUT .\texto.lot
-INPUT .\texto.lot
-INPUT texto.lot
-INPUT .\texto.toc
-INPUT .\texto.toc
-INPUT texto.toc
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmsso12.tfm
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmssbo10.tfm
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmss17.tfm
+INPUT .\pretextuais\dedicatoria.tex
+INPUT .\pretextuais\dedicatoria.tex
+OUTPUT pretextuais\dedicatoria.aux
+INPUT .\pretextuais\dedicatoria.tex
+INPUT .\pretextuais\dedicatoria.tex
+INPUT pretextuais\dedicatoria.tex
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri12.tfm
+INPUT .\pretextuais\agradecimentos.tex
+INPUT .\pretextuais\agradecimentos.tex
+OUTPUT pretextuais\agradecimentos.aux
+INPUT .\pretextuais\agradecimentos.tex
+INPUT .\pretextuais\agradecimentos.tex
+INPUT pretextuais\agradecimentos.tex
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmss17.tfm
+INPUT .\pretextuais\epigrafe.tex
+INPUT .\pretextuais\epigrafe.tex
+OUTPUT pretextuais\epigrafe.aux
+INPUT .\pretextuais\epigrafe.tex
+INPUT .\pretextuais\epigrafe.tex
+INPUT pretextuais\epigrafe.tex
+INPUT .\pretextuais\resumos.tex
+INPUT .\pretextuais\resumos.tex
+OUTPUT pretextuais\resumos.aux
+INPUT .\pretextuais\resumos.tex
+INPUT .\pretextuais\resumos.tex
+INPUT pretextuais\resumos.tex
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
+INPUT .\main.lof
+INPUT .\main.lof
+INPUT main.lof
+INPUT .\main.lot
+INPUT .\main.lot
+INPUT main.lot
+INPUT .\main.toc
+INPUT .\main.toc
+INPUT main.toc
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi12.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtk10.tfm
+INPUT .\capitulos\1introdu.tex
+INPUT .\capitulos\1introdu.tex
+INPUT capitulos\1introdu.tex
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmss17.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ts1-lmr12.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr7.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ts1.enc
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmri10.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
+INPUT .\capitulos\2referencial.tex
+INPUT .\capitulos\2referencial.tex
+INPUT capitulos\2referencial.tex
 INPUT .\imagens\fig1.png
 INPUT .\imagens\fig1.png
 INPUT .\imagens\fig1.png
@@ -343,6 +412,13 @@ INPUT .\imagens\fig5.jpg
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmsso17.tfm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
+INPUT .\capitulos\3trabalhosRela.tex
+INPUT .\capitulos\3trabalhosRela.tex
+INPUT capitulos\3trabalhosRela.tex
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx10.tfm
+INPUT .\capitulos\4Metodologia.tex
+INPUT .\capitulos\4Metodologia.tex
+INPUT capitulos\4Metodologia.tex
 INPUT .\imagens\fig7.png
 INPUT .\imagens\fig7.png
 INPUT .\imagens\fig7.png
@@ -350,37 +426,78 @@ INPUT .\imagens\fig7.png
 INPUT .\imagens\fig7.png
 INPUT .\imagens\fig7.png
 INPUT .\imagens\fig7.png
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT .\imagens\fig6.png
+INPUT .\imagens\fig6.png
+INPUT .\imagens\fig6.png
+INPUT .\imagens\fig6.png
+INPUT .\imagens\fig6.png
+INPUT .\imagens\fig6.png
+INPUT .\imagens\fig6.png
+INPUT .\imagens\fig8.png
+INPUT .\imagens\fig8.png
+INPUT .\imagens\fig8.png
+INPUT .\imagens\fig8.png
+INPUT .\imagens\fig8.png
+INPUT .\imagens\fig8.png
+INPUT .\imagens\fig8.png
+INPUT .\capitulos\5Conclusao.tex
+INPUT .\capitulos\5Conclusao.tex
+INPUT capitulos\5Conclusao.tex
+INPUT .\main.bbl
+INPUT .\main.bbl
+INPUT main.bbl
+INPUT .\main.brf
+INPUT .\main.brf
+INPUT main.brf
+INPUT .\main.brf
+INPUT .\main.brf
+OUTPUT main.brf
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstmisc.sty
+INPUT .\anexos\00668.rob
+INPUT .\anexos\00668.rob
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt10.tfm
+INPUT anexos\00668.rob
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtk10.tfm
+INPUT .\anexos\08016.rob
+INPUT .\anexos\08016.rob
+INPUT anexos\08016.rob
+INPUT .\anexos\45071.rob
+INPUT .\anexos\45071.rob
+INPUT anexos\45071.rob
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
-INPUT .\imagens\fig6.png
-INPUT .\imagens\fig6.png
-INPUT .\imagens\fig6.png
-INPUT .\imagens\fig6.png
-INPUT .\imagens\fig6.png
-INPUT .\imagens\fig6.png
-INPUT .\imagens\fig6.png
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx12.tfm
-OUTPUT abntex2-modelo-include-comandos.aux
-INPUT .\texto.bbl
-INPUT .\texto.bbl
-INPUT texto.bbl
-INPUT .\texto.brf
-INPUT .\texto.brf
-INPUT texto.brf
-INPUT .\texto.brf
-INPUT .\texto.brf
-OUTPUT texto.brf
-OUTPUT texto.lof
-OUTPUT texto.lot
-OUTPUT texto.toc
-INPUT texto.aux
-INPUT .\abntex2-modelo-include-comandos.aux
-INPUT .\abntex2-modelo-include-comandos.aux
-INPUT abntex2-modelo-include-comandos.aux
-INPUT .\texto.brf
-INPUT .\texto.brf
+INPUT .\anexos\extr_........gdbstub.c_gdb_cmd_memwrite.rob
+INPUT .\anexos\extr_........gdbstub.c_gdb_cmd_memwrite.rob
+INPUT anexos\extr_........gdbstub.c_gdb_cmd_memwrite.rob
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtti10.tfm
+INPUT .\anexos\extr_libcoreproxy.c_compress_hint_to_enum.rob
+INPUT .\anexos\extr_libcoreproxy.c_compress_hint_to_enum.rob
+INPUT anexos\extr_libcoreproxy.c_compress_hint_to_enum.rob
+OUTPUT main.lof
+OUTPUT main.lot
+OUTPUT main.toc
+INPUT main.aux
+INPUT .\pretextuais\dedicatoria.aux
+INPUT .\pretextuais\dedicatoria.aux
+INPUT pretextuais\dedicatoria.aux
+INPUT .\pretextuais\agradecimentos.aux
+INPUT .\pretextuais\agradecimentos.aux
+INPUT pretextuais\agradecimentos.aux
+INPUT .\pretextuais\epigrafe.aux
+INPUT .\pretextuais\epigrafe.aux
+INPUT pretextuais\epigrafe.aux
+INPUT .\pretextuais\resumos.aux
+INPUT .\pretextuais\resumos.aux
+INPUT pretextuais\resumos.aux
+INPUT .\main.brf
+INPUT .\main.brf
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi12.pfb
@@ -403,13 +520,17 @@ INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmss12.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmss17.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmss17.pfb
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmssbo10.pfb
-INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmssbo10.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmssbx10.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmssbx10.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsso12.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsso12.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsso17.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsso17.pfb
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtk10.pfb
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtk10.pfb
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
 INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtti10.pfb
+INPUT C:\Users\Alisson Teles\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtti10.pfb

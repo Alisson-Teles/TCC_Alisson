@@ -1,0 +1,78 @@
+\section{Introdução}
+Para levantar os trabalhos relacionados, foi adotada uma revisão narrativa da literatura (NRL), partindo de buscas iniciais em bases científicas (Google Scholar) com termos de busca voltados a compiladores, otimização de código e aprendizado de máquina. Seguiu-se explorando as referências e citações de tais artigos, para identificar o conjunto de trabalhos mais recente e relacionado.
+
+Para a escolha de trabalhos correlatos, foram elegidos aqueles que, direta ou indiretamente, aportam a aplicação de métodos para otimização de tamanho de código no pipeline de compilação (em especial no LLVM), seja por ordenação de passes, \textit{autotunning} ou por modelos de Inteligência Artificial. 
+
+
+\subsection{Trabalhos Analisados}
+
+Nas subceções abaixo são descritos três trabalhos, ressaltando suas contribuições e limitações quanto ao escopo deste estudo.
+
+\subsection{New Optimization Sequences for Code-Size Reduction for the LLVMCompilation Infrastructure}
+
+
+A ideia central do trabalho de \citeonline{faustino2021new} é substituir as sequências padrão de redução de tamanho do LLVM (-Os com 264 passes e -Oz com 260 passes) por sequências muito mais curtas (12–15 passes) obtidas por busca sistemática, mas que preservem boa eficiência na redução de binário e reduzam o tempo de compilação. Para descobrir essas sequências, os autores geram candidatos com um algoritmo genético (YaCoS\footnote{Disponível em https://github.com/ComputerSystemsLaboratory/YaCoS}), reduzem-nos por poda \cite{purini2013finding} e removem duplicatas, construindo uma “matriz de otimização” a partir de 15.000 funções do AnghaBench \cite{da2021anghabench} e 10.044 sequências de otimização; cada célula da matriz guarda o tamanho do código LLVM-IR resultante ao aplicar uma sequência a uma função. A avaliação é feita em nível de programa, nos 16 \textit{benchmarks} do \textit{SPEC CPU2017}\footnote{Disponível em: \url{https://www.spec.org/cpu2017/}}, medindo tamanho final em número de instruções LLVM-IR após a criação do executável.
+
+Uma das sequências propostas (Lim) gera binários 2,3\% menores que -Os e apenas 2,5\% maiores que -Oz, enquanto compila mais rápido: 140 s com Lim vs 224 s (-Os) e 210 s (-Oz), o que corresponde a 1,4–1,6× e 1,3–1,5× mais rápido, respectivamente. Em casos específicos, como x264, as sequências Sum e Lim superam -Oz em 11\% e -Os em 16\% no tamanho do binário. Ao aplicar todas as sequências por função e reter o melhor resultado, a combinação vence os níveis padrão do LLVM em 7 de 16 programas do SPEC.
+%duvida se esta ultima oração está realmente tendo carácter ciêntifico
+
+Em resumo, a pesquisa de \citeonline{faustino2021new}, sem o uso de Inteligência Artificial, encontra uma lista com sequência de passes curtas que realmente mostram ter impacto significativo sobre os padrões de otimização já existentes no LLVM. Porém por ser uma busca exaustiva, é pesada, e não se adapta especificamente a cada programa.
+
+
+\subsection{CompilerDream:
+ Learning a Compiler World Model for General Code Optimization}
+
+A ideia central do estudo de \citeonline{deng_compilerdream_2024} é treinar um modelo de mundo do compilador, isto é, um modelo que simula como os passes de otimização se comportam quando aplicados ao código. Em cima desse simulador, os autores treinam um agente de aprendizado por reforço que aprende quais passes aplicar e em que ordem para melhorar o código (por exemplo, reduzir tamanho do binário ou otimizar métricas de desempenho). Ou seja, o sistema cria um “laboratório virtual” do compilador e ensina um agente a planejar sequências de otimização eficazes antes de gastar tempo com experimentos reais e lentos no compilador “de verdade”. 
+
+%duvida, o parágrafo parece muito longo, devo retirar quais informações ?
+Seguindo essa linha, os resultados de \citeonline{deng_compilerdream_2024} (avaliados como média geométrica da redução da contagem de instruções no LLVM-IR sobre o ``-Oz'') mostram que, no \textit{autotuning/CompilerGym}\footnote{Disponível em: \url{https://github.com/facebookresearch/CompilerGym}}, o agente  treinado no modelo de mundo atinge 1,068× em \textit{cBench} (coleção de programas C). No cenário de \textit{value prediction} (escolha de sequências dentre 50 candidatas), o método supera o estado da arte \textit{Coreset-NVP} \cite{liang_learning_2023} em 3/4 suítes: \textit{cBench} 1,038× vs 1,028×, \textit{MiBench} 1,017× vs 1,003× (\textit{MiBench} é uma suíte clássica de embarcados), NPB 1,140× vs 1,085× e empata em \textit{CHStone} 1,101× vs 1,101× (\textit{CHStone} reúne 12 programas C usados em \textit{High-Level Synthesis}). Já no teste \textit{zero-shot end-to-end}, o agente do \textit{CompilerDream} supera o -Oz em todos, exceto dois \textit{benchmarks}; justamente BLAS (rotinas padrão de álgebra linear) e Linux (\textit{kernel}) aparecem como casos “já muito otimizados”, o que explica a menor margem de ganho nesses conjuntos. 
+
+Em síntese, o estudo de \citeonline{deng_compilerdream_2024}, nos mostra que é possível, com uso de Inteligência Artificial, automatizar a ordenação de passes visando redução de tamanho de código, porém, os experimentos também não são realizados para MCUs/STM32, portanto não replicável para ambientes com recursos de \textit{hardware} limitados.
+
+\subsection{LLMCompiler: Foundation Language Models
+ for Compiler Optimization}
+
+A ideia central de \citeonline{cummins_llm_2025} é treinar modelos de linguagem “fundacionais” para compiladores em 546 bilhões de \textit{tokens} de LLVM-IR e \textit{assembly}, e depois especializá-los para emular otimizações e escolher passes que reduzem tamanho de código (além de um segundo alvo de levantamento de \textit{assembly} → IR). O tamanho de código é medido de duas formas: contagem de instruções no IR e tamanho binário (soma das seções .TEXT + .DATA após gerar o objeto; .BSS fica de fora por não afetar o tamanho em disco). Para gerar dados e treinar o modelo a “pensar como o opt”, os autores aplicam listas aleatórias de passes (amostradas de um conjunto de 167 passes) a programas desotimizados, e fazem \textit{fine-tuning} para que o LLM preveja o IR/\textit[assembly] e o tamanho resultante.
+
+Além disso, o modelo alcança 77\% do potencial de um \textit{autotuner} extensivo, mas sem precisar de milhares de compilações por programa. Em suma, o LLM Compiler mostra que modelos fundacionais especializados em IR/\textit{assembly} podem ordenar passes e escolher flags para reduzir tamanho de código de forma \textit{zero-shot}, com ganhos médios de 4\% sobre o -Oz.
+
+%resumo comparativo
+\subsection{Resumo Comparativo}
+A \hyperref[tab:comparativo-trabalhos]{tabela~\ref*{tab:comparativo-trabalhos}} nos mostra o resumo comparativo entre os trabalhos analisados nas seções anteriores, com a utilização de critérios elaborados durante a revisão da literatura.
+
+\begin{table}[ht]
+\centering
+\caption{Comparativo entre trabalhos relacionados}
+\label{tab:comparativo-trabalhos}
+\footnotesize
+\setlength{\tabcolsep}{3pt}%
+\renewcommand{\arraystretch}{1.15}%
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\multirow{2}{*}{\textbf{Trabalhos}} & \multicolumn{6}{c|}{\textbf{Critérios}} \\ \cline{2-7}
+ & \textbf{MCUs} & \textbf{Modelos} & \textbf{LLM} & \textbf{Fine-tuning} & \textbf{CPU} & \textbf{Otimiz. p/ tamanho} \\
+\hline
+\cite{faustino2021new}         & -- & -- & -- & -- & + & + \\
+\hline
+\cite{deng_compilerdream_2024} & -- & +  & -- & +  & + & + \\
+\hline
+\cite{cummins_llm_2025}        & -- & +  & +  & +  & + & + \\
+\hline
+Este trabalho                  & +  & +  & +  & +  & -- & + \\
+\hline
+\end{tabular}%
+}
+\vspace{2pt}
+
+\footnotesize “+” indica presença do critério; “--” indica ausência.
+\end{table}
+%duvida, talvez os textos tenham ficado muito grandes pois eu quís explicar o motivo de cada um conter um critério ou não( o porque dele conter o critério).
+Todos os trabalhos apresentam o critério \textbf{otimização para tamanho} de forma explicita, o que diferencia é o caminho, um utiliza de heurísticas e engenharia de passes \cite{faustino2021new}, enquanto os outros utilizam modelos treinados que priorizam métricas de tamanho \cite{cummins_llm_2025,deng_compilerdream_2024}. Diferentemente, todos os trabalhos, menos este, possui o critério \textbf{CPU}, pois em todos os trabalhos que foram analisados, o \textit{pipeline} é pensado e executado para ambientes de CPUs de propósito geral.
+
+Quanto ao critério \textbf{Modelos}, só é presente naqueles trabalhos em que foi utulizado modelos de inteligência artificial na otimização para redução de tamanho. Neste caso \citeonline{faustino2021new} não contém este critério pois realizam busca sistemática para descobrir sequências curtas que reduzem tamanho e tempo de compilação em LLVM. Porém, \citeonline{cummins_llm_2025} e \citeonline{deng_compilerdream_2024} utilizam respectivamente, um modelo de linguagem e modelo de mundo com um agente (um programa que aprende por tentativa e erro) para redução de tamanho de código.
+
+
+O critério \textbf{Fine-tuning}, é adotado como qualquer adaptação paramétrica de um modelo base guiada por um sinal de tarefa ou domínio. Nessa leitura, somente \citeonline{cummins_llm_2025} e \citeonline{deng_compilerdream_2024} pontuam positivamente. \citeonline{cummins_llm_2025}, após expor o modelo a bilhões de \textit{tokens} inicia um \textit{fine-tuning} supervisionado por instruções, usando entradas e saídas desejadas (A variante FTD adiciona uma etapa extra focada em tarefas, aprofundando essa especialização). \citeonline{deng_compilerdream_2024} realizam o \textit{fine-tuning} por reforço de um agente dentro de um modelo de mundo que imita o compilador. O agente ajusta sua política (sua regra de decisão) para aplicar passes que reduzem o código.
+
+Por fim, apenas no trabalho de \citeonline{cummins_llm_2025} é atingido o critério \textbf{LLM}, que é a utilização de LLMs para reduzir o tamanho em LLVM-IR. Isso nos mostra que a literatura permanece centrada em CPUs. A minha contribuição é trazer esse conjunto de técnicas para o domínio de MCUs, mantendo o foco em otimização para tamanho, demonstrando sua efetividade sob as restrições de hardware embarcado e atingindo o critério de \textbf{MCUs}(utilização destas técnicas em MCUs).
