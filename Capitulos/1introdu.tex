@@ -36,7 +36,7 @@ Portanto, este trabalho tem como objetivo refinar o modelo \textit{LLM Compiler}
 \begin{enumerate}
     \item Converter repositórios de código escritos em C para a ROBL, ignorando os códigos em C que necessitam de funcionalidades inexistentes na ROBL;
     \item Compilar o repositório convertido usando otimizações pré-determinadas e busca semi-exaustiva de passes, para encontrar o melhor código otimizado de cada programa;
-    \item Criar, para treinamento supervisionado do modelo, pares \textit{prompt-label} com o código em ROBL e o melhor código otimizado encontrado; e
+    \item Criar, para refinamento supervisionado do modelo já treinado, \textit{LLM Compiler}, pares \textit{prompt-label} com o código em ROBL e o melhor código otimizado encontrado; e
     \item Executar experimentos para validar o desempenho do modelo refinado ao indicar sequências de passes para otimização de programas não usados no treinamento, escritos em ROBL.
 \end{enumerate}
 
